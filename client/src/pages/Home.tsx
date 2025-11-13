@@ -1,37 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-//import { ProjectCard } from '@/components/ProjectCard';
-//import { TechBadge } from '@/components/TechBadge';
-import { getProjectsByAudience, getFeaturedProjects } from '@/data/projects';
-//import { Audience, getStoredAudience } from '@/lib/audience';
-import heroBg from '@/assets/hero-bg.jpg';
+import { ProjectCard } from '../components/ProjectsCard';
+import { TechBadge } from '../components/TechBadge';
+import { getFeaturedProjects } from '../data/projects';
+import heroBg from '../assets/hero-bg.jpg';
 
 const Home = () => {
-  //const [audience, setAudience] = useState<Audience>(getStoredAudience());
-  //const [orderedProjects, setOrderedProjects] = useState(getFeaturedProjects());
-
-  useEffect(() => {
-    //const handleAudienceChange = (e?: CustomEvent<Audience>) => {
-    //  const newAudience = e?.detail || getStoredAudience();
-    //  setAudience(newAudience);
-    //  setOrderedProjects(getProjectsByAudience(newAudience).filter(p => p.featured));
-    //};
-
-    // Listen for custom event (same tab) and storage event (other tabs)
-    //window.addEventListener('audienceChange', handleAudienceChange as EventListener);
-    //window.addEventListener('storage', handleAudienceChange as EventListener);
-    
-    // Initial load
-    //handleAudienceChange();
-
-    return () => {
-      //window.removeEventListener('audienceChange', handleAudienceChange as EventListener);
-      //window.removeEventListener('storage', handleAudienceChange as EventListener);
-    };
-  }, []);
+  const [orderedProjects, setOrderedProjects] = useState(getFeaturedProjects());
 
   const heroContent = {
     SWE: {
@@ -89,30 +67,30 @@ const Home = () => {
                   Available for SWE & PM internships
                 </motion.div>
 
-                {/* <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  {heroContent[audience].headline}
+                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                  {heroContent.SWE.headline}
                 </h1>
 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl">
-                  {heroContent[audience].subtitle}
-                </p> */}
+                  {heroContent.SWE.subtitle}
+                </p>
               </div>
 
               {/* CTAs */}
-              {/* <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
                   <Link to="/projects">
                     Explore Projects
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/resume">
-                    <Download className="mr-2 h-5 w-5" />
+                    {/* <Download className="mr-2 h-5 w-5" /> */}
                     Download Resume
                   </Link>
                 </Button>
-              </div> */}
+              </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
@@ -148,7 +126,7 @@ const Home = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
                     >
-                      {/* <TechBadge tech={tech} /> */}
+                      <TechBadge tech={tech} />
                     </motion.div>
                   ))}
                 </div>
@@ -166,9 +144,9 @@ const Home = () => {
                   <li>→ Seeking PM internship for Summer 2025</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
-                  {/* <Link to="/now">
+                  <Link to="/now">
                     See full update →
-                  </Link> */}
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -188,30 +166,28 @@ const Home = () => {
           <div className="flex items-end justify-between">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Featured Projects</h2>
-              {/* <p className="text-muted-foreground">
-                {audience === 'SWE' 
-                  ? "Full-stack applications with focus on performance and architecture"
-                  : "Product-driven projects with measurable user impact and clear metrics"}
-              </p> */}
+              <p className="text-muted-foreground">
+                Full-stack applications with focus on users, performance, and architecture
+              </p>
             </div>
             <Button variant="ghost" asChild className="hidden lg:flex">
-              {/* <Link to="/projects">
+              <Link to="/projects">
                 View All →
-              </Link> */}
+              </Link>
             </Button>
           </div>
 
-          {/* <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {orderedProjects.map((project, index) => (
               <ProjectCard key={project.slug} project={project} index={index} />
             ))}
-          </div> */}
+          </div>
 
           <div className="flex justify-center lg:hidden">
             <Button asChild>
-              {/* <Link to="/projects">
+              <Link to="/projects">
                 View All Projects →
-              </Link> */}
+              </Link>
             </Button>
           </div>
         </motion.div>
