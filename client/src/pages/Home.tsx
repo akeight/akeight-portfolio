@@ -139,9 +139,9 @@ const Home = () => {
                   Now
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Building Vertex AI demo with React frontend</li>
-                  <li>→ Completing Web103 course at WGU</li>
-                  <li>→ Seeking PM internship for Summer 2025</li>
+                  <li>→ Building ALL Blood Cell Classifier demo with React frontend</li>
+                  <li>→ Completing Advanced Web Development course at CodePath</li>
+                  <li>→ Seeking PM or SWE internship role for Summer 2026</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
                   <Link to="/now">

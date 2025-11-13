@@ -26,7 +26,7 @@ export type Project = {
         demo: "",
         caseStudy: "/projects/internship-tracker"
       },
-      cover: "/src/assets/projects/internship-tracker.jpg",
+      cover: "/InternshipTracker.gif",
       featured: true,
       category: "Web App"
     },
@@ -50,13 +50,13 @@ export type Project = {
       title: "Blood Cell Classifier",
       tagline: "ResNet50 model with Grad-CAM visualization and FastAPI deployment",
       impact: "End-to-end ML demo; deployed inference endpoint with heatmap UI",
-      stack: ["PyTorch", "FastAPI", "React", "Vite"],
+      stack: ["TensorFlow", "Keras", "FastAPI", "React", "Vite"],
       links: {
-        repo: "https://github.com/akeight/ai4all",
+        repo: "https://github.com/akeight/ai4all-project",
         demo: "",
         caseStudy: "/projects/all-classifier"
       },
-      cover: "/src/assets/projects/all-classifier.jpg",
+      cover: "/all-classifier.png",
       featured: true,
       category: "AI/ML"
     },

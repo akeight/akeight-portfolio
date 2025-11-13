@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand colors - Developer portfolio theme */
+    --primary: 262 52% 58%; /* #6E56CF - Indigo/Violet */
+    --primary-foreground: 0 0% 98%;
+    
+    --accent: 173 66% 40%; /* #22A699 - Teal */
+    --accent-foreground: 0 0% 98%;
+    
+    --background: 240 11% 4%; /* #0B0B10 - Near black */
+    --foreground: 0 0% 93%; /* #EDEDED - Light text */
+    
+    --card: 240 9% 7%; /* #111218 - Slightly lighter than bg */
+    --card-foreground: 0 0% 93%;
+    
+    --popover: 240 9% 7%;
+    --popover-foreground: 0 0% 93%;
+    
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 93%;
+    
+    --muted: 240 5% 20%;
+    --muted-foreground: 0 0% 65%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 262 52% 58%;
+    
+    --radius: 1rem;
+    
+    /* Custom design tokens */
+    --surface: 240 11% 4%;
+    --surface-elevated: 240 9% 10%;
+    --glow-primary: 262 52% 58%;
+    --glow-accent: 173 66% 40%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(var(--primary) / 0.15);
+    --shadow-md: 0 8px 24px -4px hsl(var(--primary) / 0.2);
+    --shadow-lg: 0 16px 48px -8px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--glow-primary) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .light {
+    /* Light mode colors */
+    --primary: 262 52% 58%;
+    --primary-foreground: 0 0% 98%;
+    
+    --accent: 173 66% 40%;
+    --accent-foreground: 0 0% 98%;
+    
+    --background: 0 0% 98%; /* Light background */
+    --foreground: 240 11% 10%; /* Dark text */
+    
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 240 11% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 11% 10%;
+    
+    --secondary: 240 5% 95%;
+    --secondary-foreground: 240 11% 10%;
+    
+    --muted: 240 5% 90%;
+    --muted-foreground: 0 0% 40%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5% 88%;
+    --input: 240 5% 88%;
+    --ring: 262 52% 58%;
+    
+    --surface: 0 0% 98%;
+    --surface-elevated: 0 0% 95%;
+    --glow-primary: 262 52% 58%;
+    --glow-accent: 173 66% 40%;
+    
+    /* Light mode shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(240 5% 15% / 0.1);
+    --shadow-md: 0 8px 24px -4px hsl(240 5% 15% / 0.15);
+    --shadow-lg: 0 16px 48px -8px hsl(240 5% 15% / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--glow-primary) / 0.2);
+  }
+
+  .dark {
+    /* Dark mode is default, but keeping for consistency */
+    --background: 240 11% 4%;
+    --foreground: 0 0% 93%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  code {
+    @apply font-mono text-sm;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+

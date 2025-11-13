@@ -10,45 +10,46 @@ export type Experience = {
   export const experience: Experience[] = [
     {
       id: "kahani-pm",
-      role: "Technical Product Manager",
+      role: "Product Manager",
       organization: "Kahani",
-      period: "2024 - Present",
+      period: "October 2025 - Present",
       highlights: [
-        "Led MVP squad to ship Feature X; improved pilot retention by ~30%",
+        "Led MVP internship squad to run A/B tests; improved pilot retention by ~30%",
         "Drove customer discovery with 20+ user interviews; shaped product roadmap"
       ],
       type: "work"
     },
     {
       id: "kahani-swe",
-      role: "Frontend Software Engineer Intern",
+      role: "Software Engineer Intern",
       organization: "Kahani",
-      period: "2023 - 2024",
+      period: "September 2025 - Present",
       highlights: [
-        "Built Flutter/BLoC features with Firebase backend",
-        "Accelerated onboarding flow; implemented CI/CD pipeline"
+        "Built Flutter/Dart features with Firebase backend",
+        "Accelerated onboarding flow; implemented CI/CD pipeline with GitHub Actions"
       ],
       type: "work"
     },
     {
       id: "ai-ml-projects",
-      role: "AI/ML Student Projects",
-      organization: "WGU & Self-Directed",
-      period: "2024",
+      role: "Ignite Accelerator Fellow",
+      organization: "AI4ALL",
+      period: "September 2025 - Present",
       highlights: [
-        "ResNet50 blood cell classifier with Grad-CAM visualization",
-        "Deployed Vertex AI inference endpoint with React frontend"
+        "20 weeks of hands-on AI/ML training with industry experts",
+        "Built ResNet50 blood cell classifier with Grad-CAM visualization",
+        "Deployed FastAPI inference endpoint with React frontend for real-time classification"
       ],
-      type: "project"
+      type: "education"
     },
     {
       id: "wgu-education",
       role: "B.S. Software Engineering",
       organization: "Western Governors University",
-      period: "2023 - Present",
+      period: "Expected Graduation: May 2028",
       highlights: [
         "Focus: Full-stack development, algorithms, and AI/ML",
-        "Relevant coursework: Data structures, software design, cloud computing"
+        "Relevant coursework: Data structures, Front-End Web Development, Python Programming"
       ],
       type: "education"
     }
