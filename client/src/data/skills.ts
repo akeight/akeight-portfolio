@@ -10,20 +10,20 @@ export type SkillCategory = {
     },
     {
       category: "Backend",
-      items: ["Node.js", "FastAPI", "tRPC", "Prisma", "PostgreSQL", "Supabase"]
+      items: ["Node.js", "FastAPI", "tRPC", "Prisma", "PostgreSQL", "Supabase", "Firebase"]
     },
     {
       category: "AI/ML",
-      items: ["PyTorch", "TensorFlow", "Vertex AI", "Scikit-learn", "Grad-CAM"]
+      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM"]
     },
     {
       category: "DevOps",
       items: ["Docker", "CI/CD", "Vercel", "GitHub Actions", "Firebase"]
     },
-    {
-      category: "Testing",
-      items: ["Jest", "React Testing Library", "Playwright", "Unit Testing"]
-    }
+    // {
+    //   category: "Testing",
+    //   items: ["Jest", "React Testing Library", "Playwright", "Unit Testing"]
+    // }
   ];
   
   export const productSkills: SkillCategory[] = [
