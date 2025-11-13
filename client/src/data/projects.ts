@@ -11,10 +11,6 @@ export type Project = {
     };
     cover?: string;
     featured?: boolean;
-    audienceWeight?: {
-      SWE: number;
-      PM: number;
-    };
     category: string;
   };
   
@@ -26,45 +22,42 @@ export type Project = {
       impact: "Reduced manual tracking time by ~60% with automated filters and analytics",
       stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "tRPC", "Auth.js", "ShadCN"],
       links: {
-        repo: "https://github.com/allyson/internship-tracker",
-        demo: "https://internship-tracker.vercel.app",
+        repo: "https://github.com/akeight/internship-tracker",
+        demo: "",
         caseStudy: "/projects/internship-tracker"
       },
       cover: "/src/assets/projects/internship-tracker.jpg",
       featured: true,
-      audienceWeight: { SWE: 0.9, PM: 0.7 },
       category: "Web App"
     },
     {
       slug: "spacex-dashboard",
       title: "SpaceX Launch Dashboard",
-      tagline: "Real-time launch events explorer with advanced filtering and charts",
+      tagline: "Explore live SpaceX mission data with this interactive, data rich frontend dashboard. Built with React and styled with custom components, the app pulls real launch data from the public SpaceX API and displays its story with visuals.",
       impact: "Surfaced 15+ KPIs; caching strategy reduced API calls by ~35%",
-      stack: ["React", "Vite", "TypeScript", "Recharts", "TanStack Query", "Tailwind"],
+      stack: ["React", "Vite", "JavaScript", "Recharts"],
       links: {
-        repo: "https://github.com/allyson/spacex-dashboard",
-        demo: "https://spacex-dash.netlify.app",
+        repo: "https://github.com/akeight/SpaceX-data-dashboard",
+        demo: "",
         caseStudy: "/projects/spacex-dashboard"
       },
-      cover: "/src/assets/projects/spacex-dashboard.jpg",
+      cover: "/spacex-dashboard.gif",
       featured: true,
-      audienceWeight: { SWE: 0.8, PM: 0.6 },
       category: "Data Visualization"
     },
     {
       slug: "blood-cell-classifier",
       title: "Blood Cell Classifier",
-      tagline: "ResNet50 model with Grad-CAM visualization and Vertex AI deployment",
+      tagline: "ResNet50 model with Grad-CAM visualization and FastAPI deployment",
       impact: "End-to-end ML demo; deployed inference endpoint with heatmap UI",
-      stack: ["PyTorch", "FastAPI", "React", "Vite", "Vertex AI", "Docker"],
+      stack: ["PyTorch", "FastAPI", "React", "Vite"],
       links: {
-        repo: "https://github.com/allyson/blood-cell-classifier",
-        demo: "https://blood-cell-demo.vercel.app",
-        caseStudy: "/projects/blood-cell-classifier"
+        repo: "https://github.com/akeight/ai4all",
+        demo: "",
+        caseStudy: "/projects/all-classifier"
       },
-      cover: "/src/assets/projects/blood-cell-classifier.jpg",
+      cover: "/src/assets/projects/all-classifier.jpg",
       featured: true,
-      audienceWeight: { SWE: 1.0, PM: 0.5 },
       category: "AI/ML"
     },
     {
@@ -72,25 +65,16 @@ export type Project = {
       title: "WGU Course Explorer",
       tagline: "Community-driven platform for course reviews and difficulty ratings",
       impact: "300+ reviews aggregated; courses filterable by difficulty and time commitment",
-      stack: ["Next.js", "Supabase", "TypeScript", "Tailwind", "Shadcn/ui"],
+      stack: ["React", "Vite", "Node.js", "Express", "TailwindCSS", "ShadCN/Radix UI", "React Router", "PostgreSQL", "Render"],
       links: {
-        repo: "https://github.com/allyson/wgu-explorer",
-        demo: "https://wgu-courses.vercel.app",
+        repo: "https://github.com/akeight/wgu-explorer",
+        demo: "",
         caseStudy: "/projects/wgu-course-explorer"
       },
-      cover: "/src/assets/projects/course-explorer.jpg",
+      cover: "/course-explorer.gif",
       featured: true,
-      audienceWeight: { SWE: 0.7, PM: 0.9 },
       category: "Community Tool"
     }
   ];
   
   export const getFeaturedProjects = () => projects.filter(p => p.featured);
-  
-  export const getProjectsByAudience = (audience: 'SWE' | 'PM') => {
-    return [...projects].sort((a, b) => {
-      const weightA = a.audienceWeight?.[audience] ?? 0.5;
-      const weightB = b.audienceWeight?.[audience] ?? 0.5;
-      return weightB - weightA;
-    });
-  };
