@@ -5,7 +5,7 @@ import { Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 //import { ProjectCard } from '@/components/ProjectCard';
 //import { TechBadge } from '@/components/TechBadge';
-//import { getProjectsByAudience, getFeaturedProjects } from '@/data/projects';
+import { getProjectsByAudience, getFeaturedProjects } from '@/data/projects';
 //import { Audience, getStoredAudience } from '@/lib/audience';
 import heroBg from '@/assets/hero-bg.jpg';
 
