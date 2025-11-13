@@ -1,7 +1,10 @@
+// import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <NotFound />
     </div>
   );
 };
