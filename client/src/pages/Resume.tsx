@@ -3,7 +3,7 @@ import { Download, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { experience } from '../data/experience';
 import { engineeringSkills, productSkills } from '../data/skills';
-// import { TechBadge } from '@/components/TechBadge';
+import { TechBadge } from '@/components/TechBadge';
 
 const Resume = () => {
   return (
@@ -16,19 +16,27 @@ const Resume = () => {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <div className="flex items-start justify-between">
+          <div className="flex items-start justify-between gap-4 mb-4">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">Resume</h1>
               <p className="text-lg text-muted-foreground">
                 Software Engineer & Product Manager | Full-stack development & user-centered product strategy
               </p>
             </div>
-            <Button asChild>
-              <a href="/resume.pdf" download>
-                <Download className="mr-2 h-4 w-4" />
-                Download PDF
-              </a>
-            </Button>
+            <div className="flex flex-col gap-2">
+              <Button asChild>
+                <a href="/AllysonKeightley_SWEResume.pdf" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume PDF
+                </a>
+              </Button>
+              {/* <Button asChild variant="secondary">
+                <a href="/AllysonKeightley_PMResume.pdf" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PM PDF
+                </a>
+              </Button> */}
+            </div>
           </div>
         </motion.div>
 
@@ -95,11 +103,11 @@ const Resume = () => {
                   <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider">
                     {category.category}
                   </h4>
-                  {/* <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {category.items.map(skill => (
                       <TechBadge key={skill} tech={skill} />
                     ))}
-                  </div> */}
+                  </div>
                 </div>
               ))}
             </div>
@@ -114,11 +122,11 @@ const Resume = () => {
                   <h4 className="font-medium text-sm text-muted-foreground uppercase tracking-wider">
                     {category.category}
                   </h4>
-                  {/* <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {category.items.map(skill => (
                       <TechBadge key={skill} tech={skill} className="bg-accent/10 text-accent border-accent/20" />
                     ))}
-                  </div> */}
+                  </div>
                 </div>
               ))}
             </div>
@@ -136,7 +144,7 @@ const Resume = () => {
             PDF resume viewer would appear here
           </p>
           <Button variant="outline" asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/AllysonKeightley_SWEResume.pdf" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />
               Open PDF in new tab
             </a>

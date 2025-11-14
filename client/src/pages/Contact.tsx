@@ -34,19 +34,19 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:allyson@example.com',
-      label: 'allyson@example.com'
+      href: 'mailto:allysonkeightley@outlook.com',
+      label: 'allysonkeightley@outlook.com'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/allysonkeightley',
-      label: 'github.com/allysonkeightley'
+      href: 'https://github.com/akeight',
+      label: 'github.com/akeight'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/allysonkeightley',
+      href: 'https://linkedin.com/in/allyson-keightley',
       label: 'linkedin.com/in/allysonkeightley'
     }
   ];

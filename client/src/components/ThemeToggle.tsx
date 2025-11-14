@@ -15,14 +15,17 @@ export const ThemeToggle = () => {
     return <Button variant="ghost" size="icon" disabled />;
   }
 
+  const currentTheme = theme || 'dark';
+  const isDark = currentTheme === 'dark';
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className="transition-colors"
     >
-      {theme === 'dark' ? (
+      {isDark ? (
         <Sun className="h-5 w-5" />
       ) : (
         <Moon className="h-5 w-5" />
