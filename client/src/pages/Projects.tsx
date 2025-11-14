@@ -3,22 +3,26 @@ import { motion } from 'framer-motion';
 import { Search, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-// import { ProjectCard } from '@/components/ProjectCard';
+import { ProjectCard } from '../components/ProjectsCard';
 import { projects } from '@/data/projects';
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
+  // Extract all unique categories from all projects (flatten arrays)
+  const allCategories = projects.flatMap(p => p.category);
+  const uniqueCategories = Array.from(new Set(allCategories)).sort();
+  const categories = ['All', ...uniqueCategories];
 
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.stack.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
     
+    // Check if selectedCategory is in the project's category array
     const matchesCategory = !selectedCategory || selectedCategory === 'All' || 
-                           project.category === selectedCategory;
+                           project.category.includes(selectedCategory);
 
     return matchesSearch && matchesCategory;
   });
@@ -61,7 +65,7 @@ const Projects = () => {
           {/* Category filters */}
           <div className="flex items-center gap-2 flex-wrap">
             <Filter className="h-4 w-4 text-muted-foreground" />
-            {categories.map(category => (
+            {categories.map((category: string) => (
               <Button
                 key={category}
                 variant={selectedCategory === category || (category === 'All' && !selectedCategory) ? 'default' : 'outline'}
@@ -76,9 +80,9 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
-          ))} */}
+          ))}
         </div>
 
         {/* No results */}

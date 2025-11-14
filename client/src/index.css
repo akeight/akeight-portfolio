@@ -7,8 +7,9 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    /* Brand colors - Developer portfolio theme */
+  :root,
+  .dark {
+    /* Dark mode colors - Default theme */
     --primary: 262 52% 58%; /* #6E56CF - Indigo/Violet */
     --primary-foreground: 0 0% 98%;
     
@@ -102,11 +103,6 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 40px hsl(var(--glow-primary) / 0.2);
   }
 
-  .dark {
-    /* Dark mode is default, but keeping for consistency */
-    --background: 240 11% 4%;
-    --foreground: 0 0% 93%;
-  }
 }
 
 @layer base {

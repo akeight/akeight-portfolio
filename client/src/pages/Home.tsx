@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '../components/ProjectsCard';
 import { TechBadge } from '../components/TechBadge';
@@ -25,12 +25,12 @@ const Home = () => {
   const stats = [
     { label: "Projects Shipped", value: "10+" },
     { label: "Prototypes Live", value: "3" },
-    { label: "CI/CD Pipelines", value: "5" },
+    { label: "CI/CD Pipelines", value: "3" },
   ];
 
   const techStack = [
-    "React", "Next.js", "TypeScript", "Python", "FastAPI", 
-    "PostgreSQL", "Flutter", "Tailwind", "Docker"
+    "JavaScript/TypeScript", "Python", "Dart", "React", "Next.js", "FastAPI", 
+    "PostgreSQL", "Express", "Render", "Prisma","Flutter", "Tailwind", "Supabase", "Firebase"
   ];
 
   return (
@@ -81,12 +81,12 @@ const Home = () => {
                 <Button size="lg" asChild>
                   <Link to="/projects">
                     Explore Projects
-                    {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/resume">
-                    {/* <Download className="mr-2 h-5 w-5" /> */}
+                    <Download className="mr-2 h-5 w-5" />
                     Download Resume
                   </Link>
                 </Button>
