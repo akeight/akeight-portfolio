@@ -9,7 +9,7 @@ import Index from './pages/Home';
 import Projects from './pages/Projects';
 import Now from './pages/Now';
 import Contact from './pages/Contact';
-import { Footer } from './pages/Footer';
+import { Footer } from './components/Footer';
 import NotFound from './pages/NotFound';
 import Resume from './pages/Resume';
 

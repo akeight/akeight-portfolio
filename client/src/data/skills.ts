@@ -14,7 +14,7 @@ export type SkillCategory = {
     },
     {
       category: "AI/ML",
-      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM"]
+      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM", "AWS Bedrock", "AWS SageMaker"]
     },
     {
       category: "DevOps",
@@ -29,11 +29,11 @@ export type SkillCategory = {
   export const productSkills: SkillCategory[] = [
     {
       category: "Discovery",
-      items: ["User Interviews", "Customer Research", "Problem Definition", "Market Analysis"]
+      items: ["User Interviews", "Problem Definition", "Market Research"]
     },
     {
       category: "Strategy",
-      items: ["PRDs", "Roadmapping", "Feature Prioritization", "MVP Definition"]
+      items: ["PRDs", "Roadmapping", "Feature Prioritization", "MVP Definition", "Technical Documentation"]
     },
     {
       category: "Metrics",
@@ -41,6 +41,6 @@ export type SkillCategory = {
     },
     {
       category: "Tools",
-      items: ["Figma", "Notion", "Jira", "Mode", "Amplitude", "Linear"]
+      items: ["Figma", "Notion", "Slack", "Zoom", "Google Workspace"]
     }
   ];

@@ -7,14 +7,20 @@ const Now = () => {
     {
       icon: Code,
       title: "Building ALL Classifier Demo",
-      description: "As an AI4ALL fellow, our small team is deploying a ResNet50 blood cell classifier with FastAPI backend and React frontend featuring Grad-CAM visualizations",
-      progress: 75
+      description: "As an AI4ALL fellow, our small team is deploying a CNN ResNet50 blood cell classifier with FastAPI backend and React frontend featuring Grad-CAM visualizations",
+      progress: 80
     },
     {
       icon: BookOpen,
-      title: "WGU Coursework",
-      description: "Completing Web103 (Advanced Web Development) and preparing for Software Engineering Capstone",
-      progress: 60
+      title: "CodePath Coursework",
+      description: "Completing Web103 (Advanced Web Development) and preparing for Capstone Project",
+      progress: 90
+    },
+    {
+      icon: BookOpen,
+      title: "CodePath Coursework",
+      description: "Completing TIP (Technical Interview Prep)",
+      progress: 90
     },
     {
       icon: Briefcase,
@@ -22,12 +28,12 @@ const Now = () => {
       description: "Actively seeking Summer 2025 Product Management internship to bridge technical and user-focused work",
       progress: 40
     },
-    {
-      icon: Target,
-      title: "Open Source Contributions",
-      description: "Contributing to React ecosystem and building developer tools for the community",
-      progress: 30
-    }
+    // {
+    //   icon: Target,
+    //   title: "Open Source Contributions",
+    //   description: "Contributing to React ecosystem and building developer tools for the community",
+    //   progress: 30
+    // }
   ];
 
   const weeklyGoals = [
