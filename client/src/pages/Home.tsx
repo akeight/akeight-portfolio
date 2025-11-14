@@ -14,7 +14,7 @@ const Home = () => {
   const heroContent = {
     SWE: {
       headline: "Software Engineer & Product Manager in training",
-      subtitle: "Building fast, accessible web apps and practical AI demos. I love turning ambiguous ideas into shipped, measurable products.",
+      subtitle: "Hey, I'm Allyson! I'm a curious, self-starter fueled by coffee, growth, and creating impactful products.",
     },
     PM: {
       headline: "Leading student squads to ship lean MVPs",

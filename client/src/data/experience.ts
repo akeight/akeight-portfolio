@@ -14,8 +14,9 @@ export type Experience = {
       organization: "Kahani",
       period: "October 2025 - Present",
       highlights: [
-        "Led MVP internship squad to run A/B tests; improved pilot retention by ~30%",
-        "Drove customer discovery with 20+ user interviews; shaped product roadmap"
+        "Own day-to-day product execution across design and engineering to ship learning-driven iterations",
+        "Lead cross-functional ceremonies and debriefs; track milestones, owners, deliverables, and timelines",
+        "Align scope for A/B test pilots, define success criteria, and ensure learnings translate into the roadmap"
       ],
       type: "work"
     },
@@ -25,8 +26,10 @@ export type Experience = {
       organization: "Kahani",
       period: "September 2025 - Present",
       highlights: [
-        "Built Flutter/Dart features with Firebase backend",
-        "Accelerated onboarding flow; implemented CI/CD pipeline with GitHub Actions"
+        "Built Flutter/Dart features with GCP Firebase backend",
+        "Set up MVVM feature-first folder architecture, improving code reuse and dropping time by 30%",
+        "Accelerated onboarding flow; implemented CI/CD pipeline with GitHub Actions to cut PR cycle time",
+        "Authored dev guides that made build reproducible, lowering new-machine setup from 2 hrs to 30 minutes and unblocking 80% teammates", 
       ],
       type: "work"
     },
@@ -43,12 +46,25 @@ export type Experience = {
       type: "education"
     },
     {
+      id: "aws-ai-engineer-nanodegree",
+      role: "AWS AI Engineer Nanodegree Scholar",
+      organization: "Udacity & AWS",
+      period: "September 2025 - Present",
+      highlights: [
+        "Awarded a competitive scholarship to the AWS AI Engineer Nanodegree (≈3% acceptance rate)",
+        "Building and deploying deep learning models using AWS services such as Bedrock and SageMaker",
+        "Developing end-to-end ML pipelines with a focus on production readiness and MLOps best practices",
+        "Deep focus on ethical AI, responsible model deployment, and safety guardrails for real-world applications"
+      ],
+      type: "education"
+    },
+    {
       id: "wgu-education",
       role: "B.S. Software Engineering",
       organization: "Western Governors University",
       period: "Expected Graduation: May 2028",
       highlights: [
-        "Focus: Full-stack development, algorithms, and AI/ML",
+        "Focus: Full-stack development, algorithms, and software architecture",
         "Relevant coursework: Data structures, Front-End Web Development, Python Programming"
       ],
       type: "education"

@@ -4,6 +4,7 @@ import { Code2, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
+import PixelAlly from '../assets/akeightpixel.png';
 
 
 export const Header = () => {
