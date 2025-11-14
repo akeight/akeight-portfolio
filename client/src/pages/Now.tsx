@@ -37,10 +37,10 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Ship Vertex AI deployment tutorial blog post",
-    "Complete 3 WGU competencies",
-    "Apply to 10 PM internship positions",
-    "Code review 2 open source PRs"
+    "Ship WGU CS Course Explorer MVP capstone project",
+    "Practice Binary Tree problems",
+    "Apply to 10 PM and SWE internship positions",
+    "Wrap up MVP development for A/B testing in current internship"
   ];
 
   return (
