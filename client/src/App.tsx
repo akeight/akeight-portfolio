@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import { Footer } from './components/Footer';
 import NotFound from './pages/NotFound';
 import Resume from './pages/Resume';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <TooltipProvider>
+        <SpeedInsights />
+        <Analytics />
         <Toaster />
         <BrowserRouter future={{ v7_relativeSplatPath: true }}>
         <div className="flex flex-col min-h-screen">
