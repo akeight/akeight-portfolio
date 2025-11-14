@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="container py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Allyson Keightley. Building with purpose.
+            © {currentYear} Allyson Keightley. Building With Purpose.
           </p>
 
           <div className="flex items-center gap-4">
