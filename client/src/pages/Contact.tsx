@@ -1,33 +1,89 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Send } from 'lucide-react';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '../hooks/use-toast';
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = () => {
+    const newErrors: { [key: string]: string } = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      toast.error("Validation Error", {
+        description: "Please fill in all fields correctly.",
+      });
+      return;
+    }
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
+    setIsSubmitting(true);
+    setErrors({});
+
+    try {
+      // Get Formspree form ID from environment variable
+      // Set VITE_FORMSPREE_FORM_ID in .env file
+      const formId = import.meta.env.VITE_FORMSPREE_FORM_ID || 'mwpavkqr';
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      toast.success("Message sent!", {
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      toast.error("Error Sending Message", {
+        description: "Failed to send message. Please try again or email me directly at allysonkeightley@outlook.com",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const socialLinks = [
@@ -128,10 +184,17 @@ const Contact = () => {
                 <Input
                   id="name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) => {
+                    setFormData({ ...formData, name: e.target.value });
+                    if (errors.name) setErrors({ ...errors, name: '' });
+                  }}
                   placeholder="Your name"
                   required
+                  className={errors.name ? 'border-destructive' : ''}
                 />
+                {errors.name && (
+                  <p className="text-sm text-destructive">{errors.name}</p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -142,10 +205,17 @@ const Contact = () => {
                   id="email"
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) => {
+                    setFormData({ ...formData, email: e.target.value });
+                    if (errors.email) setErrors({ ...errors, email: '' });
+                  }}
                   placeholder="your@email.com"
                   required
+                  className={errors.email ? 'border-destructive' : ''}
                 />
+                {errors.email && (
+                  <p className="text-sm text-destructive">{errors.email}</p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -155,11 +225,18 @@ const Contact = () => {
                 <Textarea
                   id="message"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) => {
+                    setFormData({ ...formData, message: e.target.value });
+                    if (errors.message) setErrors({ ...errors, message: '' });
+                  }}
                   placeholder="Tell me about your project or opportunity..."
                   rows={6}
                   required
+                  className={errors.message ? 'border-destructive' : ''}
                 />
+                {errors.message && (
+                  <p className="text-sm text-destructive">{errors.message}</p>
+                )}
               </div>
 
               <Button type="submit" className="w-full" disabled={isSubmitting}>

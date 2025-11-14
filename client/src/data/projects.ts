@@ -41,7 +41,7 @@ export type Project = {
         demo: "",
         caseStudy: ""
       },
-      cover: "/all-classifier.png",
+      cover: "/all-classifier.gif",
       featured: true,
       category: ["AI/ML", "Web App"]
     },
