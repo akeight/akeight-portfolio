@@ -21,13 +21,13 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <TooltipProvider>
-        <SpeedInsights />
         <Analytics />
         <Toaster />
         <BrowserRouter future={{ v7_relativeSplatPath: true }}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">
+            <SpeedInsights />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/projects" element={<Projects />} />
