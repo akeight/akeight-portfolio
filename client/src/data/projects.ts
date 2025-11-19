@@ -102,7 +102,7 @@ export type Project = {
         caseStudy: ""
       },
       cover: "/portfolio.png",
-      featured: true,
+      featured: false,
       category: ["Web App", "Portfolio"]
     },
   ];
