@@ -16,6 +16,21 @@ export type Project = {
   
   export const projects: Project[] = [
     {
+      slug: "wgu-course-explorer",
+      title: "WGU CS Course Explorer",
+      tagline: "Community-driven platform for computer science course reviews and difficulty ratings",
+      impact: "Courses filterable by difficulty and time commitment",
+      stack: ["React", "Vite", "Node.js", "Express", "TailwindCSS", "ShadCN/Radix UI", "React Router", "PostgreSQL", "Render"],
+      links: {
+        repo: "",
+        demo: "https://web103-finalproject-1.onrender.com",
+        caseStudy: ""
+      },
+      cover: "/course-explorer.gif",
+      featured: true,
+      category: ["Community Tool", "Web App"],
+    },
+    {
       slug: "internship-tracker",
       title: "Internship Tracker",
       tagline: "Full-stack CRUD app to organize and track internship applications",
@@ -46,25 +61,10 @@ export type Project = {
       category: ["AI/ML", "Web App"]
     },
     {
-      slug: "wgu-course-explorer",
-      title: "WGU Course Explorer | Demo Coming Soon",
-      tagline: "Community-driven platform for course reviews and difficulty ratings",
-      impact: "300+ reviews aggregated; courses filterable by difficulty and time commitment",
-      stack: ["React", "Vite", "Node.js", "Express", "TailwindCSS", "ShadCN/Radix UI", "React Router", "PostgreSQL", "Render"],
-      links: {
-        repo: "https://github.com/akeight/wgu-explorer",
-        demo: "",
-        caseStudy: ""
-      },
-      cover: "/course-explorer.gif",
-      featured: true,
-      category: ["Community Tool", "Web App"],
-    },
-    {
       slug: "class-connect",
       title: "ClassConnect",
       tagline: "Collaborative class forum web app where students and teachers can connect! They can post questions, share resources, make announcements, repost other's posts and engage with peers. It features live filtering, searching, sorting by upvotes, repost functionality, and a custom, playful UI, making it easy to stay connected and organized in any class environment.",
-      impact: "300+ reviews aggregated; courses filterable by difficulty and time commitment",
+      impact: "",
       stack: ["React", "Vite", "Supabase", "PostgreSQL", "React Router"],
       links: {
         repo: "https://github.com/akeight/ClassConnect",
@@ -89,6 +89,21 @@ export type Project = {
       cover: "/spacex-dashboard.gif",
       featured: true,
       category: ["Data Visualization", "Web App"]
+    },
+    {
+      slug: "portfolio",
+      title: "Personal Portfolio",
+      tagline: "Modern, responsive portfolio website showcasing projects, experience, and skills with a clean UI and smooth animations",
+      impact: "Showcases full-stack capabilities with modern React patterns and component architecture",
+      stack: ["React", "TypeScript", "Vite", "TailwindCSS", "ShadCN/Radix UI", "React Router", "Framer Motion", "Vercel"],
+      links: {
+        repo: "https://github.com/akeight/akeight-portfolio",
+        demo: "",
+        caseStudy: ""
+      },
+      cover: "/portfolio.png",
+      featured: true,
+      category: ["Web App", "Portfolio"]
     },
   ];
   
