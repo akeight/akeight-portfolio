@@ -64,7 +64,7 @@ const Home = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary"
                 >
                   <Sparkles className="h-4 w-4" />
-                  Available for SWE & PM internships
+                  Available for SWE & PM internships for Summer 2026
                 </motion.div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -140,7 +140,8 @@ const Home = () => {
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>→ Building ALL Blood Cell Classifier demo with React frontend</li>
-                  <li>→ Completing Advanced Web Development course at CodePath</li>
+                  <li>→ Completing AWS AI Engineer Nanodegree program</li>
+                  <li>→ Building cross-platform mobile app features for Kahani</li>
                   <li>→ Seeking PM or SWE internship role for Summer 2026</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">

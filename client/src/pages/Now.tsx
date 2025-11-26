@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Briefcase, Target } from 'lucide-react';
+import { BookOpen, Code, Briefcase, Target, PartyPopper, GraduationCap } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const Now = () => {
@@ -8,25 +8,31 @@ const Now = () => {
       icon: Code,
       title: "Building ALL Classifier Demo",
       description: "As an AI4ALL fellow, our small team is deploying a CNN ResNet50 blood cell classifier with FastAPI backend and React frontend featuring Grad-CAM visualizations",
+      progress: 90
+    },
+    {
+      icon: BookOpen,
+      title: "AWS AI Engineer Nanodegree",
+      description: "Building a RAG pipeline with Terraform, Aurora PostgreSQL, AWS Bedrock, and Streamlit",
       progress: 80
     },
     {
-      icon: BookOpen,
+      icon: PartyPopper,
       title: "CodePath Coursework",
-      description: "Completing Web103 (Advanced Web Development) and preparing for Capstone Project",
-      progress: 90
+      description: "Completed Web103 (Advanced Web Development) and deployed Capstone Project",
+      progress: 100
     },
     {
-      icon: BookOpen,
+      icon: GraduationCap,
       title: "CodePath Coursework",
-      description: "Completing TIP (Technical Interview Prep)",
-      progress: 90
+      description: "Completed TIP (Technical Interview Prep)",
+      progress: 100
     },
     {
       icon: Briefcase,
-      title: "PM Internship Search",
-      description: "Actively seeking Summer 2025 Product Management internship to bridge technical and user-focused work",
-      progress: 40
+      title: "PM/SWE Internship Search",
+      description: "Actively interviewing for Summer 2026 Product Management or Software Engineering internships to bridge technical and user-focused work",
+      progress: 50
     },
     // {
     //   icon: Target,
@@ -37,10 +43,10 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Ship WGU CS Course Explorer MVP capstone project",
-    "Practice Binary Tree problems",
+    "Present and demo mobile app MVP to Kahani founders and team for current internship role",
+    "Build a RAG pipeline with AWS stack",
     "Apply to 10 PM and SWE internship positions",
-    "Wrap up MVP development for A/B testing in current internship"
+    "Be present and enjoy Thanksgiving with family and friends"
   ];
 
   return (
