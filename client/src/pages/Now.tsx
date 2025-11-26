@@ -67,7 +67,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: November 13, 2025
+            Last updated: November 25, 2025
           </p>
         </motion.div>
 
