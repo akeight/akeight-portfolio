@@ -61,6 +61,21 @@ export type Project = {
       category: ["AI/ML", "Web App"]
     },
     {
+      slug: "ai-document-query",
+      title: "Intelligent Document Querying System",
+      tagline: "Document querying system that uses AI to answer questions about documents. Built with Udacity's AWS AI Engineer Nanodegree.",
+      impact: "Custom AWS Bedrock RAG pipeline with Terraform, S3, Aurora PostgreSQL, and Streamlit",
+      stack: ["Python", "AWS Bedrock", "Terraform", "AWS S3", "AWS Aurora PostgreSQL", "Streamlit"],
+      links: {
+        repo: "https://github.com/akeight/Intelligent-Document-Querying-System",
+        demo: "",
+        caseStudy: ""
+      },
+      cover: "/ai-document-retrieval.gif",
+      featured: false,
+      category: ["AI/ML", "Web App"]
+    },
+    {
       slug: "class-connect",
       title: "ClassConnect",
       tagline: "Collaborative class forum web app where students and teachers can connect! They can post questions, share resources, make announcements, repost other's posts and engage with peers. It features live filtering, searching, sorting by upvotes, repost functionality, and a custom, playful UI, making it easy to stay connected and organized in any class environment.",
