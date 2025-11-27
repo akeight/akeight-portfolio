@@ -13,8 +13,8 @@ const Now = () => {
     {
       icon: BookOpen,
       title: "AWS AI Engineer Nanodegree",
-      description: "Building a RAG pipeline with Terraform, Aurora PostgreSQL, AWS Bedrock, and Streamlit",
-      progress: 80
+      description: "Built an AWS RAG pipeline with Terraform, Aurora PostgreSQL, S3, Bedrock, and Streamlit",
+      progress: 90
     },
     {
       icon: PartyPopper,
