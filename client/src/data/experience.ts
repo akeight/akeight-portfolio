@@ -49,11 +49,11 @@ export type Experience = {
       id: "aws-ai-engineer-nanodegree",
       role: "AWS AI Engineer Nanodegree Scholar",
       organization: "Udacity & AWS",
-      period: "September 2025 - Present",
+      period: "September 2025 - November 2025",
       highlights: [
         "Awarded a competitive scholarship to the AWS AI Engineer Nanodegree (≈3% acceptance rate)",
-        "Building and deploying deep learning models using AWS services such as Bedrock and SageMaker",
-        "Developing end-to-end ML pipelines with a focus on production readiness and MLOps best practices",
+        "Built and deployed deep learning models using AWS Bedrock, S3, Aurora PostgreSQL, and Streamlit",
+        "Developed end-to-end ML pipelines with a focus on production readiness and MLOps best practices",
         "Deep focus on ethical AI, responsible model deployment, and safety guardrails for real-world applications"
       ],
       type: "education"

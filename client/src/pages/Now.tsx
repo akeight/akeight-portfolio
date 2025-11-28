@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Briefcase, Target, PartyPopper, GraduationCap } from 'lucide-react';
+import { BookOpen, Code, Briefcase, Target, PartyPopper, GraduationCap, Brain } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const Now = () => {
@@ -11,10 +11,10 @@ const Now = () => {
       progress: 90
     },
     {
-      icon: BookOpen,
+      icon: Brain,
       title: "AWS AI Engineer Nanodegree",
       description: "Built an AWS RAG pipeline with Terraform, Aurora PostgreSQL, S3, Bedrock, and Streamlit",
-      progress: 90
+      progress: 100
     },
     {
       icon: PartyPopper,
@@ -67,7 +67,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: November 25, 2025
+            Last updated: November 28, 2025
           </p>
         </motion.div>
 

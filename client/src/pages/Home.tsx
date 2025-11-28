@@ -139,8 +139,8 @@ const Home = () => {
                   Now
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Building ALL Blood Cell Classifier demo with React frontend</li>
-                  <li>→ Completing AWS AI Engineer Nanodegree program</li>
+                  <li>→ Building ALL Blood Cell Classifier demo with FastAPI/React</li>
+                  <li>→ Completed AWS AI Engineer Nanodegree program</li>
                   <li>→ Building cross-platform mobile app features for Kahani</li>
                   <li>→ Seeking PM or SWE internship role for Summer 2026</li>
                 </ul>

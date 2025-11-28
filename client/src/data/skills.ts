@@ -14,11 +14,11 @@ export type SkillCategory = {
     },
     {
       category: "AI/ML",
-      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM", "AWS Bedrock", "AWS SageMaker"]
+      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM", "AWS Bedrock"]
     },
     {
       category: "DevOps",
-      items: ["Docker", "CI/CD", "Vercel", "GitHub Actions", "Firebase"]
+      items: ["Docker", "CI/CD", "Vercel", "GitHub Actions"]
     },
     // {
     //   category: "Testing",
