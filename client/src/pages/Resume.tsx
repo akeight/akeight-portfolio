@@ -25,7 +25,7 @@ const Resume = () => {
             </div>
             <div className="flex flex-col gap-2">
               <Button asChild>
-                <a href="/AllysonKeightley_SWEResume.pdf" download>
+                <a href="/AllysonKeightleySWEResume.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume PDF
                 </a>
@@ -133,22 +133,30 @@ const Resume = () => {
           </div>
         </motion.section>
 
-        {/* PDF Embed Placeholder */}
+        {/* PDF Viewer */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-card border border-border rounded-2xl p-12 text-center space-y-4"
+          className="bg-card border border-border rounded-2xl p-6 space-y-4"
         >
-          <p className="text-muted-foreground">
-            PDF resume viewer would appear here
-          </p>
-          <Button variant="outline" asChild>
-            <a href="/AllysonKeightley_SWEResume.pdf" target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Open PDF in new tab
-            </a>
-          </Button>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold">Resume PDF</h2>
+            <Button variant="outline" size="sm" asChild>
+              <a href="/AllysonKeightleySWEResume.pdf" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Open in new tab
+              </a>
+            </Button>
+          </div>
+          <div className="relative w-full" style={{ minHeight: '800px' }}>
+            <iframe
+              src="/AllysonKeightleySWEResume.pdf#toolbar=1&navpanes=1&scrollbar=1"
+              className="w-full h-full rounded-lg border border-border"
+              style={{ minHeight: '800px' }}
+              title="Resume PDF Viewer"
+            />
+          </div>
         </motion.section>
       </div>
     </div>
