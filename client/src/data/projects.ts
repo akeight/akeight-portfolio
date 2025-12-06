@@ -16,6 +16,21 @@ export type Project = {
   
   export const projects: Project[] = [
     {
+      slug: "blood-cell-classifier",
+      title: "ALL Blood Cell Classifier",
+      tagline: "ResNet50 model with Grad-CAM visualization and fullstack deployment",
+      impact: "End-to-end ML demo; deployed inference endpoint with heatmap UI",
+      stack: ["TensorFlow", "Keras", "FastAPI", "React", "Vite", "Supabase"],
+      links: {
+        repo: "https://github.com/akeight/ai4all-project",
+        demo: "https://ai4all-project.vercel.app/",
+        caseStudy: ""
+      },
+      cover: "/all-classifier.gif",
+      featured: true,
+      category: ["AI/ML", "Web App"]
+    },
+    {
       slug: "wgu-course-explorer",
       title: "WGU CS Course Explorer",
       tagline: "Community-driven platform for computer science course reviews and difficulty ratings",
@@ -44,21 +59,6 @@ export type Project = {
       cover: "/InternshipTracker.gif",
       featured: true,
       category: ["Web App", "Productivity"]
-    },
-    {
-      slug: "blood-cell-classifier",
-      title: "Blood Cell Classifier | Demo Coming Soon",
-      tagline: "ResNet50 model with Grad-CAM visualization and FastAPI deployment",
-      impact: "End-to-end ML demo; deployed inference endpoint with heatmap UI",
-      stack: ["TensorFlow", "Keras", "FastAPI", "React", "Vite", "Supabase"],
-      links: {
-        repo: "https://github.com/akeight/ai4all-project",
-        demo: "",
-        caseStudy: ""
-      },
-      cover: "/all-classifier.gif",
-      featured: true,
-      category: ["AI/ML", "Web App"]
     },
     {
       slug: "ai-document-query",
