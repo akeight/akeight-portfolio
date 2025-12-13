@@ -6,33 +6,33 @@ const Now = () => {
   const focuses = [
     {
       icon: Code,
-      title: "Building ALL Classifier Demo",
-      description: "As an AI4ALL fellow, our small team is deploying a CNN ResNet50 blood cell classifier with FastAPI backend and React frontend featuring Grad-CAM visualizations",
-      progress: 90
+      title: "Building the new Kahani Health website",
+      description: "Extending my fall internship with Kahani to build the new website",
+      progress: 50
     },
     {
       icon: Brain,
-      title: "AWS AI Engineer Nanodegree",
-      description: "Built an AWS RAG pipeline with Terraform, Aurora PostgreSQL, S3, Bedrock, and Streamlit",
-      progress: 100
+      title: "Data Structures and Algorithms",
+      description: "Studying for Data Structures and Algorithms course",
+      progress: 60
     },
     {
       icon: PartyPopper,
-      title: "CodePath Coursework",
-      description: "Completed Web103 (Advanced Web Development) and deployed Capstone Project",
-      progress: 100
+      title: "MLT Career Prep Program",
+      description: "Orientation for MLT CP, for the class of 2028! Will start in January 2026",
+      progress: 0
     },
     {
       icon: GraduationCap,
-      title: "CodePath Coursework",
-      description: "Completed TIP (Technical Interview Prep)",
+      title: "Google Generative AI Leader Certification",
+      description: "Passed the Google Gen AI Leader Certification exam today!",
       progress: 100
     },
     {
       icon: Briefcase,
       title: "PM/SWE Internship Search",
       description: "Actively interviewing for Summer 2026 Product Management or Software Engineering internships to bridge technical and user-focused work",
-      progress: 50
+      progress: 60
     },
     // {
     //   icon: Target,
@@ -43,10 +43,10 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Present and demo mobile app MVP to Kahani founders and team for current internship role",
-    "Build a RAG pipeline with AWS stack",
-    "Apply to 10 PM and SWE internship positions",
-    "Be present and enjoy Thanksgiving with family and friends"
+    "Pass the Google Generative AI Leader Certification exam",
+    "Finish building the new Kahani Health website",
+    "Finish upgrading all my React/Next.js projects to the latest version",
+    "Apply to PM and SWE internship positions for Summer 2026"
   ];
 
   return (
@@ -67,7 +67,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: November 28, 2025
+            Last updated: December 12, 2025
           </p>
         </motion.div>
 

@@ -9,27 +9,26 @@ export type Experience = {
   
   export const experience: Experience[] = [
     {
-      id: "kahani-pm",
-      role: "Product Manager",
-      organization: "Kahani",
-      period: "October 2025 - Present",
-      highlights: [
-        "Own day-to-day product execution across design and engineering to ship learning-driven iterations",
-        "Lead cross-functional ceremonies and debriefs; track milestones, owners, deliverables, and timelines",
-        "Align scope for A/B test pilots, define success criteria, and ensure learnings translate into the roadmap"
-      ],
-      type: "work"
-    },
-    {
       id: "kahani-swe",
       role: "Software Engineer Intern",
       organization: "Kahani",
       period: "September 2025 - Present",
       highlights: [
-        "Built Flutter/Dart features with GCP Firebase backend",
+        "Built Flutter/Dart cross-platform mobile app features with GCP Firebase backend",
         "Set up MVVM feature-first folder architecture, improving code reuse and dropping time by 30%",
         "Accelerated onboarding flow; implemented CI/CD pipeline with GitHub Actions to cut PR cycle time",
         "Authored dev guides that made build reproducible, lowering new-machine setup from 2 hrs to 30 minutes and unblocking 80% teammates", 
+      ],
+      type: "work"
+    },
+    {
+      id: "kahani-pm",
+      role: "Product Manager",
+      organization: "Kahani",
+      period: "October 2025 - December 2025",
+      highlights: [
+        "Owned day-to-day product execution across design and engineering to ship learning-driven iterations",
+        "Lead cross-functional ceremonies and debriefs; track milestones, owners, deliverables, and timelines",
       ],
       type: "work"
     },

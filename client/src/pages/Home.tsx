@@ -139,9 +139,9 @@ const Home = () => {
                   Now
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Building ALL Blood Cell Classifier demo with FastAPI/React</li>
-                  <li>→ Completed AWS AI Engineer Nanodegree program</li>
-                  <li>→ Building cross-platform mobile app features for Kahani</li>
+                  <li>→ Upgrading all my React/Next.js projects to the latest version</li>
+                  <li>→ Building the new Kahani Health website</li>
+                  <li>→ Earned Google Generative AI Leader Certification</li>
                   <li>→ Seeking PM or SWE internship role for Summer 2026</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
