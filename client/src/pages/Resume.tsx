@@ -114,7 +114,7 @@ const Resume = () => {
           </div>
 
           {/* Product Skills */}
-          <div className="space-y-6">
+      {/* <div className="space-y-6">
             <h3 className="text-xl font-semibold text-accent">Product</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {productSkills.map((category) => (
@@ -130,7 +130,7 @@ const Resume = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.section>
 
         {/* PDF Viewer */}
