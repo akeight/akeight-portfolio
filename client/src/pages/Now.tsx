@@ -8,7 +8,7 @@ const Now = () => {
       icon: Code,
       title: "Building the new Kahani Health website",
       description: "Extending my fall internship with Kahani to build the new website",
-      progress: 50
+      progress: 80
     },
     {
       icon: Brain,
@@ -28,25 +28,24 @@ const Now = () => {
       description: "Passed the Google Gen AI Leader Certification exam today!",
       progress: 100
     },
-    {
-      icon: Briefcase,
-      title: "PM/SWE Internship Search",
-      description: "Actively interviewing for Summer 2026 Product Management or Software Engineering internships to bridge technical and user-focused work",
-      progress: 60
-    },
-    // {
-    //   icon: Target,
-    //   title: "Open Source Contributions",
-    //   description: "Contributing to React ecosystem and building developer tools for the community",
-    //   progress: 30
-    // }
+   // {
+      //icon: Briefcase,
+      //title: "PM/SWE Internship Search",
+      //description: "",
+      //progress: 100
+    //},
+     {
+       icon: Target,
+       title: "Reflect on 2025",
+       description: "Celebrate wins and progress made, identify struggles and weak areas, build into 2026",
+       progress: 40
+     }
   ];
 
   const weeklyGoals = [
-    "Pass the Google Generative AI Leader Certification exam",
     "Finish building the new Kahani Health website",
-    "Finish upgrading all my React/Next.js projects to the latest version",
-    "Apply to PM and SWE internship positions for Summer 2026"
+    "Upgrade all my React/Next.js projects to the latest version",
+    "Enjoy the holiday break with my family, bake insane amounts of Christmas cookies"
   ];
 
   return (
@@ -67,7 +66,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: December 12, 2025
+            Last updated: December 17, 2025
           </p>
         </motion.div>
 
@@ -78,7 +77,7 @@ const Now = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="space-y-6"
         >
-          <h2 className="text-2xl font-bold">Current Focuses</h2>
+          <h2 className="text-2xl font-bold">Current Focuses</h2> 
           <div className="grid gap-6">
             {focuses.map((focus, index) => {
               const Icon = focus.icon;
