@@ -5,12 +5,16 @@ export type SkillCategory = {
   
   export const engineeringSkills: SkillCategory[] = [
     {
+      category: "Languages",
+      items: ["Python", "JavaScript", "TypeScript", "Dart"]
+    },
+    {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Flutter", "Vite"]
+      items: ["React", "Next.js", "TypeScript", "TailwindCSS", "Flutter", "Vite"]
     },
     {
       category: "Backend",
-      items: ["Node.js", "FastAPI", "tRPC", "Prisma", "PostgreSQL", "Supabase", "Firebase"]
+      items: ["Node.js", "Express.js", "FastAPI", "tRPC", "REST", "Prisma", "PostgreSQL", "Supabase", "Firebase"]
     },
     {
       category: "AI/ML",
