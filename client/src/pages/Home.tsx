@@ -64,7 +64,7 @@ const Home = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary"
                 >
                   <Sparkles className="h-4 w-4" />
-                  Available for SWE & PM internships for Summer 2026
+                  Available for SWE & PM internships for Fall 2026
                 </motion.div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -142,7 +142,7 @@ const Home = () => {
                   <li>→ Upgrading all my React/Next.js projects to the latest version</li>
                   <li>→ Building the new Kahani Health website</li>
                   <li>→ Earned Google Generative AI Leader Certification</li>
-                  <li>→ Seeking PM or SWE internship role for Summer 2026</li>
+                  <li>→ 2026: incoming SWE at Todd, incoming Mobile App Developer at Itron</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
                   <Link to="/now">
