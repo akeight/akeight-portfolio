@@ -161,11 +161,11 @@ const Contact = () => {
             >
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Currently Available
+                Reach Out for Availability
               </h3>
               <p className="text-sm text-muted-foreground">
-                Seeking SWE and PM internship opportunities for Summer 2025. 
-                Open to freelance projects and open source collaborations.
+                Available for SWE and PM internship opportunities for Fall 2026. 
+                Open to freelance projects and Hackathons.
               </p>
             </motion.div>
           </motion.div>
