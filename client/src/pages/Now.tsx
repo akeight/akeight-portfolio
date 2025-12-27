@@ -8,7 +8,7 @@ const Now = () => {
       icon: Code,
       title: "Building the new Kahani Health website",
       description: "Extending my fall internship with Kahani to build the new website",
-      progress: 80
+      progress: 90
     },
     {
       icon: Brain,
