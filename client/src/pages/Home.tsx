@@ -24,7 +24,7 @@ const Home = () => {
 
   const stats = [
     { label: "Projects Shipped", value: "10+" },
-    { label: "Prototypes Live", value: "3" },
+    { label: "Prototypes Live", value: "4" },
     { label: "CI/CD Pipelines", value: "3" },
   ];
 
@@ -140,8 +140,8 @@ const Home = () => {
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>→ Upgrading all my React/Next.js projects to the latest version</li>
-                  <li>→ Building the new Kahani Health website</li>
-                  <li>→ Earned Google Generative AI Leader Certification</li>
+                  <li>→ Practicing dsa and leetcode</li>
+                  <li>→ Onboarding for Todd and MLT Career Prep</li>
                   <li>→ 2026: incoming SWE at Todd, incoming Mobile App Developer at Itron</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">

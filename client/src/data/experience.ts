@@ -9,21 +9,44 @@ export type Experience = {
   
   export const experience: Experience[] = [
     {
+      id: "todd-swe",
+      role: "Software Engineer Intern",
+      organization: "Todd",
+      period: "January 2026 - Present",
+      highlights: [
+        "Implementing Figma-driven UI for marketing site and client dashboard using modern web technologies and testing and consistent quality for frontend development"
+      ],
+      type: "work"
+    },
+    {
+      id: "mlt-cp",
+      role: "Career Prep Program Fellow",
+      organization: "Management Leaders of Tomorrow (MLT)",
+      period: "January 2026 - Present",
+      highlights: [
+        "Accepted into a selective 18-month professional development program that accelerates the career growth of emerging leaders through structured coaching, mentorship, and targeted skill-building",
+        "Develop business and technical acumen through hands-on technical assessments, case studies, simulations, and project work designed to strengthen analytical, strategic, and leadership capabilities",
+        "Engage with leading partner organizations (e.g., LinkedIn, Bloomberg, and Deloitte) to gain industry exposure and insight into tech-talent pathways"
+      ],
+      type: "work"
+    },
+    {
       id: "kahani-swe",
       role: "Software Engineer Intern",
       organization: "Kahani",
-      period: "September 2025 - Present",
+      period: "September 2025 - January 2026",
       highlights: [
         "Built Flutter/Dart cross-platform mobile app features with GCP Firebase backend",
         "Set up MVVM feature-first folder architecture, improving code reuse and dropping time by 30%",
         "Accelerated onboarding flow; implemented CI/CD pipeline with GitHub Actions to cut PR cycle time",
-        "Authored dev guides that made build reproducible, lowering new-machine setup from 2 hrs to 30 minutes and unblocking 80% teammates", 
+        "Authored dev guides that made build reproducible, lowering new-machine setup from 2 hrs to 30 minutes and unblocking 80% teammates",
+        "Solo developed the new Kahani website based on Figma designs", 
       ],
       type: "work"
     },
     {
       id: "kahani-pm",
-      role: "Product Manager",
+      role: "Product Manager Intern",
       organization: "Kahani",
       period: "October 2025 - December 2025",
       highlights: [

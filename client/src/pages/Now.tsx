@@ -6,9 +6,9 @@ const Now = () => {
   const focuses = [
     {
       icon: Code,
-      title: "Building the new Kahani Health website",
-      description: "Extending my fall internship with Kahani to build the new website",
-      progress: 90
+      title: "Todd Software Engineer Intern",
+      description: "Onboarding for Todd as a Software Engineer Intern",
+      progress: 30
     },
     {
       icon: Brain,
@@ -19,14 +19,14 @@ const Now = () => {
     {
       icon: PartyPopper,
       title: "MLT Career Prep Program",
-      description: "Orientation for MLT CP, for the class of 2028! Will start in January 2026",
-      progress: 0
+      description: "Orientation for MLT CP, for the class of 2028!",
+      progress: 30
     },
     {
-      icon: GraduationCap,
-      title: "Google Generative AI Leader Certification",
-      description: "Passed the Google Gen AI Leader Certification exam today!",
-      progress: 100
+      icon: Code,
+      title: "Itron Internship Prep",
+      description: "Study C# and .NET MAUI",
+      progress: 20
     },
    // {
       //icon: Briefcase,
@@ -34,18 +34,13 @@ const Now = () => {
       //description: "",
       //progress: 100
     //},
-     {
-       icon: Target,
-       title: "Reflect on 2025",
-       description: "Celebrate wins and progress made, identify struggles and weak areas, build into 2026",
-       progress: 40
-     }
   ];
 
   const weeklyGoals = [
-    "Finish building the new Kahani Health website",
-    "Upgrade all my React/Next.js projects to the latest version",
-    "Enjoy the holiday break with my family, bake insane amounts of Christmas cookies"
+    "Onboarding for Todd",
+    "Dive into Storybook and Vitest for testing",
+    "Continue learning C# and .NET MAUI",
+    "Take the DSA practice exam"
   ];
 
   return (
@@ -66,7 +61,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: December 17, 2025
+            Last updated: January 11, 2026
           </p>
         </motion.div>
 

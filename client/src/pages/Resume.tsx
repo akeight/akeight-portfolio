@@ -5,6 +5,8 @@ import { experience } from '../data/experience';
 import { engineeringSkills, productSkills } from '../data/skills';
 import { TechBadge } from '@/components/TechBadge';
 
+const resumePdf = `${import.meta.env.BASE_URL}AllysonKeightley_Resume.pdf`;
+
 const Resume = () => {
   return (
     <div className="min-h-screen py-20">
@@ -25,7 +27,7 @@ const Resume = () => {
             </div>
             <div className="flex flex-col gap-2">
               <Button asChild>
-                <a href="/AllysonKeightleySWEResume.pdf" download>
+                <a href={resumePdf} download>
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume PDF
                 </a>
@@ -47,7 +49,7 @@ const Resume = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="space-y-6"
         >
-          <h2 className="text-2xl font-bold">Experience</h2>
+          <h2 className="text-2xl font-bold">Experience & Professional Development</h2>
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <motion.div
@@ -73,7 +75,7 @@ const Resume = () => {
                   
                   <ul className="space-y-2">
                     {exp.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
+                      <li key={i} className="flex items-baseline gap-2 text-sm">
                         <span className="text-accent mt-1.5">→</span>
                         <span>{highlight}</span>
                       </li>
@@ -143,7 +145,7 @@ const Resume = () => {
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold">Resume PDF</h2>
             <Button variant="outline" size="sm" asChild>
-              <a href="/AllysonKeightleySWEResume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Open in new tab
               </a>
@@ -151,7 +153,7 @@ const Resume = () => {
           </div>
           <div className="relative w-full" style={{ minHeight: '800px' }}>
             <iframe
-              src="/AllysonKeightleySWEResume.pdf#toolbar=1&navpanes=1&scrollbar=1"
+              src={`${resumePdf}#toolbar=1&navpanes=1&scrollbar=1`}
               className="w-full h-full rounded-lg border border-border"
               style={{ minHeight: '800px' }}
               title="Resume PDF Viewer"
