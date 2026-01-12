@@ -47,9 +47,9 @@ export type Project = {
     },
     {
       slug: "kahani-website",
-      title: "Kahani Health Website",
-      tagline: "Figma-driven UI for marketing site using modern web technologies and testing and consistent quality for frontend development",
-      impact: "Solo built the redesigned Kahani Health website from Figma design to production deployment",
+      title: "Kahani Website",
+      tagline: "Professional marketing site for Kahani using modern web technologies and testing and consistent quality for frontend development",
+      impact: "Solo built the redesigned website from Figma design to production deployment during internship",
       stack: ["React", "Vite", "DaisyUI", "Firebase"],
       links: {
         repo: "",
@@ -63,8 +63,8 @@ export type Project = {
           poster: "/kahani-website.png"
         }
       },
-      featured: true,
-      category: ["Web App", "Productivity"]
+      featured: false,
+      category: ["Web App", "Marketing", "Community Tool"]
     },
     {
       slug: "wgu-course-explorer",
