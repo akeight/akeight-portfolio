@@ -1,19 +1,28 @@
-export type Project = {
-    slug: string;
-    title: string;
-    tagline: string;
-    impact: string;
-    stack: string[];
-    links?: {
-      repo?: string;
-      demo?: string;
-      caseStudy?: string;
-    };
-    cover?: string;
-    featured?: boolean;
-    category: string[];
+export type ProjectMedia = {
+  cover?: string;
+  video?: {
+    mp4: string;
+    webm: string;
+    poster: string;
   };
-  
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  tagline: string;
+  impact: string;
+  stack: string[];
+  links?: {
+    repo?: string;
+    demo?: string;
+    caseStudy?: string;
+  };
+  media?: ProjectMedia;
+  featured?: boolean;
+  category: string[];
+};
+
   export const projects: Project[] = [
     {
       slug: "blood-cell-classifier",
@@ -26,9 +35,36 @@ export type Project = {
         demo: "https://ai4all-project.vercel.app/",
         caseStudy: ""
       },
-      cover: "/all-classifier.gif",
+      media: {
+        video: {
+          mp4: "/all-classifier.mp4",
+          webm: "/all-classifier.webm",
+          poster: "/all-classifier.jpg"
+        }
+      },
       featured: true,
       category: ["AI/ML", "Web App"]
+    },
+    {
+      slug: "kahani-website",
+      title: "Kahani Health Website",
+      tagline: "Figma-driven UI for marketing site using modern web technologies and testing and consistent quality for frontend development",
+      impact: "Solo built the redesigned Kahani Health website from Figma design to production deployment",
+      stack: ["React", "Vite", "DaisyUI", "Firebase"],
+      links: {
+        repo: "",
+        demo: "https://www.getkahani.com/",
+        caseStudy: ""
+      },
+      media: {
+        video: {
+          mp4: "",
+          webm: "",
+          poster: "/kahani-website.png"
+        }
+      },
+      featured: true,
+      category: ["Web App", "Productivity"]
     },
     {
       slug: "wgu-course-explorer",
@@ -37,11 +73,17 @@ export type Project = {
       impact: "Courses filterable by difficulty and time commitment",
       stack: ["React", "Vite", "Node.js", "Express", "TailwindCSS", "ShadCN/Radix UI", "React Router", "PostgreSQL", "Railway", "Docker", "Cloud Run", "Vercel"],
       links: {
-        repo: "",
+        repo: "https://github.com/akeight/wgu-cs-course-reviews",
         demo: "https://wgu-cs-course-reviews.vercel.app/",
         caseStudy: ""
       },
-      cover: "/course-explorer.gif",
+      media: {
+        video: {
+          mp4: "/course-explorer.mp4",
+          webm: "/course-explorer.webm",
+          poster: "/course-explorer.jpg"
+        }
+      },
       featured: true,
       category: ["Community Tool", "Web App"],
     },
@@ -56,7 +98,13 @@ export type Project = {
         demo: "",
         caseStudy: ""
       },
-      cover: "/InternshipTracker.gif",
+      media: {
+        video: {
+          mp4: "/InternshipTracker.mp4",
+          webm: "/InternshipTracker.webm",
+          poster: "/InternshipTracker.jpg"
+        }
+      },
       featured: true,
       category: ["Web App", "Productivity"]
     },
@@ -71,7 +119,13 @@ export type Project = {
         demo: "",
         caseStudy: ""
       },
-      cover: "/ai-document-retrieval.gif",
+      media: {
+        video: {
+          mp4: "/ai-document-retrieval.mp4",
+          webm: "/ai-document-retrieval.webm",
+          poster: "/ai-document-retrieval.jpg"
+        }
+      },
       featured: false,
       category: ["AI/ML", "Web App"]
     },
@@ -86,7 +140,13 @@ export type Project = {
         demo: "https://classconnecthub.netlify.app",
         caseStudy: ""
       },
-      cover: "/ClassConnect.gif",
+      media: {
+        video: {
+          mp4: "/ClassConnect.mp4",
+          webm: "/ClassConnect.webm",
+          poster: "/ClassConnect.jpg"
+        }
+      },
       featured: false,
       category: ["Web App", "Community Tool"]
     },
@@ -101,7 +161,13 @@ export type Project = {
         demo: "",
         caseStudy: ""
       },
-      cover: "/spacex-dashboard.gif",
+      media: {
+        video: {
+          mp4: "/spacex-dashboard.mp4",
+          webm: "/spacex-dashboard.webm",
+          poster: "/spacex-dashboard.jpg"
+        }
+      },
       featured: true,
       category: ["Data Visualization", "Web App"]
     },
@@ -113,10 +179,12 @@ export type Project = {
       stack: ["React", "TypeScript", "Vite", "TailwindCSS", "ShadCN/Radix UI", "React Router", "Framer Motion", "Vercel"],
       links: {
         repo: "https://github.com/akeight/akeight-portfolio",
-        demo: "",
+        demo: "https://akeight-portfolio.vercel.app/",
         caseStudy: ""
       },
-      cover: "/portfolio.png",
+      media: {
+        cover: "/portfolio.png"
+      },
       featured: false,
       category: ["Web App", "Portfolio"]
     },

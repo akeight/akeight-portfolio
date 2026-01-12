@@ -24,8 +24,8 @@ const Home = () => {
 
   const stats = [
     { label: "Projects Shipped", value: "10+" },
-    { label: "Prototypes Live", value: "4" },
-    { label: "CI/CD Pipelines", value: "3" },
+    { label: "Prototypes Live", value: "5" },
+    { label: "CI/CD Pipelines", value: "4" },
   ];
 
   const techStack = [
