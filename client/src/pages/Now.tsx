@@ -14,13 +14,13 @@ const Now = () => {
       icon: Brain,
       title: "Data Structures and Algorithms",
       description: "Studying for Data Structures and Algorithms course",
-      progress: 60
+      progress: 70
     },
     {
       icon: PartyPopper,
       title: "MLT Career Prep Program",
       description: "Orientation for MLT CP, for the class of 2028!",
-      progress: 30
+      progress: 70
     },
     {
       icon: Code,
