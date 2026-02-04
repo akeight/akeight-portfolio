@@ -7,25 +7,25 @@ const Now = () => {
     {
       icon: Code,
       title: "Todd Software Engineer Intern",
-      description: "Onboarding for Todd as a Software Engineer Intern",
+      description: "Designing, implementing and shipping for Todd as Lead Frontend Engineer Intern",
       progress: 30
     },
     {
       icon: Brain,
-      title: "Data Structures and Algorithms",
-      description: "Studying for Data Structures and Algorithms course",
-      progress: 70
+      title: "WGU",
+      description: "Studying for Ethics in Technology class",
+      progress: 10
     },
     {
       icon: PartyPopper,
       title: "MLT Career Prep Program",
-      description: "Orientation for MLT CP, for the class of 2028!",
-      progress: 70
+      description: "Started MLT CP, for the class of 2028!",
+      progress: 10
     },
     {
       icon: Code,
-      title: "Itron Internship Prep",
-      description: "Study C# and .NET MAUI",
+      title: "C#",
+      description: "Learning C# for upcoming spring/summer internship.",
       progress: 20
     },
    // {
@@ -37,10 +37,8 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Onboarding for Todd",
-    "Dive into Storybook and Vitest for testing",
-    "Continue learning C# and .NET MAUI",
-    "Take the DSA practice exam"
+    "Goals on pause. Currently in hospital for family emergency.",
+    "Just making it work."
   ];
 
   return (
@@ -61,7 +59,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: January 11, 2026
+            Last updated: February 4, 2026
           </p>
         </motion.div>
 
