@@ -6,7 +6,7 @@ const Now = () => {
   const focuses = [
     {
       icon: Code,
-      title: "Todd Software Engineer Intern",
+      title: "Todd Agriscience",
       description: "Designing, implementing and shipping for Todd as Lead Frontend Engineer Intern",
       progress: 30
     },

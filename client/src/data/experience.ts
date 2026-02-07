@@ -9,12 +9,23 @@ export type Experience = {
   
   export const experience: Experience[] = [
     {
+      id: "itron",
+      role: "Incoming Mobile Application Developer Intern",
+      organization: "Itron",
+      period: "Incoming: Spring 2026 - Summer 2026",
+      highlights: [
+        "Supporting the Temetra mobile application team in feature development, unit testing, debugging, and implementation, using C# and .NET MAUI",
+      ],
+      type: "work"
+    },
+    {
       id: "todd-swe",
-      role: "Software Engineer Intern",
+      role: "Lead Frontend Engineer Intern",
       organization: "Todd",
       period: "January 2026 - Present",
       highlights: [
-        "Implementing Figma-driven UI for marketing site and client dashboard using modern web technologies and testing and consistent quality for frontend development"
+        "Implementing Figma-driven UI for marketing site and client dashboard using modern web technologies and testing and consistent quality for frontend development",
+        "Leading and mentoring a small team of company externship participants in weekly development projects and foundations",
       ],
       type: "work"
     },
