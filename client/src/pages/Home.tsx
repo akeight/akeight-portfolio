@@ -139,7 +139,7 @@ const Home = () => {
                   Now
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Interning at Todd Agriscience as Lead Frontend Engineer</li>
+                  <li>→ Interning at Todd Agriscience as Lead Frontend Engineer and Extern Program Team Lead</li>
                   <li>→ WGU classes</li>
                   <li>→ Starting Girls Who Code/Udacity Product Manager Scholarship</li>
                   <li>→ Spring/Summer 2026: incoming Mobile App Developer at Itron</li>
