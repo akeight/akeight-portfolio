@@ -11,16 +11,22 @@ const Now = () => {
       progress: 30
     },
     {
-      icon: Brain,
-      title: "WGU",
-      description: "Studying for Ethics in Technology class",
+      icon: Code,
+      title: "Todd Externship",
+      description: "Acting as team lead for the Todd Externship program Marketing Site Team, and mentoring externship participants in weekly development projects and foundations",
       progress: 10
     },
     {
+      icon: Brain,
+      title: "WGU",
+      description: "Studying for Ethics in Technology class",
+      progress: 50
+    },
+    {
       icon: PartyPopper,
-      title: "MLT Career Prep Program",
-      description: "Started MLT CP, for the class of 2028!",
-      progress: 10
+      title: "Girls Who Code/Udacity Product Manager Scholarship",
+      description: "Week one of the program!",
+      progress: 25
     },
     {
       icon: Code,
@@ -37,8 +43,10 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Goals on pause. Currently in hospital for family emergency.",
-    "Just making it work."
+    "Continue to work on the Todd Marketing site.",
+    "Kickoff the first Todd Externship program cohort, meet team.",
+    "Complete week 1 of the Girls Who Code/Udacity Product Manager Scholarship.",
+    "Finish WGU Ethics in Technology class.",
   ];
 
   return (

@@ -141,7 +141,7 @@ const Home = () => {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>→ Interning at Todd Agriscience as Lead Frontend Engineer</li>
                   <li>→ WGU classes</li>
-                  <li>→ Starting MLT Career Prep</li>
+                  <li>→ Starting Girls Who Code/Udacity Product Manager Scholarship</li>
                   <li>→ Spring/Summer 2026: incoming Mobile App Developer at Itron</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
