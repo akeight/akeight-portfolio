@@ -5,7 +5,7 @@ import { experience } from '../data/experience';
 import { engineeringSkills, productSkills } from '../data/skills';
 import { TechBadge } from '@/components/TechBadge';
 
-const resumePdf = `${import.meta.env.BASE_URL}AllysonKeightley_Resume.pdf`;
+const resumePdf = `${import.meta.env.BASE_URL}AllysonKeightleyResume_26.pdf`;
 
 const Resume = () => {
   return (
@@ -22,7 +22,7 @@ const Resume = () => {
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">Resume</h1>
               <p className="text-lg text-muted-foreground">
-                Software Engineer & Product Manager | Full-stack development & user-centered product strategy
+                Software Engineer & Product Builder | Full-stack development & user-centered product strategy
               </p>
             </div>
             <div className="flex flex-col gap-2">

@@ -5,34 +5,22 @@ import { Progress } from '@/components/ui/progress';
 const Now = () => {
   const focuses = [
     {
-      icon: Code,
-      title: "Todd Agriscience",
-      description: "Designing, implementing and shipping for Todd as Lead Frontend Engineer Intern",
-      progress: 30
-    },
-    {
-      icon: Code,
-      title: "Todd Externship",
-      description: "Acting as team lead for the Todd Externship program Marketing Site Team, and mentoring externship participants in weekly development projects and foundations",
-      progress: 10
+      icon: Briefcase,
+      title: "Itron",
+      description: "Interning on the Temetra team for mobile app development using C# and .NET MAUI",
+      progress: 5
     },
     {
       icon: Brain,
       title: "WGU",
-      description: "Studying for Ethics in Technology class",
+      description: "Studying for my Bachelor's in Software Engineering",
       progress: 50
     },
     {
       icon: PartyPopper,
-      title: "Girls Who Code/Udacity Product Manager Scholarship",
-      description: "Week one of the program!",
-      progress: 25
-    },
-    {
-      icon: Code,
-      title: "C#",
-      description: "Learning C# for upcoming spring/summer internship.",
-      progress: 20
+      title: "Break Through Tech",
+      description: "AI Program with partnership with Cornell Tech",
+      progress: 10
     },
    // {
       //icon: Briefcase,
@@ -43,10 +31,10 @@ const Now = () => {
   ];
 
   const weeklyGoals = [
-    "Continue to work on the Todd Marketing site.",
-    "Kickoff the first Todd Externship program cohort, meet team.",
-    "Complete week 1 of the Girls Who Code/Udacity Product Manager Scholarship.",
-    "Finish WGU Ethics in Technology class.",
+    "Continue to work on software with Itron.",
+    "Continue to act as a frontend advisor for Todd.",
+    "Complete official kickoff of the Break Through Tech program.",
+    "Finish WGU UI/UX classes.",
   ];
 
   return (
@@ -67,7 +55,7 @@ const Now = () => {
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
           <p className="text-sm text-muted-foreground">
-            Last updated: February 4, 2026
+            Last updated: May 16, 2026
           </p>
         </motion.div>
 

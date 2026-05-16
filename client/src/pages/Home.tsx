@@ -13,8 +13,8 @@ const Home = () => {
 
   const heroContent = {
     SWE: {
-      headline: "Software Engineer & Product Manager in training",
-      subtitle: "Hey, I'm Allyson! I'm a curious, self-starter fueled by coffee, growth, and creating impactful products.",
+      headline: "Software Engineer & Product Builder",
+      subtitle: "Hey, I'm Allyson! I'm a curious, self-starter fueled by coffee. With 800+ contributions on GitHub this year, I learn, build, and ship for fun.",
     },
     PM: {
       headline: "Leading student squads to ship lean MVPs",
@@ -29,8 +29,8 @@ const Home = () => {
   ];
 
   const techStack = [
-    "JavaScript/TypeScript", "Python", "Dart", "React", "Next.js", "FastAPI", 
-    "PostgreSQL", "Express", "Render", "Prisma","Flutter", "Tailwind", "Supabase", "Firebase"
+    "JavaScript/TypeScript", "Python", "Dart", "React", "Next.js", "FastAPI", "C#", ".NET MAUI",
+    "PostgreSQL", "Express", "Render", "Flutter", "Tailwind", "Supabase", "GCP", "Vercel"
   ];
 
   return (
@@ -64,7 +64,7 @@ const Home = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary"
                 >
                   <Sparkles className="h-4 w-4" />
-                  Available for SWE & PM internships for Fall 2026
+                  Available for internships for Fall 2026
                 </motion.div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -139,10 +139,9 @@ const Home = () => {
                   Now
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Interning at Todd Agriscience as Lead Frontend Engineer and Extern Program Team Lead</li>
+                  <li>→ Interning at Itron Inc. for software on the Temetra mobile team</li>
                   <li>→ WGU classes</li>
-                  <li>→ Starting Girls Who Code/Udacity Product Manager Scholarship</li>
-                  <li>→ Spring/Summer 2026: incoming Mobile App Developer at Itron</li>
+                  <li>→ AI Program with Break Through Tech</li>
                 </ul>
                 <Button variant="ghost" size="sm" asChild className="mt-2">
                   <Link to="/now">

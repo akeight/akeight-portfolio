@@ -10,9 +10,9 @@ export type Experience = {
   export const experience: Experience[] = [
     {
       id: "itron",
-      role: "Incoming Mobile Application Developer Intern",
+      role: "Mobile Application Developer Intern",
       organization: "Itron",
-      period: "Incoming: Spring 2026 - Summer 2026",
+      period: "April 2026 - Present",
       highlights: [
         "Supporting the Temetra mobile application team in feature development, unit testing, debugging, and implementation, using C# and .NET MAUI",
       ],
@@ -22,12 +22,22 @@ export type Experience = {
       id: "todd-swe",
       role: "Lead Frontend Engineer Intern",
       organization: "Todd",
-      period: "January 2026 - Present",
+      period: "January 2026 - April 2026",
       highlights: [
         "Implementing Figma-driven UI for marketing site and client dashboard using modern web technologies and testing and consistent quality for frontend development",
         "Leading and mentoring a small team of company externship participants in weekly development projects and foundations",
       ],
       type: "work"
+    },
+    {
+      id: "break-through-tech",
+      role: "AI Fellow",
+      organization: "Break Through Tech",
+      period: "May 2026 - Present",
+      highlights: [
+        "Year-long hands-on AI/ML training with industry experts and Cornell Tech",
+      ],
+      type: "education"
     },
     {
       id: "mlt-cp",
@@ -70,7 +80,7 @@ export type Experience = {
       id: "ai-ml-projects",
       role: "Ignite Accelerator Fellow",
       organization: "AI4ALL",
-      period: "September 2025 - Present",
+      period: "September 2025 - March 2026",
       highlights: [
         "20 weeks of hands-on AI/ML training with industry experts",
         "Built ResNet50 blood cell classifier with Grad-CAM visualization",
