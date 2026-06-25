@@ -7,15 +7,23 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.5rem",
       screens: {
-        "2xl": "1100px",
+        "2xl": "1320px",
       },
     },
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+      },
+      fontSize: {
+        "display-sm": ["clamp(2.5rem, 6vw, 4rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
+        "display": ["clamp(3rem, 9vw, 7rem)", { lineHeight: "0.92", letterSpacing: "-0.035em" }],
+        "display-lg": ["clamp(3.5rem, 13vw, 11rem)", { lineHeight: "0.88", letterSpacing: "-0.04em" }],
+      },
+      letterSpacing: {
+        tightest: "-0.04em",
       },
       colors: {
         border: "hsl(var(--border))",

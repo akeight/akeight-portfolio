@@ -1,154 +1,109 @@
-import { motion } from 'framer-motion';
-import { BookOpen, Code, Briefcase, Target, PartyPopper, GraduationCap, Brain } from 'lucide-react';
+import { Briefcase, PartyPopper, Brain } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
+import { GiantHeading } from '../components/GiantHeading';
+import { ScrollReveal } from '../components/ScrollReveal';
 
 const Now = () => {
   const focuses = [
     {
       icon: Briefcase,
-      title: "Itron",
-      description: "Interning on the Temetra team for mobile app development using C# and .NET MAUI",
-      progress: 5
+      title: 'Itron',
+      description:
+        'Interning on the Temetra team for mobile app development using C# and .NET MAUI',
+      progress: 50,
     },
     {
       icon: Brain,
-      title: "WGU",
+      title: 'WGU',
       description: "Studying for my Bachelor's in Software Engineering",
-      progress: 50
+      progress: 50,
     },
     {
       icon: PartyPopper,
-      title: "Break Through Tech",
-      description: "AI Program with partnership with Cornell Tech",
-      progress: 10
+      title: 'Break Through Tech Machine Learning Foundations',
+      description: 'AI Program in partnership with Cornell Tech',
+      progress: 50,
     },
-   // {
-      //icon: Briefcase,
-      //title: "PM/SWE Internship Search",
-      //description: "",
-      //progress: 100
-    //},
   ];
 
   const weeklyGoals = [
-    "Continue to work on software with Itron.",
-    "Continue to act as a frontend advisor for Todd.",
-    "Complete official kickoff of the Break Through Tech program.",
-    "Finish WGU UI/UX classes.",
+    'Continue to work on software with Itron.',
+    'Continue to act as a frontend advisor for Todd.',
+    'Weekly labs and coursework with the Break Through Tech program.',
+    'Worked throught the LinkedIn or LeftOut Tech Interview prep course.',
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container max-w-4xl space-y-12">
+    <div className="py-24 md:py-32">
+      <div className="container max-w-4xl space-y-20">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-4"
-        >
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-accent animate-pulse" />
-            <h1 className="text-4xl lg:text-5xl font-bold">Now</h1>
-          </div>
-          <p className="text-lg text-muted-foreground">
+        <header className="space-y-5">
+          <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+            Now — updated May 16, 2026
+          </span>
+          <GiantHeading as="h1" text="What I'm up to." className="max-w-[12ch]" />
+          <p className="max-w-xl text-lg text-muted-foreground">
             What I'm currently focused on building, learning, and exploring. Updated weekly.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Last updated: May 16, 2026
-          </p>
-        </motion.div>
+        </header>
 
-        {/* Current Focuses */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="space-y-6"
-        >
-          <h2 className="text-2xl font-bold">Current Focuses</h2> 
-          <div className="grid gap-6">
+        {/* Current focuses */}
+        <section className="space-y-8">
+          <h2 className="border-b border-foreground/15 pb-4 text-3xl font-semibold tracking-tight">
+            Current focuses
+          </h2>
+          <div className="grid gap-px overflow-hidden rounded-xl border border-foreground/10 bg-foreground/10 sm:grid-cols-1">
             {focuses.map((focus, index) => {
               const Icon = focus.icon;
               return (
-                <motion.div
+                <ScrollReveal
                   key={focus.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  className="bg-card border border-border rounded-xl p-6 space-y-4"
+                  delay={index * 0.06}
+                  className="space-y-4 bg-surface-elevated p-6 md:p-8"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="text-2xl"><Icon className="h-5 w-5 text-primary flex-shrink-0" /></div>
-                    <div className="flex-1 space-y-2">
-                      <div className="flex items-start justify-between gap-4">
-                        <h3 className="text-lg font-semibold">{focus.title}</h3>
-                        <div className="text-2xl"><Icon className="h-5 w-5 text-primary flex-shrink-0" /></div>
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-foreground/15">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="flex-1 space-y-3">
+                      <div className="flex items-baseline justify-between gap-4">
+                        <h3 className="text-lg font-semibold tracking-tight">{focus.title}</h3>
+                        <span className="font-mono text-xs text-muted-foreground">
+                          {focus.progress}%
+                        </span>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        {focus.description}
-                      </p>
-                      <div className="space-y-2">
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span>Progress</span>
-                          <span>{focus.progress}%</span>
-                        </div>
-                        <Progress value={focus.progress} className="h-2" />
-                      </div>
+                      <p className="text-sm text-muted-foreground">{focus.description}</p>
+                      <Progress value={focus.progress} className="h-1.5" />
                     </div>
                   </div>
-                </motion.div>
+                </ScrollReveal>
               );
             })}
           </div>
-        </motion.section>
+        </section>
 
-        {/* This Week's Goals */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="space-y-6"
-        >
-          <h2 className="text-2xl font-bold">This Week's Goals</h2>
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-6">
-            <ul className="space-y-3">
-              {weeklyGoals.map((goal, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                  <span>{goal}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </motion.section>
-
-        {/* Inspiration */}
-        {/* <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-card border border-border rounded-xl p-6 space-y-4"
-        >
-          <h2 className="text-xl font-semibold">Currently Inspired By</h2>
-          <div className="space-y-3 text-sm text-muted-foreground">
-            <p>
-              📖 <span className="text-foreground">The Mom Test</span> by Rob Fitzpatrick — Better customer interviews
-            </p>
-            <p>
-              🎧 <span className="text-foreground">Lenny's Podcast</span> — Product strategy and career growth
-            </p>
-            <p>
-              💡 <span className="text-foreground">Linear's Product Principles</span> — Thoughtful product design
-            </p>
-          </div>
-        </motion.section> */}
+        {/* Weekly goals */}
+        <section className="space-y-8">
+          <h2 className="border-b border-foreground/15 pb-4 text-3xl font-semibold tracking-tight">
+            This week's goals
+          </h2>
+          <ul className="space-y-1">
+            {weeklyGoals.map((goal, index) => (
+              <ScrollReveal
+                as="li"
+                key={index}
+                delay={index * 0.05}
+                className="flex items-center gap-4 border-b border-foreground/10 py-4"
+              >
+                <span className="font-mono text-sm text-accent">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span>{goal}</span>
+              </ScrollReveal>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );
