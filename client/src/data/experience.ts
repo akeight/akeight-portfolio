@@ -19,7 +19,7 @@ export type Experience = {
         "Supporting the Temetra mobile application team in feature development, unit testing, debugging, and implementation, using C# and .NET MAUI",
       ],
       type: "work",
-      tech: ["C#", ".NET MAUI", "Azure DevOps", ]
+      tech: ["C#", ".NET MAUI", "Azure DevOps", "Moq"]
     },
     {
       id: "todd-swe",
@@ -41,7 +41,8 @@ export type Experience = {
       highlights: [
         "Year-long hands-on AI/ML training with industry experts and Cornell Tech",
       ],
-      type: "education"
+      type: "education",
+      tech: ["Python", "NumPy", "Pandas", "SciKit Learn"]
     },
     {
       id: "mlt-cp",
