@@ -75,7 +75,7 @@ const Contact = () => {
       console.error('Failed to send message:', error);
       toast.error('Error Sending Message', {
         description:
-          'Failed to send message. Please try again or email me directly at allysonkeightley@outlook.com',
+          'Failed to send message. Please try again or email me directly at allysondunning@gmail.com',
       });
     } finally {
       setIsSubmitting(false);
@@ -85,7 +85,7 @@ const Contact = () => {
   const socialLinks = [
     // { name: 'Email', href: 'mailto:allysonkeightley@outlook.com', label: 'allysonkeightley@outlook.com' },
     { name: 'GitHub', href: 'https://github.com/akeight', label: 'github.com/akeight' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', label: 'linkedin.com/in/allysonkeightley' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', label: 'linkedin.com/in/allyson-keightley' },
   ];
 
   return (
