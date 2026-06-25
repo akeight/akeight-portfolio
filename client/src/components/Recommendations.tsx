@@ -41,7 +41,7 @@ export const Recommendations = () => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="container py-20 md:py-28">
+      <div className="container py-20 md:py-28 pb-52 md:pb-64">
         {/* Top row */}
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="space-y-3">
