@@ -13,7 +13,7 @@ export const ExperienceAccordion = () => {
   if (items.length === 0) return null;
 
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-24 md:py-32 pb-52 md:pb-64">
       <div className="container space-y-12 md:space-y-16">
         {/* Top row */}
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
@@ -49,8 +49,8 @@ export const ExperienceAccordion = () => {
                         {i + 1}
                       </span>
                       <span className="flex-1 text-lg font-medium tracking-tight md:text-xl">
-                        {exp.organization}
-                        <span className="text-muted-foreground"> — {exp.role}</span>
+                        {exp.organization}< br/>
+                        <span className="text-muted-foreground text-base">{exp.role}</span>
                       </span>
                       <motion.span
                         animate={{ rotate: open ? 45 : 0 }}

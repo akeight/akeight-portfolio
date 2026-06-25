@@ -39,12 +39,13 @@ export const Header = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <header
+    <>
+      <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-colors duration-300',
+        'sticky top-0 z-50 w-full border-b border-foreground/10 to-surface-elevated from-surface shadow-sm transition-colors duration-300',
         scrolled
-          ? 'border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60'
-          : 'border-b border-transparent bg-transparent'
+          ? 'bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60'
+          : 'bg-background'
       )}
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
@@ -92,8 +93,10 @@ export const Header = () => {
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+      </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — rendered outside the header so the header's
+          backdrop-filter doesn't become the fixed containing block. */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -131,6 +134,6 @@ export const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 };
