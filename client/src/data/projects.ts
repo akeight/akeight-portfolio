@@ -183,7 +183,7 @@ export type Project = {
         caseStudy: ""
       },
       media: {
-        cover: "/portfolio.png"
+        cover: "/og-image.png"
       },
       featured: false,
       category: ["Web App", "Portfolio"]
