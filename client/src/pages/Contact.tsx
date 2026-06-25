@@ -83,7 +83,7 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { name: 'Email', href: 'mailto:allysonkeightley@outlook.com', label: 'allysonkeightley@outlook.com' },
+    // { name: 'Email', href: 'mailto:allysonkeightley@outlook.com', label: 'allysonkeightley@outlook.com' },
     { name: 'GitHub', href: 'https://github.com/akeight', label: 'github.com/akeight' },
     { name: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', label: 'linkedin.com/in/allysonkeightley' },
   ];

@@ -80,7 +80,8 @@ export type Experience = {
         "Owned day-to-day product execution across design and engineering to ship learning-driven iterations",
         "Lead cross-functional ceremonies and debriefs; track milestones, owners, deliverables, and timelines",
       ],
-      type: "work"
+      type: "work",
+      tech: ["Figma", "Slack", "Zoom", "Notion, Google Workspace"]
     },
     {
       id: "ai-ml-projects",
@@ -122,7 +123,7 @@ export type Experience = {
     }
   ];
 
-  /** Roles with a defined tech stack — used by the Home experience accordion. */
+  /** Work roles with a defined tech stack — used by the Home experience accordion. */
   export const featuredExperience = experience.filter(
-    (exp) => exp.tech && exp.tech.length > 0
+    (exp) => exp.type === 'work' && exp.tech && exp.tech.length > 0
   );

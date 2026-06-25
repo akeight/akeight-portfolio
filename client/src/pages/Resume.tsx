@@ -24,7 +24,7 @@ const Resume = () => {
           <a
             href={resumePdf}
             download
-            className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+            className="mx-auto group inline-flex shrink-0 items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
           >
             <Download className="h-4 w-4" />
             Download PDF
