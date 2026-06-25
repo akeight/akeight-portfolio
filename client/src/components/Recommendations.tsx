@@ -75,7 +75,7 @@ export const Recommendations = () => {
                   &ldquo;{current.quote}&rdquo;
                 </blockquote>
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-accent text-sm font-semibold text-accent-foreground">
                     {current.avatar ? (
                       <img
@@ -91,7 +91,7 @@ export const Recommendations = () => {
                     <div className="font-medium">{current.name}</div>
                     <div className="text-sm text-background/60">{current.role}</div>
                   </div>
-                </div>
+                </div> */}
               </motion.div>
             </AnimatePresence>
           </div>

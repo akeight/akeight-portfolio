@@ -71,7 +71,7 @@ const Home = () => {
               variants={fadeInUp}
               className="max-w-xl text-lg text-muted-foreground"
             >
-              Hey, I'm Allyson — a curious, coffee-fueled self-starter. With 800+ GitHub
+              Hey, I'm Allyson! A curious, coffee-fueled self-starter with 800+ GitHub
               contributions this year, I learn, build, and ship beautiful full-stack web and AI tools... <span className="text-accent italic">for the plot.</span>
             </motion.p>
 
