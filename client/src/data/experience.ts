@@ -5,6 +5,8 @@ export type Experience = {
     period: string;
     highlights: string[];
     type: 'work' | 'project' | 'education';
+    /** Tools/tech used in this role (powers the Home experience accordion). */
+    tech?: string[];
   };
   
   export const experience: Experience[] = [
@@ -16,7 +18,8 @@ export type Experience = {
       highlights: [
         "Supporting the Temetra mobile application team in feature development, unit testing, debugging, and implementation, using C# and .NET MAUI",
       ],
-      type: "work"
+      type: "work",
+      tech: ["C#", ".NET MAUI", "Azure DevOps", ]
     },
     {
       id: "todd-swe",
@@ -27,7 +30,8 @@ export type Experience = {
         "Implementing Figma-driven UI for marketing site and client dashboard using modern web technologies and testing and consistent quality for frontend development",
         "Leading and mentoring a small team of company externship participants in weekly development projects and foundations",
       ],
-      type: "work"
+      type: "work",
+      tech: ["React", "TypeScript", "TailwindCSS", "Figma", "Framer Motion", "Sanity", "CI/CD", "GitHub Actions", "GitHub"]
     },
     {
       id: "break-through-tech",
@@ -63,7 +67,8 @@ export type Experience = {
         "Authored dev guides that made build reproducible, lowering new-machine setup from 2 hrs to 30 minutes and unblocking 80% teammates",
         "Solo developed the new Kahani website based on Figma designs", 
       ],
-      type: "work"
+      type: "work",
+      tech: ["Flutter", "Dart", "Firebase", "GCP", "GitHub Actions", "CI/CD"]
     },
     {
       id: "kahani-pm",
@@ -86,7 +91,8 @@ export type Experience = {
         "Built ResNet50 blood cell classifier with Grad-CAM visualization",
         "Deployed FastAPI inference endpoint with React frontend for real-time classification"
       ],
-      type: "education"
+      type: "education",
+      tech: ["TensorFlow", "Keras", "FastAPI", "React", "Grad-CAM"]
     },
     {
       id: "aws-ai-engineer-nanodegree",
@@ -99,7 +105,8 @@ export type Experience = {
         "Developed end-to-end ML pipelines with a focus on production readiness and MLOps best practices",
         "Deep focus on ethical AI, responsible model deployment, and safety guardrails for real-world applications"
       ],
-      type: "education"
+      type: "education",
+      tech: ["Python", "AWS Bedrock", "S3", "Aurora PostgreSQL", "Streamlit"]
     },
     {
       id: "wgu-education",
@@ -113,3 +120,8 @@ export type Experience = {
       type: "education"
     }
   ];
+
+  /** Roles with a defined tech stack — used by the Home experience accordion. */
+  export const featuredExperience = experience.filter(
+    (exp) => exp.tech && exp.tech.length > 0
+  );

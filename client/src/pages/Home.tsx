@@ -1,197 +1,214 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sparkles, Download, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ProjectCard } from '../components/ProjectsCard';
-import { TechBadge } from '../components/TechBadge';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { getFeaturedProjects } from '../data/projects';
-import heroBg from '../assets/hero-bg.jpg';
+import { FeaturedProject } from '../components/FeaturedProject';
+import { Recommendations } from '../components/Recommendations';
+import { ExperienceAccordion } from '../components/ExperienceAccordion';
+import { GiantHeading } from '../components/GiantHeading';
+import { ScrollReveal } from '../components/ScrollReveal';
+import { TextRotate } from '../components/fancy/text-rotate';
+import { VerticalCutReveal } from '../components/fancy/vertical-cut-reveal';
+import { SimpleMarquee } from '../components/fancy/simple-marquee';
+import { StackingCards, StackingCard } from '../components/fancy/stacking-cards';
+import { StickyReveal } from '../components/fancy/sticky-reveal';
+import { Floating } from '../components/fancy/parallax-floating';
+import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
+
+const stats = [
+  { label: 'Projects shipped', value: '10+' },
+  { label: 'Prototypes live', value: '5' },
+  { label: 'CI/CD pipelines', value: '4' },
+];
+
+const techStack = [
+  'TypeScript', 'Python', 'React', 'Next.js', 'FastAPI', 'C#', '.NET MAUI',
+  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'GCP', 'Vercel', 'Docker',
+];
 
 const Home = () => {
-  const [orderedProjects, setOrderedProjects] = useState(getFeaturedProjects());
-
-  const heroContent = {
-    SWE: {
-      headline: "Software Engineer & Product Builder",
-      subtitle: "Hey, I'm Allyson! I'm a curious, self-starter fueled by coffee. With 800+ contributions on GitHub this year, I learn, build, and ship for fun.",
-    },
-    PM: {
-      headline: "Leading student squads to ship lean MVPs",
-      subtitle: "I bridge engineering and product with clear metrics, customer discovery, and rapid iteration—delivering outcomes that matter.",
-    }
-  };
-
-  const stats = [
-    { label: "Projects Shipped", value: "10+" },
-    { label: "Prototypes Live", value: "5" },
-    { label: "CI/CD Pipelines", value: "4" },
-  ];
-
-  const techStack = [
-    "JavaScript/TypeScript", "Python", "Dart", "React", "Next.js", "FastAPI", "C#", ".NET MAUI",
-    "PostgreSQL", "Express", "Render", "Flutter", "Tailwind", "Supabase", "GCP", "Vercel"
-  ];
+  const featured = getFeaturedProjects();
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
+    <div>
+      {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 -z-10">
-          <img 
-            src={heroBg} 
-            alt="" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background to-background" />
+        {/* Floating decorative accents */}
+        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+          <Floating depth={2.6} amplitude={28} className="absolute right-[8%] top-[18%]">
+            <div className="h-24 w-24 rounded-full border border-foreground/15 md:h-40 md:w-40" />
+          </Floating>
+          <Floating depth={4} amplitude={40} className="absolute right-[22%] top-[55%]">
+            <div className="h-4 w-4 rounded-full bg-accent" />
+          </Floating>
+          <Floating depth={1.8} amplitude={24} className="absolute left-[4%] bottom-[12%]">
+            <div className="h-16 w-16 rotate-12 border border-foreground/10 md:h-24 md:w-24" />
+          </Floating>
         </div>
 
-        <div className="container py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-8"
+        <div className="container flex min-h-[88vh] flex-col justify-center py-24">
+          <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
+            <motion.span variants={fadeInUp} className="eyebrow">
+              Software Engineer · Product Builder
+            </motion.span>
+
+            <h1 className="text-display font-semibold tracking-tightest leading-[1.04] max-w-[15ch]">
+              <span className="block">
+                <VerticalCutReveal text="Crafting" />
+              </span>
+              <span className="block text-accent">
+                <TextRotate
+                  texts={['human-centered', 'beautiful', 'creative', 'practical AI']}
+                  className="leading-[1.1]"
+                />
+              </span>
+              <span className="block">
+                <VerticalCutReveal text="digital products." staggerDuration={0.04} />
+              </span>
+            </h1>
+
+            <motion.p
+              variants={fadeInUp}
+              className="max-w-xl text-lg text-muted-foreground"
             >
-              <div className="space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary"
-                >
-                  <Sparkles className="h-4 w-4" />
-                  Available for internships for Fall 2026
-                </motion.div>
+              Hey, I'm Allyson — a curious, coffee-fueled self-starter. With 800+ GitHub
+              contributions this year, I learn, build, and ship beautiful full-stack web and AI tools... <span className="text-accent italic">for the plot.</span>
+            </motion.p>
 
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  {heroContent.SWE.headline}
-                </h1>
-
-                <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl">
-                  {heroContent.SWE.subtitle}
-                </p>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/projects">
-                    Explore Projects
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/resume">
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Resume
-                  </Link>
-                </Button>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  >
-                    <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
+            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">
+              <Link
+                to="/projects"
+                className="group inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+              >
+                View selected work
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+              <Link
+                to="/resume"
+                className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-7 py-3.5 text-sm font-medium transition-colors hover:border-foreground/50"
+              >
+                Resume
+              </Link>
             </motion.div>
 
-            {/* Right: Tech Stack & Now */}
+            {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-6"
+              variants={fadeInUp}
+              className="grid max-w-xl grid-cols-3 gap-8 border-t border-foreground/15 pt-8"
             >
-              {/* Tech Stack */}
-              <div className="bg-card border border-border rounded-2xl p-6 space-y-4">
-                <h3 className="text-lg font-semibold">Tech Stack</h3>
-                <div className="flex flex-wrap gap-2">
-                  {techStack.map((tech, index) => (
-                    <motion.div
-                      key={tech}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                    >
-                      <TechBadge tech={tech} />
-                    </motion.div>
-                  ))}
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-3xl font-semibold tracking-tight md:text-4xl">{stat.value}</div>
+                  <div className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.15em] text-muted-foreground">
+                    {stat.label}
+                  </div>
                 </div>
-              </div>
-
-              {/* Now */}
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6 space-y-3">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  Now
-                </h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>→ Interning at Itron Inc. for software on the Temetra mobile team</li>
-                  <li>→ WGU classes</li>
-                  <li>→ AI Program with Break Through Tech</li>
-                </ul>
-                <Button variant="ghost" size="sm" asChild className="mt-2">
-                  <Link to="/now">
-                    See full update →
-                  </Link>
-                </Button>
-              </div>
+              ))}
             </motion.div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="mt-16 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
+          >
+            <ArrowDown className="h-4 w-4 animate-bounce" />
+            Scroll
+          </motion.div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="container py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="space-y-8"
-        >
-          <div className="flex items-end justify-between">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Featured Projects</h2>
-              <p className="text-muted-foreground">
-                Full-stack applications with focus on users, performance, and architecture
-              </p>
-            </div>
-            <Button variant="ghost" asChild className="hidden lg:flex">
-              <Link to="/projects">
-                View All →
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {orderedProjects.map((project, index) => (
-              <ProjectCard key={project.slug} project={project} index={index} />
-            ))}
-          </div>
-
-          <div className="flex justify-center lg:hidden">
-            <Button asChild>
-              <Link to="/projects">
-                View All Projects →
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
+      {/* Skills marquee */}
+      <section className="border-y border-foreground/15 py-6">
+        <SimpleMarquee speed={50} pauseOnHover>
+          {techStack.map((tech) => (
+            <span
+              key={tech}
+              className="flex items-center gap-10 px-8 font-mono text-base font-bold uppercase tracking-[0.15em] text-muted-foreground"
+            >
+              {tech}
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            </span>
+          ))}
+        </SimpleMarquee>
       </section>
+
+      {/* Scroll-over reveal — each panel pins once read, then the next rolls up
+          over it (same mechanic as the sticky footer). */}
+      {/* Experience (base layer) */}
+      <StickyReveal className="z-0 bg-background">
+        <ExperienceAccordion />
+      </StickyReveal>
+
+      {/* Recommendations rolls up over Experience */}
+      <StickyReveal className="z-10 overflow-hidden rounded-t-[2rem] md:rounded-t-[3rem]">
+        <Recommendations />
+      </StickyReveal>
+
+      {/* Everything after rolls up over Recommendations */}
+      <div className="relative z-20 rounded-t-[2rem] bg-background md:rounded-t-[3rem]">
+      {/* Selected work — stacking cards */}
+      <section className="container py-24 md:py-32">
+        <ScrollReveal className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <div className="space-y-4">
+            <span className="eyebrow">Selected work</span>
+            <GiantHeading text="Things I've built." className="max-w-[10ch]" />
+          </div>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            View all projects
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </ScrollReveal>
+
+        <StackingCards className="space-y-8">
+          {featured.map((project, index) => (
+            <StackingCard key={project.slug} index={index} total={featured.length}>
+              <FeaturedProject project={project} index={index} />
+            </StackingCard>
+          ))}
+        </StackingCards>
+      </section>
+
+      {/* Now teaser */}
+      <section className="container py-24 md:py-32 mb-20">
+        <ScrollReveal className="rounded-2xl border border-foreground/10 bg-surface-elevated p-8 md:p-12">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-4">
+              <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+                Now
+              </span>
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                Currently building & learning
+              </h2>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>→ Interning at Itron on the Temetra mobile team</li>
+                <li>→ B.S. Software Engineering at WGU</li>
+                <li>→ AI Fellow with Break Through Tech & Cornell Tech</li>
+              </ul>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 12 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: easeEditorial }}
+            >
+              <Link
+                to="/now"
+                className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium transition-colors hover:border-foreground/50"
+              >
+                See full update
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </ScrollReveal>
+      </section>
+      </div>
     </div>
   );
 };
