@@ -16,10 +16,12 @@ export type Experience = {
       organization: "Itron",
       period: "April 2026 - Present",
       highlights: [
-        "Supporting the Temetra mobile application team in feature development, unit testing, debugging, and implementation, using C# and .NET MAUI",
+        "Supporting the Temetra mobile application team in feature development, unit testing, and debugging",
+        "Built and hardend over 1000 unit tests for the maintainability and reliability of the application",
+        "Implementated a new feature for customers to easily submit diagnostic/log data to the support team, streamlined the process by 60%; published a design document in the end-to-end process",
       ],
       type: "work",
-      tech: ["C#", ".NET MAUI", "Azure DevOps", "Moq"]
+      tech: ["C#", ".NET MAUI", "XAML", "Azure DevOps", "Moq", "MS Test"]
     },
     {
       id: "todd-swe",
@@ -81,7 +83,7 @@ export type Experience = {
         "Lead cross-functional ceremonies and debriefs; track milestones, owners, deliverables, and timelines",
       ],
       type: "work",
-      tech: ["Figma", "Slack", "Zoom", "Notion, Google Workspace"]
+      tech: ["Figma", "Slack", "Notion", "Google Workspace"]
     },
     {
       id: "ai-ml-projects",
@@ -94,7 +96,7 @@ export type Experience = {
         "Deployed FastAPI inference endpoint with React frontend for real-time classification"
       ],
       type: "education",
-      tech: ["TensorFlow", "Keras", "FastAPI", "React", "Grad-CAM"]
+      tech: ["Python", "TensorFlow", "Keras", "FastAPI", "React", "Grad-CAM", "scikit-learn", "NumPy", "Pandas"]
     },
     {
       id: "aws-ai-engineer-nanodegree",
@@ -108,7 +110,7 @@ export type Experience = {
         "Deep focus on ethical AI, responsible model deployment, and safety guardrails for real-world applications"
       ],
       type: "education",
-      tech: ["Python", "AWS Bedrock", "S3", "Aurora PostgreSQL", "Streamlit"]
+      tech: ["Python", "AWS Bedrock", "S3", "Aurora PostgreSQL", "Streamlit", "Terraform"]
     },
     {
       id: "wgu-education",

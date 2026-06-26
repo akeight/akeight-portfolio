@@ -59,7 +59,7 @@ const Home = () => {
               <span className="block font-serif font-medium italic text-accent">
                 <TextRotate
                   texts={['human-centered', 'beautiful', 'creative', 'practical AI']}
-                  className="leading-[1.1]"
+                  className="leading-[1.1] pr-[0.12em]"
                 />
               </span>
               <span className="block">
