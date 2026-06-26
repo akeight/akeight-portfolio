@@ -17,7 +17,7 @@ const Resume = () => {
             <span className="eyebrow">Resume</span>
             <GiantHeading as="h1" text="The story so far." className="max-w-[12ch]" />
             <p className="max-w-xl text-lg text-muted-foreground">
-              Software Engineer & Product Builder — full-stack development and user-centered
+              Software Engineer & Product Builder | Full-stack development and user-centered
               product strategy.
             </p>
           </div>

@@ -26,8 +26,8 @@ export const ExperienceAccordion = () => {
         </div>
 
         {/* Giant word */}
-        <h2 className="select-none text-[clamp(3.5rem,16vw,13rem)] font-bold uppercase leading-[0.82] tracking-tighter">
-          Experience
+        <h2 className="text-right select-none text-[clamp(3.5rem,16vw,12rem)] font-bold uppercase leading-[100px] md:leading-[150px] lg:leading-[200px] tracking-tighter">
+          Experience.
         </h2>
 
         {/* Accordion */}

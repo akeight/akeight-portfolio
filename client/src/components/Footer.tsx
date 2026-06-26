@@ -55,7 +55,7 @@ export const Footer = () => {
       {/* Bottom row */}
       <div className="container flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-background/60">
-          © {year} Allyson Keightley — Building with purpose
+          © {year} Allyson Keightley | Building with purpose
         </p>
         <div className="flex items-center gap-6">
           {socials.map((s) => (
