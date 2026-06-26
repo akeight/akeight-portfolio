@@ -18,7 +18,7 @@ export type Experience = {
       highlights: [
         "Supporting the Temetra mobile application team in feature development, unit testing, and debugging",
         "Built and hardend over 1000 unit tests for the maintainability and reliability of the application",
-        "Implementated a new feature for customers to easily submit diagnostic/log data to the support team, streamlined the process by 60%; published a design document in the end-to-end process",
+        "Implemented a new feature for customers to easily submit diagnostic/log data to the support team, streamlined the process by 60%; published a design document in the end-to-end process",
       ],
       type: "work",
       tech: ["C#", ".NET MAUI", "XAML", "Azure DevOps", "Moq", "MS Test"]
