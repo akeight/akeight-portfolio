@@ -89,7 +89,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-24 md:py-32">
+    <div className="py-24 md:py-30">
       <div className="container max-w-5xl">
         <header className="mb-16 space-y-5">
           <span className="eyebrow">Contact</span>

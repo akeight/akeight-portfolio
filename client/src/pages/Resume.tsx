@@ -9,7 +9,7 @@ const resumePdf = `${import.meta.env.BASE_URL}AllysonKeightleyResume_26.pdf`;
 
 const Resume = () => {
   return (
-    <div className="py-24 md:py-32">
+    <div className="py-24 md:py-30">
       <div className="container max-w-5xl space-y-20">
         {/* Header */}
         <header className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">

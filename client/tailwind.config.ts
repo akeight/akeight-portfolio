@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ['InterTight', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       fontSize: {
         "display-sm": ["clamp(2.5rem, 6vw, 4rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],

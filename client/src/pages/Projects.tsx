@@ -26,7 +26,7 @@ const Projects = () => {
   });
 
   return (
-    <div className="py-24 md:py-32">
+    <div className="py-24 md:py-30">
       <div className="container space-y-14">
         {/* Header */}
         <header className="space-y-6">

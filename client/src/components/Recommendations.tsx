@@ -47,7 +47,7 @@ export const Recommendations = () => {
           <div className="space-y-3">
             <span className="eyebrow">Recommendations</span>
           </div>
-          <p className="max-w-xl text-2xl font-semibold tracking-tight md:text-right md:text-3xl">
+          <p className="max-w-xl text-2xl font-medium font-serif italic tracking-tight md:text-right md:text-3xl">
             What people say about me.
           </p>
         </div>

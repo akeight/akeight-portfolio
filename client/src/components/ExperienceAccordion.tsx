@@ -20,13 +20,13 @@ export const ExperienceAccordion = () => {
           <div className="space-y-3">
             <span className="eyebrow">Experience</span>
           </div>
-          <p className="max-w-xl text-2xl font-semibold tracking-tight md:text-right md:text-3xl">
+          <p className="max-w-xl text-2xl font-medium font-serif italic tracking-tight md:text-right md:text-3xl">
             Where I've been building, shipping, and learning.
           </p>
         </div>
 
         {/* Giant word */}
-        <h2 className="text-right select-none text-[clamp(3.5rem,16vw,12rem)] font-bold uppercase leading-[100px] md:leading-[150px] lg:leading-[200px] tracking-tighter">
+        <h2 className="lg:text-right select-none text-[clamp(3.5rem,16vw,12rem)] font-bold uppercase leading-[100px] md:leading-[150px] lg:leading-[200px] tracking-tighter">
           Experience.
         </h2>
 

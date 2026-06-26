@@ -22,8 +22,8 @@ const stats = [
 ];
 
 const techStack = [
-  'TypeScript', 'Python', 'React', 'Next.js', 'FastAPI', 'C#', '.NET MAUI',
-  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'GCP', 'Vercel', 'Docker',
+  'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'FastAPI', 'C#', '.NET MAUI', 'JavaScript',
+  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Figma', 'GCP', 'Vercel', 'GitHub', 'Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps',
 ];
 
 const Home = () => {
@@ -41,7 +41,7 @@ const Home = () => {
           <Floating depth={4} amplitude={40} className="absolute right-[22%] top-[55%]">
             <div className="h-4 w-4 rounded-full bg-accent" />
           </Floating>
-          <Floating depth={1.8} amplitude={24} className="absolute left-[4%] bottom-[12%]">
+          <Floating depth={1.8} amplitude={24} className="absolute right-[14%] bottom-[8%]">
             <div className="h-16 w-16 rotate-12 border border-foreground/10 md:h-24 md:w-24" />
           </Floating>
         </div>
@@ -56,7 +56,7 @@ const Home = () => {
               <span className="block">
                 <VerticalCutReveal text="Crafting" />
               </span>
-              <span className="block text-accent">
+              <span className="block font-serif font-medium italic text-accent">
                 <TextRotate
                   texts={['human-centered', 'beautiful', 'creative', 'practical AI']}
                   className="leading-[1.1]"
@@ -72,7 +72,7 @@ const Home = () => {
               className="max-w-xl text-lg text-muted-foreground"
             >
               Hey, I'm Allyson! A curious, coffee-fueled self-starter with 800+ GitHub
-              contributions this year, I learn, build, and ship beautiful full-stack web and AI tools... <span className="text-accent italic">for the plot.</span>
+              contributions this year, I learn, build, and ship beautiful full-stack web and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">

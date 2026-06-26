@@ -53,7 +53,7 @@ export const Header = () => {
         <Link to="/" className="shrink-0">
           <VariableFontHoverByLetter
             label="Allyson Keightley"
-            className="font-mono text-sm uppercase tracking-[0.18em]"
+            className="font-serif text-sm font-medium uppercase tracking-[0.18em]"
             fromWeight={500}
             toWeight={800}
           />
