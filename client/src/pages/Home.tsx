@@ -16,14 +16,16 @@ import { Floating } from '../components/fancy/parallax-floating';
 import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
 
 const stats = [
+  { label: 'Internships', value: '3' },
   { label: 'Projects shipped', value: '10+' },
   { label: 'Prototypes live', value: '5' },
-  { label: 'CI/CD pipelines', value: '4' },
+
 ];
 
 const techStack = [
   'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'FastAPI', 'C#', '.NET MAUI', 'JavaScript',
-  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Figma', 'GCP', 'Vercel', 'GitHub', 'Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps',
+  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Figma', 'GCP', 'Vercel', 
+  'GitHub', 'Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps',
 ];
 
 const Home = () => {
