@@ -52,7 +52,7 @@ const Home = () => {
               Software Engineer · Product Builder
             </motion.span>
 
-            <h1 className="text-display font-semibold tracking-tightest leading-[1.04] max-w-[15ch]">
+            <h1 className="text-display font-semibold tracking-tightest leading-[0.85] max-w-[15ch]">
               <span className="block">
                 <VerticalCutReveal text="Crafting" />
               </span>
