@@ -16,9 +16,9 @@ import { Floating } from '../components/fancy/parallax-floating';
 import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
 
 const stats = [
+  { label: 'Internships', value: '3' },
   { label: 'Projects shipped', value: '10+' },
   { label: 'Prototypes live', value: '5' },
-  { label: 'CI/CD pipelines', value: '4' },
 ];
 
 const techStack = [
