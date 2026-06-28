@@ -19,7 +19,6 @@ const stats = [
   { label: 'Internships', value: '3' },
   { label: 'Projects shipped', value: '10+' },
   { label: 'Prototypes live', value: '5' },
-
 ];
 
 const techStack = [
