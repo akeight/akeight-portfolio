@@ -190,6 +190,7 @@ const Home = () => {
                 <li>→ Interning at Itron on the Temetra mobile team</li>
                 <li>→ B.S. Software Engineering at WGU</li>
                 <li>→ AI Fellow with Break Through Tech & Cornell Tech</li>
+                <li>→ TBA! Building an open-source repo for finding hackathons with my hackathon team</li>
               </ul>
             </div>
             <motion.div

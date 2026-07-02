@@ -10,7 +10,7 @@ const Now = () => {
       title: 'Itron',
       description:
         'Interning on the Temetra team for mobile app development using C# and .NET MAUI',
-      progress: 50,
+      progress: 60,
     },
     {
       icon: Brain,
@@ -22,7 +22,7 @@ const Now = () => {
       icon: PartyPopper,
       title: 'Break Through Tech Machine Learning Foundations',
       description: 'AI Program in partnership with Cornell Tech',
-      progress: 50,
+      progress: 60,
     },
   ];
 
@@ -30,7 +30,7 @@ const Now = () => {
     'Continue to work on software with Itron.',
     'Continue to act as a frontend advisor for Todd.',
     'Weekly labs and coursework with the Break Through Tech program.',
-    'Worked through the LinkedIn or LeftOut Tech Interview prep course.',
+    'Launch an open-source website/repository for finding hackathons with my hackathon team.',
   ];
 
   return (
