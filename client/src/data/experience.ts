@@ -11,6 +11,19 @@ export type Experience = {
   
   export const experience: Experience[] = [
     {
+      id: "hackhq",
+      role: "Founding Open Source Contributor",
+      organization: "HackHQ",
+      period: "June 2026 - Present",
+      highlights: [
+        "Maintaining and updating the HackHQ open-source repository for finding hackathons with my hackathon team",
+        "Designing, developing, and deploying the corresponding website",
+        "Planning feature development roadmap and implementing new features",
+      ],
+      type: "project",
+      tech: ["Next.js", "TypeScript", "TailwindCSS", "Vite", "ShadCN/Radix UI", "React Router", "Framer Motion", "Vercel"]
+    },
+    {
       id: "itron",
       role: "Mobile Application Developer Intern",
       organization: "Itron",
