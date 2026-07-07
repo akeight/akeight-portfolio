@@ -25,6 +25,27 @@ export type Project = {
 
   export const projects: Project[] = [
     {
+      slug: "careercatalyst",
+      title: "Career Catalyst",
+      tagline: "Full-stack CRUD app to organize and track internship applications",
+      impact: "Reduced manual tracking time by ~60% with automated filters and analytics",
+      stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "tRPC", "Auth.js", "Vercel"],
+      links: {
+        repo: "https://github.com/akeight/careercatalyst",
+        demo: "https://try-catalyst.vercel.app",
+        caseStudy: ""
+      },
+      media: {
+        video: {
+          mp4: "/catalystdemo.mp4",
+          webm: "/catalystdemo.webm",
+          poster: "/catalysthome.png"
+        }
+      },
+      featured: true,
+      category: ["Web App", "Productivity"]
+    },
+    {
       slug: "blood-cell-classifier",
       title: "ALL Blood Cell Classifier",
       tagline: "ResNet50 model with Grad-CAM visualization and fullstack deployment",
@@ -86,27 +107,6 @@ export type Project = {
       },
       featured: true,
       category: ["Community Tool", "Web App"],
-    },
-    {
-      slug: "internship-tracker",
-      title: "Internship Tracker",
-      tagline: "Full-stack CRUD app to organize and track internship applications",
-      impact: "Reduced manual tracking time by ~60% with automated filters and analytics",
-      stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "tRPC", "Auth.js", "ShadCN"],
-      links: {
-        repo: "https://github.com/akeight/internship-tracker",
-        demo: "",
-        caseStudy: ""
-      },
-      media: {
-        video: {
-          mp4: "/InternshipTracker.mp4",
-          webm: "/InternshipTracker.webm",
-          poster: "/InternshipTracker.jpg"
-        }
-      },
-      featured: true,
-      category: ["Web App", "Productivity"]
     },
     {
       slug: "ai-document-query",

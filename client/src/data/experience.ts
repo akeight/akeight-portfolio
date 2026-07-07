@@ -38,7 +38,7 @@ export type Experience = {
     },
     {
       id: "todd-swe",
-      role: "Lead Frontend Engineer Intern",
+      role: "Frontend Engineer Intern",
       organization: "Todd",
       period: "January 2026 - April 2026",
       highlights: [
@@ -73,7 +73,7 @@ export type Experience = {
     },
     {
       id: "kahani-swe",
-      role: "Software Engineer Intern",
+      role: "Mobile Engineer Intern",
       organization: "Kahani",
       period: "September 2025 - January 2026",
       highlights: [
