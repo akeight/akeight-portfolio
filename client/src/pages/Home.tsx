@@ -55,11 +55,11 @@ const Home = () => {
 
             <h1 className="text-display font-semibold tracking-tightest leading-[0.85] max-w-[15ch]">
               <span className="block">
-                <VerticalCutReveal text="Creating" />
+                <VerticalCutReveal text="Building" />
               </span>
               <span className="block font-serif font-medium italic text-accent">
                 <TextRotate
-                  texts={['design-forward', 'engaging', 'user-focused', 'AI-powered']}
+                  texts={['thoughtful', 'beautiful', 'intuitive', 'AI-powered']}
                   className="leading-[1.1] pr-[0.12em]"
                 />
               </span>
