@@ -40,7 +40,7 @@ The site is intentionally **editorial** in feel: oversized display type, a warm 
 
 | Featured case study | Live project preview |
 | :---: | :---: |
-| ![Course Explorer](https://akeight-portfolio.vercel.app/course-explorer.jpg) | ![Internship Tracker](https://akeight-portfolio.vercel.app/InternshipTracker.jpg) |
+| ![Course Explorer](https://akeight-portfolio.vercel.app/course-explorer.jpg) | ![Internship Tracker](https://akeight-portfolio.vercel.app/catalysthome.png) |
 
 > Project cards play short hover-to-preview video demos on the live site.
 
