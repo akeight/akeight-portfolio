@@ -73,7 +73,7 @@ const Home = () => {
               className="max-w-xl text-lg text-muted-foreground"
             >
               Hey, I'm Allyson! A curious, coffee-fueled self-starter with 900+ GitHub
-              contributions this year, I learn, build, and ship beautiful full-stack web and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
+              contributions this year. I learn, build, and ship beautiful full-stack web and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">
