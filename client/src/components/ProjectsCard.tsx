@@ -100,7 +100,7 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
               className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
             >
               <ArrowUpRight className="h-4 w-4" />
-              <AnimatedUnderline>Live demo</AnimatedUnderline>
+              <AnimatedUnderline>Live site</AnimatedUnderline>
             </a>
           )}
           {project.links?.caseStudy && (
