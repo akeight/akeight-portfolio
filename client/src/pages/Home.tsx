@@ -9,7 +9,7 @@ import { GiantHeading } from '../components/GiantHeading';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { TextRotate } from '../components/fancy/text-rotate';
 import { VerticalCutReveal } from '../components/fancy/vertical-cut-reveal';
-import { SimpleMarquee } from '../components/fancy/simple-marquee';
+import CurvedLoop from '../components/fancy/CurvedLoop';
 import { StackingCards, StackingCard } from '../components/fancy/stacking-cards';
 import { StickyReveal } from '../components/fancy/sticky-reveal';
 import { Floating } from '../components/fancy/parallax-floating';
@@ -18,14 +18,22 @@ import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
 const stats = [
   { label: 'Internships', value: '3' },
   { label: 'Projects shipped', value: '10+' },
-  { label: 'Prototypes live', value: '5' },
+  { label: 'Prototypes live', value: '6' },
 ];
 
 const techStack = [
-  'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'FastAPI', 'C#', '.NET MAUI', 'JavaScript',
-  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Figma', 'GCP', 'Vercel', 
+  'TypeScript', 'C#','Python', 'Swift', 'Dart', 'React', 'Next.js', 'Node.js', 'FastAPI', '.NET MAUI', 'JavaScript',
+  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Sanity', 'Figma', 'GCP', 'Vercel', 
   'GitHub', 'Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps',
 ];
+
+const techMarqueeSegments = techStack.flatMap((tech, index) => [
+  {
+    text: tech,
+    className: index % 2 === 1 ? 'font-serif' : undefined,
+  },
+  { text: '    ' },
+]);
 
 const Home = () => {
   const featured = getFeaturedProjects();
@@ -47,7 +55,7 @@ const Home = () => {
           </Floating>
         </div>
 
-        <div className="container flex min-h-[88vh] flex-col justify-center py-24">
+        <div className="container flex min-h-[88vh] flex-col justify-center py-24 mx-2">
           <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
             <motion.span variants={fadeInUp} className="eyebrow">
               Software Engineer · Product Builder
@@ -60,7 +68,7 @@ const Home = () => {
               <span className="block font-serif font-medium italic text-accent">
                 <TextRotate
                   texts={['thoughtful', 'beautiful', 'intuitive', 'AI-powered']}
-                  className="leading-[1.1] pr-[0.12em]"
+                  className="leading-[1.1] pl-[0.08em] pr-[0.15em]"
                 />
               </span>
               <span className="block">
@@ -73,7 +81,7 @@ const Home = () => {
               className="max-w-xl text-lg text-muted-foreground"
             >
               Hey, I'm Allyson! A curious, coffee-fueled self-starter with 900+ GitHub
-              contributions this year. I learn, build, and ship beautiful full-stack web and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
+              contributions this year. I learn, create, and ship beautiful full-stack web, mobile, and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">
@@ -97,14 +105,14 @@ const Home = () => {
               variants={fadeInUp}
               className="grid max-w-xl grid-cols-3 gap-8 border-t border-foreground/15 pt-8"
             >
-              {stats.map((stat) => (
+              {/* {stats.map((stat) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-semibold tracking-tight md:text-4xl">{stat.value}</div>
                   <div className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.15em] text-muted-foreground">
                     {stat.label}
                   </div>
                 </div>
-              ))}
+              ))} */}
             </motion.div>
           </motion.div>
 
@@ -121,18 +129,16 @@ const Home = () => {
       </section>
 
       {/* Skills marquee */}
-      <section className="border-y border-foreground/15 py-6">
-        <SimpleMarquee speed={50} pauseOnHover>
-          {techStack.map((tech) => (
-            <span
-              key={tech}
-              className="flex items-center gap-10 px-8 font-mono text-base font-bold uppercase tracking-[0.15em] text-muted-foreground"
-            >
-              {tech}
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            </span>
-          ))}
-        </SimpleMarquee>
+      <section className="py-5">
+        <CurvedLoop
+          segments={techMarqueeSegments}
+          speed={1.50}
+          curveAmount={195}
+          curveType="wave"
+          direction="left"
+          interactive
+          className="text-5xl md:text-4xl font-semibold uppercase tracking-[0.45em] md:tracking-[0.35em] xl:tracking-[0.25em] 2xl:tracking-[0.11em] text-muted-foreground"
+        />
       </section>
 
       {/* Scroll-over reveal — each panel pins once read, then the next rolls up
@@ -187,7 +193,7 @@ const Home = () => {
                 Currently building & learning
               </h2>
               <ul className="space-y-2 text-muted-foreground">
-                <li>→ Interning at Itron on the Temetra mobile team</li>
+                <li>→ Interning at Itron on the Temetra mobile software team</li>
                 <li>→ B.S. Software Engineering at WGU</li>
                 <li>→ AI Fellow with Break Through Tech & Cornell Tech</li>
                 <li>→ TBA! Building an open-source repo for finding hackathons with my hackathon team</li>
