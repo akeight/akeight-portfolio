@@ -72,7 +72,7 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
                 className="inline-flex items-center gap-1.5 font-medium text-foreground"
               >
                 <ArrowUpRight className="h-4 w-4" />
-                <AnimatedUnderline>Live demo</AnimatedUnderline>
+                <AnimatedUnderline>Live site</AnimatedUnderline>
               </a>
             )}
           </div>
