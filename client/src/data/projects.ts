@@ -67,6 +67,27 @@ export type Project = {
       category: ["AI/ML", "Web App"]
     },
     {
+      slug: "hackhq",
+      title: "HackHQ",
+      tagline: "Your HQ for every hackathon worth joining: A curated, community-driven list of open & upcoming hackathons, updated automatically.",
+      impact: "Founding member and developer of this community-driven open source repo. Website launching soon!",
+      stack: ["React", "TypeScript", "Vite", "MapboxGL", "ShadCN", "Drizzle ORM", "Supabase", "Cloudflare Pages"],
+      links: {
+        repo: "https://github.com/Hack-HQ/hackhq/tree/main",
+        caseStudy: ""
+      },
+      media: {
+        cover: "/hackhq-map.png",
+        video: {
+          mp4: "/hackhq-map.gif", 
+          webm: "",
+          poster: "/hackhq-map.png"
+        }
+      },
+      featured: true,
+      category: ["Web App", "Community Tool"]
+    },
+    {
       slug: "kahani-website",
       title: "Kahani Website",
       tagline: "Professional marketing site for Kahani using modern web technologies and testing and consistent quality for frontend development",
@@ -168,7 +189,7 @@ export type Project = {
           poster: "/spacex-dashboard.jpg"
         }
       },
-      featured: true,
+      featured: false,
       category: ["Data Visualization", "Web App"]
     },
     {
