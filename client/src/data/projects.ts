@@ -79,8 +79,8 @@ export type Project = {
       media: {
         cover: "/hackhq-map.png",
         video: {
-          mp4: "/hackhq-map.gif", 
-          webm: "",
+          mp4: "/hackhq.mp4", 
+          webm: "/hackhq.webm",
           poster: "/hackhq-map.png"
         }
       },
