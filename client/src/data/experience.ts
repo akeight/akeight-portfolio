@@ -57,7 +57,7 @@ export type Experience = {
         "Year-long hands-on AI/ML training with industry experts and Cornell Tech",
       ],
       type: "education",
-      tech: ["Python", "NumPy", "Pandas", "SciKit Learn"]
+      tech: ["Python", "NumPy", "Pandas", "SciKit Learn", "Keras"]
     },
     {
       id: "mlt-cp",
