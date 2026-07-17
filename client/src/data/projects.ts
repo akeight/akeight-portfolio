@@ -27,8 +27,8 @@ export type Project = {
     {
       slug: "careercatalyst",
       title: "Career Catalyst",
-      tagline: "Full-stack CRUD app to organize and track internship applications",
-      impact: "Reduced manual tracking time by ~60% with automated filters and analytics",
+      tagline: "Designed, built, and launched a full-stack application tracker with authentication that helps candidates reduce the chaos of the job-search process.",
+      impact: "Designed a scalable data architecture with 6 relational Prisma models to support user-specific applications, statuses, saved opportunities, favorites, and future career-management features.",
       stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "tRPC", "Auth.js", "Vercel"],
       links: {
         repo: "https://github.com/akeight/careercatalyst",
@@ -46,10 +46,52 @@ export type Project = {
       category: ["Web App", "Productivity"]
     },
     {
+      slug: "epstein-rag",
+      title: "Epstein Email Explorer",
+      tagline: "Full-stack RAG web app for exploring publicly released Epstein emails. The platform ingests and structures email threads and produces source-grounded answers with clickable citations.",
+      impact: "Enabled natural-language research across 5,082 email threads, 16,447 messages, and 16,493 retrieval chunks for semantic search and natural-language exploration.",
+      stack: ["Next.js", "TypeScript", "OpenAI", "Hugging Face", "MongoDB Atlas Vector Search", "Vercel"],
+      links: {
+        repo: "https://github.com/akeight/rag-but-make-it-island-style",
+        caseStudy: ""
+      },
+      media: {
+        cover: "/epstein.png",
+        video: {
+          mp4: "/epstein.mp4", 
+          webm: "/epstein.webm",
+          poster: "/epstein.png"
+        }
+      },
+      featured: true,
+      category: ["Web App", "AI/ML"]
+    },
+    {
+      slug: "hackhq",
+      title: "HackHQ",
+      tagline: "Co-building an open-source hackathon discovery platform that gives students and developers one reliable place to find, compare, and track opportunities.",
+      impact: "Co-built and maintained a centralized directory of 62 hackathons across 58 organizers, covering in-person, virtual, and hybrid opportunities from universities, technology companies, and developer communities. Over 70 stars and growing on GitHub.",
+      stack: ["React", "TypeScript", "Vite", "MapboxGL", "ShadCN", "Drizzle ORM", "Supabase", "Cloudflare Pages"],
+      links: {
+        repo: "https://github.com/Hack-HQ/hackhq",
+        caseStudy: ""
+      },
+      media: {
+        cover: "/hackhq-map.png",
+        video: {
+          mp4: "/hackhq.mp4", 
+          webm: "/hackhq.webm",
+          poster: "/hackhq-map.png"
+        }
+      },
+      featured: true,
+      category: ["Web App", "Community Tool"]
+    },
+    {
       slug: "blood-cell-classifier",
       title: "ALL Blood Cell Classifier",
-      tagline: "ResNet50 model with Grad-CAM visualization and fullstack deployment",
-      impact: "End-to-end ML demo; deployed inference endpoint with heatmap UI",
+      tagline: "CNN ResNet50 model with Grad-CAM visualization and fullstack deployment",
+      impact: "Fine tuned a convelutional neural network to classify the presence of leukemia in blood cells. Deployed the model with inference endpoint with heatmap UI for user visualization.",
       stack: ["TensorFlow", "Keras", "FastAPI", "React", "Vite", "Supabase"],
       links: {
         repo: "https://github.com/akeight/ai4all-project",
@@ -65,27 +107,6 @@ export type Project = {
       },
       featured: true,
       category: ["AI/ML", "Web App"]
-    },
-    {
-      slug: "hackhq",
-      title: "HackHQ",
-      tagline: "Your HQ for every hackathon worth joining: A curated, community-driven list of open & upcoming hackathons, updated automatically.",
-      impact: "Founding member and developer of this community-driven open source repo. Website launching soon!",
-      stack: ["React", "TypeScript", "Vite", "MapboxGL", "ShadCN", "Drizzle ORM", "Supabase", "Cloudflare Pages"],
-      links: {
-        repo: "https://github.com/Hack-HQ/hackhq/tree/main",
-        caseStudy: ""
-      },
-      media: {
-        cover: "/hackhq-map.png",
-        video: {
-          mp4: "/hackhq.mp4", 
-          webm: "/hackhq.webm",
-          poster: "/hackhq-map.png"
-        }
-      },
-      featured: true,
-      category: ["Web App", "Community Tool"]
     },
     {
       slug: "kahani-website",
@@ -150,27 +171,27 @@ export type Project = {
       featured: false,
       category: ["AI/ML", "Web App"]
     },
-    {
-      slug: "class-connect",
-      title: "ClassConnect",
-      tagline: "Collaborative class forum web app where students and teachers can connect! They can post questions, share resources, make announcements, repost other's posts and engage with peers. It features live filtering, searching, sorting by upvotes, repost functionality, and a custom, playful UI, making it easy to stay connected and organized in any class environment.",
-      impact: "",
-      stack: ["React", "Vite", "Supabase", "PostgreSQL", "React Router"],
-      links: {
-        repo: "https://github.com/akeight/ClassConnect",
-        demo: "https://classconnecthub.netlify.app",
-        caseStudy: ""
-      },
-      media: {
-        video: {
-          mp4: "/ClassConnect.mp4",
-          webm: "/ClassConnect.webm",
-          poster: "/ClassConnect.jpg"
-        }
-      },
-      featured: false,
-      category: ["Web App", "Community Tool"]
-    },
+    // {
+    //   slug: "class-connect",
+    //   title: "ClassConnect",
+    //   tagline: "Collaborative class forum web app where students and teachers can connect! They can post questions, share resources, make announcements, repost other's posts and engage with peers. It features live filtering, searching, sorting by upvotes, repost functionality, and a custom, playful UI, making it easy to stay connected and organized in any class environment.",
+    //   impact: "",
+    //   stack: ["React", "Vite", "Supabase", "PostgreSQL", "React Router"],
+    //   links: {
+    //     repo: "https://github.com/akeight/ClassConnect",
+    //     demo: "https://classconnecthub.netlify.app",
+    //     caseStudy: ""
+    //   },
+    //   media: {
+    //     video: {
+    //       mp4: "/ClassConnect.mp4",
+    //       webm: "/ClassConnect.webm",
+    //       poster: "/ClassConnect.jpg"
+    //     }
+    //   },
+    //   featured: false,
+    //   category: ["Web App", "Community Tool"]
+    // },
     {
       slug: "spacex-dashboard",
       title: "SpaceX Launch Dashboard",
