@@ -14,7 +14,7 @@
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![Deployed on Vercel](https://img.shields.io/badge/Vercel-Deployed-000?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-Deployed-000?logo =vercel&logoColor=white)](https://vercel.com/)
 
 
 ---
@@ -68,7 +68,6 @@ The site is intentionally **editorial** in feel: oversized display type, a warm 
 | **Animation** | Framer Motion (custom components) |
 | **Routing** | React Router |
 | **Data / forms** | TanStack Query, React Hook Form, Zod |
-| **Data viz** | Recharts |
 | **Icons & type** | Lucide, Inter Tight, JetBrains Mono, Playfair Display |
 | **Hosting / monitoring** | Vercel, Vercel Analytics, Vercel Speed Insights |
 
@@ -137,7 +136,7 @@ A few of the projects highlighted on the site:
 | --- | --- | --- | --- |
 | **ALL Blood Cell Classifier** | ResNet50 model with Grad-CAM heatmaps and a full-stack inference UI | TensorFlow, Keras, FastAPI, React | [Demo](https://ai4all-project.vercel.app/) · [Code](https://github.com/akeight/ai4all-project) |
 | **WGU CS Course Reviews** | Community platform for CS course reviews and difficulty ratings | React, Node/Express, PostgreSQL, Docker | [Demo](https://wgu-cs-course-reviews.vercel.app/) · [Code](https://github.com/akeight/wgu-cs-course-reviews) |
-| **Internship Tracker** | Full-stack CRUD app to track applications, cutting manual tracking time ~60%, reducing overwhelm | Next.js, tRPC, Prisma, PostgreSQL | [Code](https://github.com/akeight/internship-tracker) |
+| **Catalyst- Application Tracker** | AI-powered app to track applications, cutting manual tracking time ~60%, reducing overwhelm | Next.js, OpenAI, tRPC, Prisma, PostgreSQL | [Code](https://github.com/akeight/internship-tracker) |
 | **SpaceX Launch Dashboard** | Interactive, data-rich dashboard over the public SpaceX API | React, Vite, Recharts | [Code](https://github.com/akeight/SpaceX-data-dashboard) |
 
 > The full, filterable list lives on the [Projects page](https://akeight-portfolio.vercel.app/projects).
