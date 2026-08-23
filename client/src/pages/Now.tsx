@@ -22,14 +22,13 @@ const Now = () => {
       icon: PartyPopper,
       title: 'Break Through Tech Machine Learning Foundations',
       description: 'AI Program in partnership with Cornell Tech',
-      progress: 70,
+      progress: 100,
     },
   ];
 
   const weeklyGoals = [
     'Continue to work as a mobile developer intern with Itron.',
-    'Continue to act as a frontend advisor/GTM for Todd.',
-    'Weekly labs and coursework with the Break Through Tech program.',
+    'Continue to act as a founding engineer for Todd.',
     'Co-launch the website for our popular open-source repository for finding hackathons.',
   ];
 
