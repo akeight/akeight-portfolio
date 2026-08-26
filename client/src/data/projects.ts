@@ -74,6 +74,7 @@ export type Project = {
       stack: ["React", "TypeScript", "Vite", "MapboxGL", "ShadCN", "Drizzle ORM", "Supabase", "Cloudflare Pages"],
       links: {
         repo: "https://github.com/Hack-HQ/hackhq",
+        demo: "https://hacking-hq.com",
         caseStudy: ""
       },
       media: {
@@ -86,6 +87,37 @@ export type Project = {
       },
       featured: true,
       category: ["Web App", "Community Tool"]
+    },
+    {
+      slug: "mova-graph",
+      title: "Mova",
+      tagline: "AI-powered student decision platform that transforms courses, skills, projects, and experiences into an interactive career-readiness map. Built for the Stellic Pathfinder Challange hackathon.",
+      impact: "Built a graph-based readiness engine that connects student evidence to target career requirements, identifies skill gaps, ranks high-impact next moves, and lets students simulate how courses, projects, or internships could change their trajectory.",
+      stack: [ "Next.js",
+        "TypeScript",
+        "React",
+        "React Flow",
+        "Supabase",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Vercel AI SDK",
+        "Anthropic",
+        "Upstash Redis",
+        "Vercel"],
+      links: {
+        repo: "https://github.com/akeight/mova-graph",
+        demo: "https://movacareer.vercel.app",
+        caseStudy: ""
+      },
+      media: {
+        video: {
+          mp4: "/movademo.mp4",
+          webm: "/movademo.webm",
+          poster: "/mova.png"
+        }
+      },
+      featured: true,
+      category: ["AI/ML", "Web App", "Data Visualization"]
     },
     {
       slug: "blood-cell-classifier",
