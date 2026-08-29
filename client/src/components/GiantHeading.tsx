@@ -8,7 +8,7 @@ interface GiantHeadingProps {
   staggerDuration?: number;
 }
 
-/** Oversized, bold, uppercase editorial heading. */
+/** Oversized editorial heading in Instrument Serif. */
 export const GiantHeading = ({
   text,
   className,
@@ -19,7 +19,7 @@ export const GiantHeading = ({
   return (
     <Tag
       className={cn(
-        'font-bold uppercase tracking-tight text-[clamp(3.5rem,16vw,12rem)] leading-[100px] md:leading-[150px] lg:leading-[200px]',
+        'font-serif font-normal tracking-[-0.03em] text-[clamp(3.25rem,11vw,8.5rem)] leading-[0.95]',
         className
       )}
     >

@@ -37,7 +37,7 @@ export const Recommendations = () => {
 
   return (
     <section
-      className="bg-foreground text-background"
+      className="bg-sage text-background"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -45,9 +45,9 @@ export const Recommendations = () => {
         {/* Top row */}
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="space-y-3">
-            <span className="eyebrow">Recommendations</span>
+            <span className="eyebrow text-background">Recommendations</span>
           </div>
-          <p className="max-w-xl text-2xl font-medium font-serif italic tracking-tight md:text-right md:text-3xl">
+          <p className="max-w-xl font-serif text-2xl font-normal italic tracking-tight md:text-right md:text-3xl">
             What people say about me.
           </p>
         </div>
@@ -71,7 +71,7 @@ export const Recommendations = () => {
                 transition={{ duration: 0.5, ease: easeEditorial }}
                 className="space-y-10"
               >
-                <blockquote className="max-w-4xl text-3xl font-medium leading-snug tracking-tight md:text-4xl md:leading-[1.15]">
+                <blockquote className="max-w-4xl font-serif text-3xl font-normal leading-snug tracking-tight md:text-4xl lg:text-5xl md:leading-[1.15]">
                   &ldquo;{current.quote}&rdquo;
                 </blockquote>
 
@@ -99,7 +99,7 @@ export const Recommendations = () => {
 
         {/* Controls */}
         {total > 1 && (
-          <div className="mt-12 flex items-center justify-between border-t border-background/15 pt-6">
+          <div className="mt-12 flex items-center justify-between border-t border-background/30 pt-6">
             <div className="flex items-center gap-3">
               <button
                 type="button"
@@ -127,7 +127,7 @@ export const Recommendations = () => {
                   aria-label={`Go to recommendation ${i + 1}`}
                   onClick={() => setIndex(i)}
                   className={`h-1.5 rounded-full transition-all ${
-                    i === index ? 'w-8 bg-accent' : 'w-2 bg-background/30 hover:bg-background/50'
+                    i === index ? 'w-8 bg-ochre' : 'w-2 bg-background/30 hover:bg-background/50'
                   }`}
                 />
               ))}

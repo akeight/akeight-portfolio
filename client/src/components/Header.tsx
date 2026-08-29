@@ -53,9 +53,9 @@ export const Header = () => {
         <Link to="/" className="shrink-0">
           <VariableFontHoverByLetter
             label="Allyson Keightley"
-            className="font-serif text-sm font-medium uppercase tracking-[0.18em]"
+            className="text-sm font-medium uppercase tracking-[0.18em]"
             fromWeight={500}
-            toWeight={800}
+            toWeight={700}
           />
         </Link>
 
@@ -72,7 +72,7 @@ export const Header = () => {
                   active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
                 )}
               >
-                <span className="font-mono text-[0.65rem] text-accent">
+                <span className="font-mono text-[0.65rem] text-dusty">
                   0{i + 1}
                 </span>
                 <AnimatedUnderline group active={active}>
@@ -124,7 +124,7 @@ export const Header = () => {
                         active ? 'text-foreground' : 'text-muted-foreground'
                       )}
                     >
-                      <span className="font-mono text-sm text-accent">0{i + 1}</span>
+                      <span className="font-mono text-sm text-dusty">0{i + 1}</span>
                       {link.label}
                     </Link>
                   </motion.div>

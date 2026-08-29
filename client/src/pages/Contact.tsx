@@ -121,7 +121,7 @@ const Contact = () => {
                     <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
                       {link.name}
                     </span>
-                    <span className="text-base font-medium md:text-lg">
+                    <span className="text-base font-medium md:text-base">
                       <AnimatedUnderline group>{link.label}</AnimatedUnderline>
                     </span>
                   </a>
@@ -131,11 +131,11 @@ const Contact = () => {
 
             <div className="rounded-2xl border border-foreground/10 bg-surface-elevated p-6">
               <h3 className="mb-2 flex items-center gap-2 font-semibold">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+                <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
                 Availability
               </h3>
               <p className="text-sm text-muted-foreground">
-                Available for SWE and PM internship opportunities for Fall 2026. Open to freelance
+                Available for SWE and PM internship opportunities for Summer 2027. Open to freelance
                 projects and hackathons.
               </p>
             </div>

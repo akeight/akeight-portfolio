@@ -38,7 +38,7 @@ const Now = () => {
         {/* Header */}
         <header className="space-y-5">
           <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+            <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
             Now — updated July 16, 2026
           </span>
           <GiantHeading as="h1" text="What I'm up to." className="max-w-[12ch]" />
@@ -95,7 +95,7 @@ const Now = () => {
                 delay={index * 0.05}
                 className="flex items-center gap-4 border-b border-foreground/10 py-4"
               >
-                <span className="font-mono text-sm text-accent">
+                <span className="font-mono text-sm text-dusty">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span>{goal}</span>

@@ -20,13 +20,13 @@ export const ExperienceAccordion = () => {
           <div className="space-y-3">
             <span className="eyebrow">Experience</span>
           </div>
-          <p className="max-w-xl text-2xl font-medium font-serif italic tracking-tight md:text-right md:text-3xl">
+          <p className="max-w-xl font-serif text-2xl font-normal italic tracking-tight md:text-right md:text-3xl">
             Where I've been building, shipping, and learning.
           </p>
         </div>
 
         {/* Giant word */}
-        <h2 className="lg:text-right select-none text-[clamp(3.5rem,16vw,12rem)] font-bold uppercase leading-[100px] md:leading-[150px] lg:leading-[200px] tracking-tighter">
+        <h2 className="lg:text-right select-none font-serif font-normal tracking-[-0.03em] text-[clamp(3.25rem,11vw,8.5rem)] leading-[0.95]">
           Experience.
         </h2>
 
@@ -80,7 +80,7 @@ export const ExperienceAccordion = () => {
                                   key={h}
                                   className="flex items-start gap-2.5 text-sm text-muted-foreground"
                                 >
-                                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
                                   <span>{highlight}</span>
                                 </li>
                               ))}
@@ -91,7 +91,7 @@ export const ExperienceAccordion = () => {
                                   <TechBadge
                                     key={tool}
                                     tech={tool}
-                                    className="border-accent/40 bg-accent/5 text-accent hover:border-accent/70 hover:text-accent"
+                                    className="border-plum/30 bg-plum/5 text-plum hover:border-plum/60 hover:text-plum"
                                   />
                                 ))}
                               </div>

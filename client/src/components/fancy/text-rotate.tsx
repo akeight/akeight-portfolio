@@ -30,7 +30,7 @@ export const TextRotate = ({
   const chars = useMemo(() => Array.from(texts[index] ?? ''), [texts, index]);
 
   return (
-    <span className={cn('relative inline-flex overflow-hidden whitespace-nowrap py-[0.08em]', className)}>
+    <span className={cn('relative inline-flex overflow-hidden whitespace-nowrap py-[0.18em]', className)}>
       <AnimatePresence mode="wait" initial={false}>
         <motion.span key={index} className="inline-flex" aria-label={texts[index]}>
           {chars.map((char, i) => (
