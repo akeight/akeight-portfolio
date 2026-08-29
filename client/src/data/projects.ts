@@ -117,7 +117,7 @@ export type Project = {
         }
       },
       featured: true,
-      category: ["AI/ML", "Web App", "Data Visualization"]
+      category: ["AI/ML", "Data Visualization"]
     },
     {
       slug: "blood-cell-classifier",
@@ -138,7 +138,7 @@ export type Project = {
         }
       },
       featured: true,
-      category: ["AI/ML", "Web App"]
+      category: ["AI/ML", "Data Visualization"]
     },
     {
       slug: "kahani-website",
