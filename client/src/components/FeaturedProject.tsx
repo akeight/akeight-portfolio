@@ -16,6 +16,23 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
   const panelRef = useRef<HTMLDivElement>(null);
   const cover = project.media?.cover || project.media?.video?.poster;
   const video = project.media?.video;
+  const mediaHref = project.links?.demo || project.links?.repo;
+
+  const media = video ? (
+    <HoverVideo
+      video={video}
+      alt={project.title}
+      hoverTargetRef={panelRef}
+      className="h-full w-full"
+    />
+  ) : cover ? (
+    <img
+      src={cover}
+      alt={project.title}
+      loading="lazy"
+      className="h-full w-full object-cover"
+    />
+  ) : null;
 
   return (
     <article
@@ -25,7 +42,7 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
       {/* Text column */}
       <div className="order-2 flex flex-col justify-between gap-10 p-8 md:p-12 lg:order-1">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-sm text-accent">
+          <span className="font-mono text-sm text-dusty">
             ({String(index + 1).padStart(2, '0')})
           </span>
           <span className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
@@ -35,12 +52,12 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
 
         <div className="space-y-5">
           <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            <VariableFontHoverByLetter label={project.title} fromWeight={600} toWeight={900} />
+            <VariableFontHoverByLetter label={project.title} fromWeight={500} toWeight={700} />
           </h3>
           <p className="max-w-md text-base text-muted-foreground">{project.tagline}</p>
           {project.impact && (
             <p className="flex items-start gap-2 text-sm text-foreground/75">
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
               {project.impact}
             </p>
           )}
@@ -79,23 +96,21 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
         </div>
       </div>
 
-      {/* Media column */}
+      {/* Media column — click through to live site, or repo if none */}
       <div className="order-1 min-h-[260px] border-b border-foreground/10 lg:order-2 lg:border-b-0 lg:border-l">
-        {video ? (
-          <HoverVideo
-            video={video}
-            alt={project.title}
-            hoverTargetRef={panelRef}
-            className="h-full w-full"
-          />
-        ) : cover ? (
-          <img
-            src={cover}
-            alt={project.title}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        ) : null}
+        {mediaHref && media ? (
+          <a
+            href={mediaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.title} ${project.links?.demo ? 'live site' : 'repository'}`}
+            className="block h-full w-full cursor-pointer"
+          >
+            {media}
+          </a>
+        ) : (
+          media
+        )}
       </div>
     </article>
   );

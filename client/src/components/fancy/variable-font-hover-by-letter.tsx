@@ -16,7 +16,7 @@ export const VariableFontHoverByLetter = ({
   label,
   className,
   fromWeight = 400,
-  toWeight = 900,
+  toWeight = 700,
   staggerDuration = 0.03,
 }: VariableFontHoverByLetterProps) => {
   const letters = useMemo(() => Array.from(label), [label]);

@@ -13,7 +13,7 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden border-t border-foreground/15 bg-foreground py-14 text-background md:py-20">
+    <footer className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden border-t border-foreground/15 bg-plum py-14 text-background md:py-20">
       {/* CTA */}
       <div className="container mt-28 md:mt-40">
         <div className="flex flex-col items-center gap-10 text-center md:flex-row md:items-end md:justify-between md:text-left">
@@ -38,16 +38,16 @@ export const Footer = () => {
         speed={60}
         className="border-y border-background/15 py-4 md:py-6"
       >
-        <span className="px-6 text-6xl font-semibold uppercase tracking-tight sm:text-7xl md:px-8 md:text-8xl">
+        <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
           AI Native
         </span>
-        <span className="px-6 text-6xl font-semibold uppercase tracking-tight text-background/40 sm:text-7xl md:px-8 md:text-8xl">
+        <span className="px-6 font-serif text-6xl font-normal italic tracking-tight text-ochre sm:text-7xl md:px-8 md:text-8xl">
           Software Engineer
         </span>
-        <span className="px-6 text-6xl font-semibold uppercase tracking-tight sm:text-7xl md:px-8 md:text-8xl">
+        <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
           Product Builder
         </span>
-        <span className="px-6 text-6xl font-semibold uppercase tracking-tight text-background/40 sm:text-7xl md:px-8 md:text-8xl">
+        <span className="px-6 font-serif text-6xl font-normal italic tracking-tight text-ochre sm:text-7xl md:px-8 md:text-8xl">
           Mobile Developer
         </span>
       </SimpleMarquee>

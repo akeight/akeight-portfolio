@@ -7,8 +7,8 @@ export default function NotFound() {
     <div className="flex min-h-[80vh] items-center justify-center px-6">
       <div className="space-y-8 text-center">
         <span className="eyebrow justify-center">Error 404</span>
-        <h1 className="display text-display-lg leading-none">
-          <VariableFontHoverByLetter label="404" fromWeight={500} toWeight={900} />
+        <h1 className="font-sans text-display-lg font-medium leading-none">
+          <VariableFontHoverByLetter label="404" fromWeight={400} toWeight={700} />
         </h1>
         <p className="text-lg text-muted-foreground">
           This page wandered off. Let's get you back on track.

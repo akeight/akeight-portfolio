@@ -2,56 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Editorial design system — light, high-contrast, warm paper canvas.
+/* Editorial design system — warm ivory paper, near-black ink, a five-color accent system.
    All color tokens are HSL component triplets (no hsl() wrapper). */
 
 @layer base {
   :root {
-    /* Core palette */
-    --background: 40 33% 97%; /* warm paper */
-    --foreground: 0 0% 8%; /* near-black ink */
+    /* Core palette — #F7F3EC paper, #171518 ink */
+    --background: 38 41% 95%;
+    --foreground: 280 7% 9%;
 
-    --card: 40 33% 97%;
-    --card-foreground: 0 0% 8%;
+    --card: 38 41% 95%;
+    --card-foreground: 280 7% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 38 38% 97%;
+    --popover-foreground: 280 7% 9%;
 
-    /* Primary actions are ink-black */
-    --primary: 0 0% 8%;
-    --primary-foreground: 40 33% 97%;
+    /* Primary actions are ink */
+    --primary: 280 7% 9%;
+    --primary-foreground: 38 41% 95%;
 
-    --secondary: 40 18% 91%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 38 22% 91%;
+    --secondary-foreground: 280 7% 9%;
 
-    --muted: 40 16% 90%;
-    --muted-foreground: 0 0% 38%;
+    --muted: 38 18% 90%;
+    --muted-foreground: 280 6% 36%;
 
-    /* Single signal accent — warm vermilion, used sparingly */
-    --accent: 14 88% 52%;
-    --accent-foreground: 40 33% 97%;
+    /* Primary signal accent — plum #4B2437 */
+    --accent: 331 35% 22%;
+    --accent-foreground: 38 41% 95%;
 
-    --destructive: 0 72% 50%;
-    --destructive-foreground: 0 0% 98%;
+    /* Accent system */
+    --plum: 331 35% 22%;       /* #4B2437 */
+    --oxblood: 343 36% 35%;    /* #79394B */
+    --sage: 113 8% 42%;        /* #657363 */
+    --dusty: 201 13% 57%;      /* #8497A1 */
+    --ochre: 37 45% 49%;       /* #B48A45 */
 
-    --border: 30 10% 84%;
-    --input: 30 10% 80%;
-    --ring: 0 0% 8%;
+    --destructive: 343 36% 35%;
+    --destructive-foreground: 38 41% 95%;
+
+    --border: 35 14% 82%;
+    --input: 35 12% 78%;
+    --ring: 280 7% 9%;
 
     --radius: 0.5rem;
 
-    /* Custom surface tokens */
-    --surface: 40 33% 97%;
-    --surface-elevated: 0 0% 100%;
+    /* Custom surface tokens — never pure white */
+    --surface: 38 41% 95%;
+    --surface-elevated: 38 36% 97%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--accent)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--plum)) 100%);
     --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
 
-    /* Shadows — soft, neutral */
-    --shadow-sm: 0 1px 2px -1px hsl(0 0% 0% / 0.08);
-    --shadow-md: 0 8px 24px -12px hsl(0 0% 0% / 0.18);
-    --shadow-lg: 0 24px 60px -24px hsl(0 0% 0% / 0.25);
+    /* Shadows — soft, warm-neutral */
+    --shadow-sm: 0 1px 2px -1px hsl(280 7% 9% / 0.08);
+    --shadow-md: 0 8px 24px -12px hsl(280 7% 9% / 0.18);
+    --shadow-lg: 0 24px 60px -24px hsl(280 7% 9% / 0.25);
     --shadow-glow: 0 0 0 1px hsl(var(--foreground) / 0.06);
 
     /* Transitions */
@@ -71,7 +78,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings: "ss01", "cv01", "cv11";
+    font-feature-settings: "kern" 1, "liga" 1;
     text-rendering: optimizeLegibility;
   }
 
@@ -80,29 +87,30 @@
   }
 
   code {
-    @apply font-mono text-sm;
+    @apply font-sans text-sm;
   }
 
   ::selection {
-    background: hsl(var(--accent));
+    background: hsl(var(--plum));
     color: hsl(var(--accent-foreground));
   }
 }
 
 @layer components {
-  /* Uppercase eyebrow label with bullet marker (editorial section tags) */
+  /* Uppercase eyebrow label with ochre bullet (editorial section tags) */
   .eyebrow {
-    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground;
+    @apply inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-muted-foreground;
   }
 
   .eyebrow::before {
     content: "";
-    @apply inline-block h-1.5 w-1.5 rounded-full bg-accent;
+    @apply inline-block h-1.5 w-1.5 rounded-full;
+    background: hsl(var(--ochre));
   }
 
-  /* Oversized editorial display type */
+  /* Oversized editorial display type — Instrument Serif */
   .display {
-    @apply font-semibold leading-[0.95] tracking-[-0.03em];
+    @apply font-serif font-normal leading-[0.95] tracking-[-0.03em];
   }
 
   /* Thin editorial rule */

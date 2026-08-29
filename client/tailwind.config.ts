@@ -14,13 +14,14 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['InterTight', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        /* Technical labels share the body face — not a coding mono. */
+        mono: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         "display-sm": ["clamp(2.5rem, 6vw, 4rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
-        "display": ["clamp(3rem, 9vw, 7rem)", { lineHeight: "0.92", letterSpacing: "-0.035em" }],
+        "display": ["clamp(3.75rem, 12vw, 8rem)", { lineHeight: "0.95", letterSpacing: "-0.035em" }],
         "display-lg": ["clamp(3.5rem, 13vw, 11rem)", { lineHeight: "0.88", letterSpacing: "-0.04em" }],
       },
       letterSpacing: {
@@ -64,6 +65,11 @@ export default {
           DEFAULT: "hsl(var(--surface))",
           elevated: "hsl(var(--surface-elevated))",
         },
+        plum: "hsl(var(--plum))",
+        oxblood: "hsl(var(--oxblood))",
+        sage: "hsl(var(--sage))",
+        dusty: "hsl(var(--dusty))",
+        ochre: "hsl(var(--ochre))",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -15,11 +15,6 @@ import { StickyReveal } from '../components/fancy/sticky-reveal';
 import { Floating } from '../components/fancy/parallax-floating';
 import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
 
-const stats = [
-  { label: 'Internships', value: '3' },
-  { label: 'Projects shipped', value: '10+' },
-  { label: 'Prototypes live', value: '6' },
-];
 
 const techStack = [
   'TypeScript', 'C#','Python', 'Swift', 'Dart', 'React', 'Next.js', 'Node.js', 'FastAPI', '.NET MAUI', 'JavaScript',
@@ -48,30 +43,30 @@ const Home = () => {
             <div className="h-24 w-24 rounded-full border border-foreground/15 md:h-40 md:w-40" />
           </Floating>
           <Floating depth={4} amplitude={40} className="absolute right-[22%] top-[55%]">
-            <div className="h-4 w-4 rounded-full bg-accent" />
+            <div className="h-4 w-4 rounded-full bg-dusty" />
           </Floating>
           <Floating depth={1.8} amplitude={24} className="absolute right-[14%] bottom-[8%]">
             <div className="h-16 w-16 rotate-12 border border-foreground/10 md:h-24 md:w-24" />
           </Floating>
         </div>
 
-        <div className="container flex min-h-[88vh] flex-col justify-center py-24 mx-2">
+        <div className="container flex min-h-[88vh] flex-col justify-center py-24">
           <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
             <motion.span variants={fadeInUp} className="eyebrow">
               Software Engineer · Product Builder
             </motion.span>
 
-            <h1 className="text-display font-semibold tracking-tightest leading-[0.85] max-w-[15ch]">
-              <span className="block">
+            <h1 className="text-display font-serif font-normal tracking-tightest leading-[1.05] max-w-[15ch]">
+              <span className="block translate-y-[10px]">
                 <VerticalCutReveal text="Building" />
               </span>
-              <span className="block font-serif font-medium italic text-accent">
+              <span className="block font-serif italic text-oxblood">
                 <TextRotate
                   texts={['thoughtful', 'beautiful', 'intuitive', 'AI-powered']}
-                  className="leading-[1.1] pl-[0.08em] pr-[0.15em]"
+                  className="leading-[1.2] pl-[0.08em] pr-[0.2em]"
                 />
               </span>
-              <span className="block">
+              <span className="block translate-y-[-10px]">
                 <VerticalCutReveal text="software." staggerDuration={0.04} />
               </span>
             </h1>
@@ -81,7 +76,7 @@ const Home = () => {
               className="max-w-xl text-lg text-muted-foreground"
             >
               Hey, I'm Allyson! A curious, coffee-fueled self-starter with 1000+ GitHub
-              contributions this year. I learn, create, and ship beautiful full-stack web, mobile, and AI tools... <span className="font-serif italic text-accent">for the plot.</span>
+              contributions this year. I learn, create, and ship beautiful full-stack web, mobile, and AI tools... <span className="font-serif italic text-oxblood text-xl">for the plot.</span>
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">
@@ -158,9 +153,9 @@ const Home = () => {
       {/* Selected work — stacking cards */}
       <section className="container py-24 md:py-32">
         <ScrollReveal className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
-          <div className="space-y-4">
+          <div className="space-y-16">
             <span className="eyebrow">Selected work</span>
-            <GiantHeading text="Things I've built." className="max-w-[10ch]" />
+            <GiantHeading text="Things I've built." className="md:whitespace-nowrap" />
           </div>
           <Link
             to="/projects"
@@ -186,7 +181,7 @@ const Home = () => {
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="space-y-4">
               <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+                <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
                 Now
               </span>
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">

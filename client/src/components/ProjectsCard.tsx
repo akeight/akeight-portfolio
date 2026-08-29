@@ -63,7 +63,7 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
 
         {project.impact && (
           <div className="flex items-start gap-2">
-            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
             <p className="text-sm text-foreground/75">{project.impact}</p>
           </div>
         )}
