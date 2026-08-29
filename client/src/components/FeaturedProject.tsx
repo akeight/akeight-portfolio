@@ -51,7 +51,7 @@ export const FeaturedProject = ({ project, index }: FeaturedProjectProps) => {
         </div>
 
         <div className="space-y-5">
-          <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
+          <h3 className="text-2xl font-semibold tracking-tight md:text-4xl">
             <VariableFontHoverByLetter label={project.title} fromWeight={500} toWeight={700} />
           </h3>
           <p className="max-w-md text-base text-muted-foreground">{project.tagline}</p>
