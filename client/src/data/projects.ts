@@ -163,7 +163,7 @@ export type Project = {
     },
     {
       slug: "wgu-course-explorer",
-      title: "WGU CS Course Reviews",
+      title: "CS Course Reviews",
       tagline: "Community-driven platform for computer science course reviews and difficulty ratings",
       impact: "Courses filterable by difficulty and time commitment",
       stack: ["React", "Vite", "Node.js", "Express", "TailwindCSS", "ShadCN/Radix UI", "React Router", "PostgreSQL", "Railway", "Docker", "Cloud Run", "Vercel"],
