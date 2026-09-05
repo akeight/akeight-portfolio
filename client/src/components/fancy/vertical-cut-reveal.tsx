@@ -8,18 +8,21 @@ interface VerticalCutRevealProps {
   className?: string;
   staggerDuration?: number;
   splitBy?: 'word' | 'char';
+  /** Keep all words on one line (disables flex-wrap). */
+  nowrap?: boolean;
 }
 
 /** Reveals text by sliding each word/char up from a clipped container on scroll.
  *  Uses an explicit in-view animate target so it works even when nested inside a
  *  parent that propagates Framer Motion variants.
- *  Overflow clipping is released after the reveal so deep Instrument Serif
+ *  Overflow clipping is released after the reveal so deep Lora
  *  descenders (g, y, p) are never permanently cut off. */
 export const VerticalCutReveal = ({
   text,
   className,
   staggerDuration = 0.05,
   splitBy = 'word',
+  nowrap = false,
 }: VerticalCutRevealProps) => {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
@@ -31,7 +34,11 @@ export const VerticalCutReveal = ({
   );
 
   return (
-    <span ref={ref} className={cn('inline-flex flex-wrap', className)} aria-label={text}>
+    <span
+      ref={ref}
+      className={cn('inline-flex', nowrap ? 'flex-nowrap whitespace-nowrap' : 'flex-wrap', className)}
+      aria-label={text}
+    >
       {parts.map((part, i) => {
         const isLast = i === parts.length - 1;
         return (
@@ -39,6 +46,7 @@ export const VerticalCutReveal = ({
             key={i}
             className={cn(
               'inline-block pb-[0.45em] -mb-[0.3em]',
+              nowrap && 'shrink-0',
               revealed ? 'overflow-visible' : 'overflow-hidden'
             )}
           >

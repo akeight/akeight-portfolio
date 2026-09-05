@@ -12,23 +12,23 @@ const Resume = () => {
     <div className="py-24 md:py-30">
       <div className="container max-w-5xl space-y-20">
         {/* Header */}
-        <header className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="space-y-5">
+        <header className="space-y-5">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <span className="eyebrow">Resume</span>
-            <GiantHeading as="h1" text="The story so far." className="max-w-[12ch]" />
-            <p className="max-w-xl text-lg text-muted-foreground">
-              Software Engineer & Product Builder | Full-stack development and user-centered
-              product strategy.
-            </p>
+            <a
+              href={resumePdf}
+              download
+              className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90 sm:self-auto"
+            >
+              <Download className="h-4 w-4" />
+              Download PDF
+            </a>
           </div>
-          <a
-            href={resumePdf}
-            download
-            className="mx-auto group inline-flex shrink-0 items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
-          >
-            <Download className="h-4 w-4" />
-            Download PDF
-          </a>
+          <GiantHeading as="h1" text="The story so far." singleLine />
+          <p className="max-w-xl text-lg text-muted-foreground">
+            Software Engineer & Product Builder | Full-stack development and user-centered
+            product strategy.
+          </p>
         </header>
 
         {/* Experience */}

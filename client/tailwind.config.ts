@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
         /* Technical labels share the body face — not a coding mono. */
         mono: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
       },
