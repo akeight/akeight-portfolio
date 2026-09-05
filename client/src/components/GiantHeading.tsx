@@ -6,24 +6,28 @@ interface GiantHeadingProps {
   className?: string;
   as?: 'h1' | 'h2';
   staggerDuration?: number;
+  /** Keep the full heading on one line. */
+  singleLine?: boolean;
 }
 
-/** Oversized editorial heading in Instrument Serif. */
+/** Oversized editorial heading in Lora. */
 export const GiantHeading = ({
   text,
   className,
   as = 'h2',
   staggerDuration,
+  singleLine = false,
 }: GiantHeadingProps) => {
   const Tag = as;
   return (
     <Tag
       className={cn(
-        'font-serif font-normal tracking-[-0.03em] text-[clamp(3.25rem,11vw,8.5rem)] leading-[0.95]',
+        'font-serif font-normal tracking-[-0.03em] text-[clamp(2.875rem,9.5vw,7.25rem)] leading-[0.95]',
+        singleLine && 'whitespace-nowrap',
         className
       )}
     >
-      <VerticalCutReveal text={text} staggerDuration={staggerDuration} />
+      <VerticalCutReveal text={text} staggerDuration={staggerDuration} nowrap={singleLine} />
     </Tag>
   );
 };

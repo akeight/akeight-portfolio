@@ -108,7 +108,7 @@
     background: hsl(var(--ochre));
   }
 
-  /* Oversized editorial display type — Instrument Serif */
+  /* Oversized editorial display type — Lora */
   .display {
     @apply font-serif font-normal leading-[0.95] tracking-[-0.03em];
   }

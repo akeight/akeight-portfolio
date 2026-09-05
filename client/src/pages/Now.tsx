@@ -10,7 +10,7 @@ const Now = () => {
       title: 'Itron',
       description:
         'Interning on the Temetra team for mobile app development using C# and .NET MAUI',
-      progress: 70,
+      progress: 95,
     },
     {
       icon: Brain,
@@ -29,7 +29,7 @@ const Now = () => {
   const weeklyGoals = [
     'Continue to work as a mobile developer intern with Itron.',
     'Continue to act as a founding engineer for Todd.',
-    'Co-launch the website for our popular open-source repository for finding hackathons.',
+    'Begin the Break Through Tech Fall AI Studio, building an AI/ML project for Chewy.',
   ];
 
   return (
@@ -39,7 +39,7 @@ const Now = () => {
         <header className="space-y-5">
           <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
-            Now — updated July 16, 2026
+            Now — updated September 4, 2026
           </span>
           <GiantHeading as="h1" text="What I'm up to." className="max-w-[12ch]" />
           <p className="max-w-xl text-lg text-muted-foreground">
