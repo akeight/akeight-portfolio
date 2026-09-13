@@ -2,24 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Editorial design system — warm ivory paper, near-black ink, a five-color accent system.
-   All color tokens are HSL component triplets (no hsl() wrapper). */
+/* ============================================================
+   Warm Technical Editorial — design tokens
+   Paper + ink globally. One accent per flagship project.
+   Ochre is reserved for the annotation system.
+   All color tokens are HSL component triplets (no hsl() wrapper).
+   ============================================================ */
 
 @layer base {
   :root {
-    /* Core palette — #F7F3EC paper, #171518 ink */
-    --background: 38 41% 95%;
+    /* Core palette — warm paper, near-black ink */
+    --background: 39 36% 96%;
     --foreground: 280 7% 9%;
 
-    --card: 38 41% 95%;
+    --card: 39 36% 96%;
     --card-foreground: 280 7% 9%;
 
-    --popover: 38 38% 97%;
+    --popover: 39 33% 97%;
     --popover-foreground: 280 7% 9%;
 
-    /* Primary actions are ink */
     --primary: 280 7% 9%;
-    --primary-foreground: 38 41% 95%;
+    --primary-foreground: 39 36% 96%;
 
     --secondary: 38 22% 91%;
     --secondary-foreground: 280 7% 9%;
@@ -27,43 +30,37 @@
     --muted: 38 18% 90%;
     --muted-foreground: 280 6% 36%;
 
-    /* Primary signal accent — plum #4B2437 */
     --accent: 331 35% 22%;
-    --accent-foreground: 38 41% 95%;
+    --accent-foreground: 39 36% 96%;
 
-    /* Accent system */
-    --plum: 331 35% 22%;       /* #4B2437 */
-    --oxblood: 343 36% 35%;    /* #79394B */
-    --sage: 113 8% 42%;        /* #657363 */
-    --dusty: 201 13% 57%;      /* #8497A1 */
-    --ochre: 37 45% 49%;       /* #B48A45 */
+    /* Project accent system — one accent per flagship
+       scout: ochre · catalyst: plum · mova: dusty · hackhq: oxblood · todd-iris: sage */
+    --plum: 331 35% 22%;       /* Catalyst */
+    --oxblood: 343 36% 35%;    /* HackHQ */
+    --sage: 113 8% 36%;        /* Todd Iris */
+    --dusty: 201 22% 40%;      /* MOVA */
+    --ochre: 36 52% 42%;       /* Scout Society + global annotation color */
 
     --destructive: 343 36% 35%;
-    --destructive-foreground: 38 41% 95%;
+    --destructive-foreground: 39 36% 96%;
 
     --border: 35 14% 82%;
     --input: 35 12% 78%;
     --ring: 280 7% 9%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Custom surface tokens — never pure white */
-    --surface: 38 41% 95%;
-    --surface-elevated: 38 36% 97%;
+    /* Surfaces — never pure white */
+    --surface: 39 36% 96%;
+    --surface-elevated: 39 33% 97%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--plum)) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+    /* Hairline — the editorial rule weight */
+    --hairline: 280 7% 9%;
 
-    /* Shadows — soft, warm-neutral */
+    /* Shadows — rare; surfaces are the exception, not the default */
     --shadow-sm: 0 1px 2px -1px hsl(280 7% 9% / 0.08);
     --shadow-md: 0 8px 24px -12px hsl(280 7% 9% / 0.18);
     --shadow-lg: 0 24px 60px -24px hsl(280 7% 9% / 0.25);
-    --shadow-glow: 0 0 0 1px hsl(var(--foreground) / 0.06);
-
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
@@ -86,35 +83,97 @@
     @apply font-semibold tracking-tight;
   }
 
-  code {
-    @apply font-sans text-sm;
-  }
-
   ::selection {
     background: hsl(var(--plum));
     color: hsl(var(--accent-foreground));
   }
+
+  /* Visible, designed focus — part of the design system, not QA */
+  :focus-visible {
+    outline: 2px solid hsl(var(--foreground));
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  /* Reduced motion is a designed variant, not a broken site */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
-  /* Uppercase eyebrow label with ochre bullet (editorial section tags) */
-  .eyebrow {
-    @apply inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-muted-foreground;
+  /* Skip link — first tab stop on every page */
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    clip: auto;
+    padding: 0.625rem 1rem;
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+    font-size: 0.875rem;
+    font-weight: 500;
+    overflow: visible;
+    white-space: nowrap;
   }
 
+  /* Uppercase eyebrow label with ochre bullet (editorial section tags) */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-muted-foreground;
+  }
   .eyebrow::before {
     content: "";
     @apply inline-block h-1.5 w-1.5 rounded-full;
     background: hsl(var(--ochre));
   }
 
+  /* Annotation — the mono margin-note voice used site-wide */
+  .annotation {
+    @apply font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-muted-foreground;
+  }
+
+  /* Figure caption */
+  .caption {
+    @apply font-mono text-[0.6875rem] leading-relaxed tracking-[0.06em] text-muted-foreground;
+  }
+
   /* Oversized editorial display type — Lora */
   .display {
-    @apply font-serif font-normal leading-[0.95] tracking-[-0.03em];
+    @apply font-serif font-normal leading-[0.98] tracking-[-0.02em];
+  }
+
+  /* Serif thesis line — the product-question voice */
+  .thesis {
+    @apply font-serif font-normal italic leading-[1.2] tracking-[-0.01em];
+    font-size: clamp(1.5rem, 3.2vw, 2.5rem);
   }
 
   /* Thin editorial rule */
   .rule {
     @apply border-t border-foreground/15;
   }
+
+  /* The three sanctioned content widths */
+  .prose-col {
+    @apply mx-auto w-full max-w-[68ch] px-6;
+  }
+  .grid-col {
+    @apply mx-auto w-full max-w-[1320px] px-6;
+  }
+  /* full bleed = no wrapper */
 }

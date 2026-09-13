@@ -4,11 +4,11 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { GiantHeading } from '../components/GiantHeading';
 import { AnimatedUnderline } from '../components/fancy/underline-animation';
-import { ScrollReveal } from '../components/ScrollReveal';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 const Contact = () => {
+  useDocumentMeta('Contact — Allyson Keightley');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -89,11 +89,10 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-24 md:py-30">
-      <div className="container max-w-5xl">
-        <header className="mb-16 space-y-5">
-          <span className="eyebrow">Contact</span>
-          <GiantHeading as="h1" text="Let's connect." />
+    <div className="py-16 md:py-24">
+      <div className="grid-col max-w-5xl">
+        <header className="mb-16 space-y-6">
+          <h1 className="display text-display">Let&rsquo;s connect.</h1>
         </header>
 
         <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr]">
@@ -105,38 +104,31 @@ const Contact = () => {
             </p>
 
             <div className="space-y-1">
-              {socialLinks.map((link, index) => (
-                <ScrollReveal
-                  as="div"
-                  key={link.name}
-                  delay={index * 0.05}
-                  className="border-t border-foreground/10 py-5"
-                >
+              {socialLinks.map((link) => (
+                <div key={link.name} className="border-t border-foreground/10 py-5">
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-baseline justify-between gap-4"
                   >
-                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                      {link.name}
-                    </span>
-                    <span className="text-base font-medium md:text-base">
+                    <span className="annotation">{link.name}</span>
+                    <span className="text-base font-medium">
                       <AnimatedUnderline group>{link.label}</AnimatedUnderline>
                     </span>
                   </a>
-                </ScrollReveal>
+                </div>
               ))}
             </div>
 
-            <div className="rounded-2xl border border-foreground/10 bg-surface-elevated p-6">
+            <div className="border border-foreground/15 bg-surface-elevated p-6">
               <h3 className="mb-2 flex items-center gap-2 font-semibold">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
+                <span className="h-2 w-2 rounded-full bg-sage" />
                 Availability
               </h3>
               <p className="text-sm text-muted-foreground">
-                Available for SWE and PM internship opportunities for Summer 2027. Open to freelance
-                projects and hackathons.
+                Available for SWE and product engineering internships for Summer 2027. Open to
+                freelance projects and hackathons.
               </p>
             </div>
           </div>

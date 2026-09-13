@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { useMotionPreference } from '@/lib/useMotionPreference';
 
 export interface VideoSources {
   mp4: string;
@@ -31,6 +32,7 @@ export const HoverVideo = ({
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const { reduceMotion } = useMotionPreference();
 
   useEffect(() => {
     const el = containerRef.current;
@@ -40,7 +42,7 @@ export const HoverVideo = ({
         const inView = entry.isIntersecting;
         setIsVisible(inView);
         if (inView) setShouldLoad(true);
-        if (autoPlayInView) {
+        if (autoPlayInView && !reduceMotion) {
           if (inView) videoRef.current?.play().catch(() => {});
           else videoRef.current?.pause();
         }
@@ -49,11 +51,11 @@ export const HoverVideo = ({
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [autoPlayInView]);
+  }, [autoPlayInView, reduceMotion]);
 
   useEffect(() => {
     const target = hoverTargetRef?.current;
-    if (!target || autoPlayInView) return;
+    if (!target || autoPlayInView || reduceMotion) return;
 
     const play = () => {
       setShouldLoad(true);
@@ -72,7 +74,7 @@ export const HoverVideo = ({
       target.removeEventListener('mouseenter', play);
       target.removeEventListener('mouseleave', stop);
     };
-  }, [hoverTargetRef, isVisible, autoPlayInView]);
+  }, [hoverTargetRef, isVisible, autoPlayInView, reduceMotion]);
 
   return (
     <div ref={containerRef} className={cn('relative overflow-hidden bg-muted', className)}>
@@ -84,7 +86,8 @@ export const HoverVideo = ({
         muted
         loop
         playsInline
-        controls={false}
+        /* Reduced-motion users get manual controls instead of autoplay */
+        controls={reduceMotion}
         aria-label={alt}
       >
         {shouldLoad && (
