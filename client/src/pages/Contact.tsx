@@ -7,8 +7,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { GiantHeading } from '../components/GiantHeading';
 import { AnimatedUnderline } from '../components/fancy/underline-animation';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 const Contact = () => {
+  useDocumentMeta(
+    'Contact — Allyson Keightley',
+    "Let's connect — SWE and product engineering opportunities, collaborations, or just tech and product talk."
+  );
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -83,7 +88,6 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    // { name: 'Email', href: 'mailto:allysonkeightley@outlook.com', label: 'allysonkeightley@outlook.com' },
     { name: 'GitHub', href: 'https://github.com/akeight', label: 'github.com/akeight' },
     { name: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', label: 'linkedin.com/in/allyson-keightley' },
   ];
@@ -135,8 +139,8 @@ const Contact = () => {
                 Availability
               </h3>
               <p className="text-sm text-muted-foreground">
-                Available for SWE and PM internship opportunities for Summer 2027. Open to freelance
-                projects and hackathons.
+                Available for software engineering and product engineering internship opportunities
+                for Summer 2027. Open to freelance projects and hackathons.
               </p>
             </div>
           </div>

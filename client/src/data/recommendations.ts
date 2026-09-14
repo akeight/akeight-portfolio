@@ -6,7 +6,9 @@ export type Recommendation = {
   avatar?: string;
 };
 
-/* Replace these with 3–5 real recommendations from people you've worked with. */
+/* TODO(Allyson): replace with 3–5 real recommendations (quote + name + role).
+   Per 2026-09-13 decision these placeholders stay as-is for now; the attribution
+   block in Recommendations.tsx remains hidden until real names exist. */
 export const recommendations: Recommendation[] = [
   {
     quote:

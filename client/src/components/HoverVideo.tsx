@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { useMotionPreference } from '@/lib/useMotionPreference';
 
 export interface VideoSources {
   mp4: string;
@@ -12,6 +13,8 @@ interface HoverVideoProps {
   alt?: string;
   className?: string;
   videoClassName?: string;
+  /** Fine-grained crop control (CSS object-position) for the video and poster. */
+  objectPosition?: string;
   /** When true, plays whenever in view instead of only on hover. */
   autoPlayInView?: boolean;
   /** A hover target ref (e.g. a parent card) to trigger playback from. */
@@ -24,6 +27,7 @@ export const HoverVideo = ({
   alt,
   className,
   videoClassName,
+  objectPosition,
   autoPlayInView = false,
   hoverTargetRef,
 }: HoverVideoProps) => {
@@ -31,6 +35,7 @@ export const HoverVideo = ({
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const { reduceMotion } = useMotionPreference();
 
   useEffect(() => {
     const el = containerRef.current;
@@ -74,11 +79,27 @@ export const HoverVideo = ({
     };
   }, [hoverTargetRef, isVisible, autoPlayInView]);
 
+  // Reduced motion: the designed static composition — poster only, no playback.
+  if (reduceMotion) {
+    return (
+      <div className={cn('relative overflow-hidden bg-muted', className)}>
+        <img
+          src={video.poster}
+          alt={alt ?? ''}
+          loading="lazy"
+          className={cn('h-full w-full object-cover', videoClassName)}
+          style={objectPosition ? { objectPosition } : undefined}
+        />
+      </div>
+    );
+  }
+
   return (
     <div ref={containerRef} className={cn('relative overflow-hidden bg-muted', className)}>
       <video
         ref={videoRef}
         className={cn('h-full w-full object-cover', videoClassName)}
+        style={objectPosition ? { objectPosition } : undefined}
         poster={video.poster}
         preload={shouldLoad ? 'metadata' : 'none'}
         muted

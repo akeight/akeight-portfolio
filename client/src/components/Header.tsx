@@ -11,8 +11,9 @@ import { easeEditorial } from '@/lib/motion';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/about', label: 'About' },
   { href: '/resume', label: 'Resume' },
-  { href: '/now', label: 'Now' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -61,20 +62,17 @@ export const Header = () => {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link, i) => {
+          {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
               <Link
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  'group flex items-baseline gap-1.5 text-sm font-medium transition-colors',
+                  'group flex items-baseline text-sm font-medium transition-colors',
                   active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
                 )}
               >
-                <span className="font-mono text-[0.65rem] text-dusty">
-                  0{i + 1}
-                </span>
                 <AnimatedUnderline group active={active}>
                   <VariableFontHoverByLetter label={link.label} />
                 </AnimatedUnderline>
@@ -120,11 +118,10 @@ export const Header = () => {
                       to={link.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        'flex items-baseline gap-3 border-b border-foreground/10 py-4 text-4xl font-semibold tracking-tight',
+                        'flex items-baseline border-b border-foreground/10 py-4 text-4xl font-semibold tracking-tight',
                         active ? 'text-foreground' : 'text-muted-foreground'
                       )}
                     >
-                      <span className="font-mono text-sm text-dusty">0{i + 1}</span>
                       {link.label}
                     </Link>
                   </motion.div>
