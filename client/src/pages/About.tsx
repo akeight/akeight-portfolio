@@ -119,7 +119,7 @@ const About = () => {
   Everything is figureoutable.
   </p>
   <p>
-  I dig in,learn fast, build fast, and usually end up going a few layers
+  I dig in, learn fast, build fast, and usually end up going a few layers
   deeper than I meant to because I want to understand how something works, why
   it works, and how it could work better.
 </p>
