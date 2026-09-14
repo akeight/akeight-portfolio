@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useRef, type ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useMediaQuery } from '@/lib/useMediaQuery';
 import { useMotionPreference } from '@/lib/useMotionPreference';
 
 interface StackingCardsProps {
@@ -12,21 +13,6 @@ interface StackingCardsProps {
 export const StackingCards = ({ children, className }: StackingCardsProps) => (
   <div className={cn('relative', className)}>{children}</div>
 );
-
-/** Tracks a media query without re-rendering on every scroll. */
-const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia(query).matches
-  );
-  useEffect(() => {
-    const mq = window.matchMedia(query);
-    const onChange = (e: MediaQueryListEvent) => setMatches(e.matches);
-    mq.addEventListener('change', onChange);
-    setMatches(mq.matches);
-    return () => mq.removeEventListener('change', onChange);
-  }, [query]);
-  return matches;
-};
 
 interface StackingCardProps {
   index: number;
