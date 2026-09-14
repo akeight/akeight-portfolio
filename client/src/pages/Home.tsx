@@ -82,7 +82,7 @@ const Home = () => {
               className="max-w-xl text-lg text-muted-foreground"
             >
               Hey, I'm Allyson! A curious, coffee-fueled self-starter with 1000+ GitHub
-              contributions this year. I learn, create, and ship beautiful full-stack web, mobile, and AI tools... <span className="font-serif italic text-oxblood text-xl">for the plot.</span>
+              contributions this year. I build and ship products across mobile and web platforms, with a high attention to  <span className="font-serif italic text-oxblood text-xl">product and design.</span>
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">

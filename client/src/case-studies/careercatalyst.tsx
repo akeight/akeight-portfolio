@@ -18,7 +18,7 @@ const tldr: TldrItem[] = [
   },
   {
     label: 'Thesis',
-    text: 'The entire journey — discovery to offer — should live in one workspace that models the search as a pipeline.',
+    text: 'Everything that happens after you find a role — saved through offer — should live in one workspace that models the search as a pipeline.',
   },
   {
     label: 'Decisions',
@@ -63,23 +63,25 @@ const CareerCatalyst = () => (
 
     <CSSection n={2} title="The thesis" accent="plum">
       <p>
-        I believed the search is really a pipeline — <em>discovery → application → interview →
-        offer</em> — and that if the product modeled that pipeline explicitly, most of the scattered
-        artifacts would have an obvious place to live. Catalyst is not a nicer spreadsheet;
-        it&rsquo;s a workspace whose structure matches the actual shape of the journey.
+        I believed the search is really a pipeline — <em>saved → applied → interview → offer</em> —
+        and that if the product modeled that pipeline explicitly, most of the scattered artifacts
+        would have an obvious place to live. Catalyst doesn&rsquo;t find roles or match you to them;
+        you bring the posting. What it owns is everything after that: the stage a role is in, the
+        people attached to it, and the research you need before an interview. It is not a nicer
+        spreadsheet; it&rsquo;s a workspace whose structure matches the actual shape of the journey.
       </p>
       <Figure
         label="The journey"
         accent="plum"
-        caption="The journey Catalyst models — each stage carries its own data and its own anxieties."
+        caption="The journey Catalyst models, starting the moment you save a role you found elsewhere — each stage carries its own data and its own anxieties."
       >
         <div className="p-5 md:p-8">
           <FlowDiagram
             accent="plum"
             steps={[
-              { label: 'Discovery', note: 'Roles found, saved, compared' },
-              { label: 'Application', note: 'Submitted, waiting, nudging' },
-              { label: 'Interview', note: 'Rounds, prep notes, people' },
+              { label: 'Saved', note: 'Postings you bring in, kept in one place' },
+              { label: 'Applied', note: 'Submitted, waiting, nudging' },
+              { label: 'Interview', note: 'Rounds, prep research, contacts' },
               { label: 'Offer', note: 'Deadlines and decisions', emphasis: true },
             ]}
           />

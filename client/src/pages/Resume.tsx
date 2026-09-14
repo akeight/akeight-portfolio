@@ -2,7 +2,8 @@ import { Download, ArrowUpRight } from 'lucide-react';
 import {
   programExperience,
   educationExperience,
-  experience,
+  professionalExperience,
+  openSourceExperience,
   type Experience,
 } from '../data/experience';
 import { engineeringSkills } from '../data/skills';
@@ -61,9 +62,6 @@ const Resume = () => {
     'Resume — Allyson Keightley',
     'Professional experience, programs and fellowships, education, and engineering skills.'
   );
-  /* Open-source project roles (e.g. HackHQ) read best alongside professional work. */
-  const workEntries = experience.filter((e) => e.type === 'work' || e.type === 'project');
-
   return (
     <div className="py-24 md:py-30">
       <div className="container max-w-5xl space-y-20">
@@ -87,8 +85,11 @@ const Resume = () => {
           </p>
         </header>
 
-        {/* Professional experience, then programs, then education — no more blending */}
-        <ResumeSection title="Professional experience" entries={workEntries} />
+        {/* Professional experience, then open source, programs, education — no more blending */}
+        <ResumeSection title="Professional experience" entries={professionalExperience} />
+        {openSourceExperience.length > 0 && (
+          <ResumeSection title="Open source" entries={openSourceExperience} />
+        )}
         <ResumeSection title="Programs & fellowships" entries={programExperience} />
         <ResumeSection title="Education" entries={educationExperience} />
 

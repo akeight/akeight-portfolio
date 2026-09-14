@@ -74,7 +74,7 @@ const ToddStory = () => {
         <div className="space-y-8">
           <p className="text-xl leading-relaxed text-foreground/90 md:text-2xl">
             I joined Todd, an agriscience startup, as a frontend engineering intern out of my love for regenerative gardening. From implementing
-            Figma-driven UI, the role grew into something bigger. I've led a small team of interns andexterns,
+            Figma-driven UI, the role grew into something bigger. I've led a small team of interns and externs,
             setting code-review standards, and helping carry the public site and Iris v1 to launch
             quality.
           </p>
@@ -155,7 +155,7 @@ const ToddStory = () => {
                     <div className="space-y-2">
                       <h3 className="font-medium text-foreground">Leading externs</h3>
                       <p>
-                        When the company brought on the first cohort ofexternship participants, I onboarded my team and
+                        When the company brought on the first cohort of externship participants, I onboarded my team and
                         owned their development workflow, branch strategy, PR process, and
                         code-review standards, so their output could safely land in a production
                         codebase.
