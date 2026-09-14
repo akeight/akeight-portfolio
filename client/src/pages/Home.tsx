@@ -14,6 +14,8 @@ import { StackingCards, StackingCard } from '../components/fancy/stacking-cards'
 import { StickyReveal } from '../components/fancy/sticky-reveal';
 import { Floating } from '../components/fancy/parallax-floating';
 import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
+import { principles } from '../data/principles';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 
 const techStack = [
@@ -31,6 +33,10 @@ const techMarqueeSegments = techStack.flatMap((tech, index) => [
 ]);
 
 const Home = () => {
+  useDocumentMeta(
+    'Allyson Keightley — Software Engineer · Product Minded Builder',
+    'Product-minded software engineer building thoughtful full-stack web, mobile, and AI tools.'
+  );
   const featured = getFeaturedProjects();
 
   return (
@@ -53,7 +59,7 @@ const Home = () => {
         <div className="container flex min-h-[88vh] flex-col justify-center py-24">
           <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
             <motion.span variants={fadeInUp} className="eyebrow">
-              Software Engineer · Product Builder
+              Software Engineer · Product Minded Builder
             </motion.span>
 
             <h1 className="text-display font-serif font-normal tracking-tightest leading-[1.05] max-w-[15ch]">
@@ -175,22 +181,44 @@ const Home = () => {
         </StackingCards>
       </section>
 
-      {/* Now teaser */}
-      <section className="container py-24 md:py-32 mb-20">
+      {/* How I build — three principles, editorial and quiet */}
+      <section className="container py-24 md:py-32">
+        <ScrollReveal className="mb-12 space-y-4 md:mb-16">
+          <span className="eyebrow">How I build</span>
+          <p className="max-w-2xl font-serif text-2xl font-normal italic tracking-tight md:text-3xl">
+            Engineering-first, product-aware.
+          </p>
+        </ScrollReveal>
+        <div className="grid gap-px overflow-hidden rounded-xl border border-foreground/10 bg-foreground/10 md:grid-cols-3">
+          {principles.map((principle, i) => (
+            <ScrollReveal
+              key={principle.title}
+              delay={i * 0.08}
+              className="space-y-4 bg-surface-elevated p-8 md:p-10"
+            >
+              <h3 className="text-xl font-semibold tracking-tight">{principle.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* About teaser */}
+      <section className="container pb-24 md:pb-32 mb-20">
         <ScrollReveal className="rounded-2xl border border-foreground/10 bg-surface-elevated p-8 md:p-12">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="space-y-4">
               <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
-                Now
+                Right now
               </span>
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
                 Currently building & learning
               </h2>
               <ul className="space-y-2 text-muted-foreground">
                 <li>→ Interning at Itron on the Temetra mobile software team</li>
+                <li>→ Founding engineer at Todd</li>
                 <li>→ B.S. Software Engineering at WGU</li>
-                <li>→ Attend MLT Summer Seminar 2026</li>
               </ul>
             </div>
             <motion.div
@@ -200,10 +228,10 @@ const Home = () => {
               transition={{ duration: 0.5, ease: easeEditorial }}
             >
               <Link
-                to="/now"
+                to="/about"
                 className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium transition-colors hover:border-foreground/50"
               >
-                See full update
+                More about me
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </motion.div>

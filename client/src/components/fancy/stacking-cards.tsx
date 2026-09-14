@@ -1,6 +1,7 @@
-import { useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useMotionPreference } from '@/lib/useMotionPreference';
 
 interface StackingCardsProps {
   children: ReactNode;
@@ -11,6 +12,21 @@ interface StackingCardsProps {
 export const StackingCards = ({ children, className }: StackingCardsProps) => (
   <div className={cn('relative', className)}>{children}</div>
 );
+
+/** Tracks a media query without re-rendering on every scroll. */
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia(query).matches
+  );
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const onChange = (e: MediaQueryListEvent) => setMatches(e.matches);
+    mq.addEventListener('change', onChange);
+    setMatches(mq.matches);
+    return () => mq.removeEventListener('change', onChange);
+  }, [query]);
+  return matches;
+};
 
 interface StackingCardProps {
   index: number;
@@ -33,14 +49,21 @@ export const StackingCard = ({
   topStep = 28,
 }: StackingCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const { reduceMotion } = useMotionPreference();
+  const isMobile = useMediaQuery('(max-width: 767px)');
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
   });
 
   const isLast = index === total - 1;
-  const scale = useTransform(scrollYProgress, [0, 1], [1, isLast ? 1 : 0.9]);
-  const top = topBase + index * topStep;
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1, isLast || reduceMotion ? 1 : 0.9]
+  );
+  // Tighter offsets on small screens so tall cards never pin below the fold.
+  const top = isMobile ? 64 + index * 12 : topBase + index * topStep;
 
   return (
     <div ref={ref} className="sticky" style={{ top }}>

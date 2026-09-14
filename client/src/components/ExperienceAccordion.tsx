@@ -50,7 +50,7 @@ export const ExperienceAccordion = () => {
                       </span>
                       <span className="flex-1 text-lg font-medium tracking-tight md:text-xl">
                         {exp.organization}< br/>
-                        <span className="text-muted-foreground text-base">{exp.role}</span>
+                        <span className="text-muted-foreground text-base">{exp.displayTitle ?? exp.role}</span>
                       </span>
                       <motion.span
                         animate={{ rotate: open ? 45 : 0 }}

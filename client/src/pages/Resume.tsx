@@ -1,13 +1,69 @@
 import { Download, ArrowUpRight } from 'lucide-react';
-import { experience } from '../data/experience';
+import {
+  programExperience,
+  educationExperience,
+  experience,
+  type Experience,
+} from '../data/experience';
 import { engineeringSkills } from '../data/skills';
 import { TechBadge } from '@/components/TechBadge';
 import { GiantHeading } from '../components/GiantHeading';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 const resumePdf = `${import.meta.env.BASE_URL}AllysonKeightleyResume_26.pdf`;
 
+/** One resume entry row (shared across the three sections). */
+const ResumeEntry = ({ exp, index }: { exp: Experience; index: number }) => (
+  <ScrollReveal
+    delay={(index % 4) * 0.05}
+    className="grid gap-4 border-b border-foreground/10 py-8 md:grid-cols-[200px_1fr] md:gap-10"
+  >
+    <div className="space-y-1">
+      <span className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
+        {exp.period}
+      </span>
+      <p className="font-medium text-foreground/80">{exp.organization}</p>
+    </div>
+    <div className="space-y-3">
+      <h3 className="text-xl font-semibold tracking-tight">{exp.displayTitle ?? exp.role}</h3>
+      <ul className="space-y-2">
+        {exp.highlights.map((highlight, i) => (
+          <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </ScrollReveal>
+);
+
+/** A titled resume section. */
+const ResumeSection = ({ title, entries }: { title: string; entries: Experience[] }) => (
+  <section className="space-y-2">
+    <div className="flex items-baseline justify-between border-b border-foreground/15 pb-4">
+      <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
+      <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+        {entries.length} {entries.length === 1 ? 'entry' : 'entries'}
+      </span>
+    </div>
+    <div>
+      {entries.map((exp, index) => (
+        <ResumeEntry key={exp.id} exp={exp} index={index} />
+      ))}
+    </div>
+  </section>
+);
+
 const Resume = () => {
+  useDocumentMeta(
+    'Resume — Allyson Keightley',
+    'Professional experience, programs and fellowships, education, and engineering skills.'
+  );
+  /* Open-source project roles (e.g. HackHQ) read best alongside professional work. */
+  const workEntries = experience.filter((e) => e.type === 'work' || e.type === 'project');
+
   return (
     <div className="py-24 md:py-30">
       <div className="container max-w-5xl space-y-20">
@@ -31,43 +87,10 @@ const Resume = () => {
           </p>
         </header>
 
-        {/* Experience */}
-        <section className="space-y-8">
-          <div className="flex items-baseline justify-between border-b border-foreground/15 pb-4">
-            <h2 className="text-2xl font-semibold tracking-tight">Experience & Development</h2>
-            <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              {experience.length} entries
-            </span>
-          </div>
-
-          <div>
-            {experience.map((exp, index) => (
-              <ScrollReveal
-                key={exp.id}
-                delay={(index % 4) * 0.05}
-                className="grid gap-4 border-b border-foreground/10 py-8 md:grid-cols-[200px_1fr] md:gap-10"
-              >
-                <div className="space-y-1">
-                  <span className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
-                    {exp.period}
-                  </span>
-                  <p className="font-medium text-foreground/80">{exp.organization}</p>
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold tracking-tight">{exp.role}</h3>
-                  <ul className="space-y-2">
-                    {exp.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
+        {/* Professional experience, then programs, then education — no more blending */}
+        <ResumeSection title="Professional experience" entries={workEntries} />
+        <ResumeSection title="Programs & fellowships" entries={programExperience} />
+        <ResumeSection title="Education" entries={educationExperience} />
 
         {/* Skills */}
         <section className="space-y-8">

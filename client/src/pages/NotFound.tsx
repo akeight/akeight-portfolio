@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { VariableFontHoverByLetter } from '../components/fancy/variable-font-hover-by-letter';
+import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
 export default function NotFound() {
+  useDocumentMeta('Page not found — Allyson Keightley');
   return (
     <div className="flex min-h-[80vh] items-center justify-center px-6">
       <div className="space-y-8 text-center">

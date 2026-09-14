@@ -117,4 +117,14 @@
   .rule {
     @apply border-t border-foreground/15;
   }
+
+  /* Mono margin-note voice (case studies, figure labels, credits) */
+  .annotation {
+    @apply block font-mono text-[0.7rem] uppercase leading-relaxed tracking-[0.14em] text-muted-foreground;
+  }
+
+  /* Figure caption */
+  .caption {
+    @apply font-mono text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground;
+  }
 }

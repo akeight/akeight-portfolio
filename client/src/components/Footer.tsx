@@ -9,6 +9,13 @@ const socials = [
   { label: 'Email', href: 'mailto:allysondunning@gmail.com' },
 ];
 
+const siteLinks = [
+  { label: 'Projects', href: '/projects' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'About', href: '/about' },
+  { label: 'Resume', href: '/resume' },
+];
+
 export const Footer = () => {
   const year = new Date().getFullYear();
 
@@ -39,16 +46,19 @@ export const Footer = () => {
         className="border-y border-background/15 py-4 md:py-6"
       >
         <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
-          AI Native
-        </span>
-        <span className="px-6 font-serif text-6xl font-normal italic tracking-tight text-ochre sm:text-7xl md:px-8 md:text-8xl">
           Software Engineer
         </span>
-        <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
+        <span className="px-6 font-serif text-6xl font-normal italic tracking-tight text-ochre sm:text-7xl md:px-8 md:text-8xl">
           Product Builder
         </span>
+        <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
+          Mobile Engineer
+        </span>
         <span className="px-6 font-serif text-6xl font-normal italic tracking-tight text-ochre sm:text-7xl md:px-8 md:text-8xl">
-          Mobile Developer
+          Design-Minded
+        </span>
+        <span className="px-6 font-serif text-6xl font-normal tracking-tight sm:text-7xl md:px-8 md:text-8xl">
+          AI-Native
         </span>
       </SimpleMarquee>
 
@@ -57,6 +67,17 @@ export const Footer = () => {
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-background/60">
           © {year} Allyson Keightley | Building with purpose
         </p>
+        <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          {siteLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className="text-sm text-background/70 transition-colors hover:text-background"
+            >
+              <AnimatedUnderline>{link.label}</AnimatedUnderline>
+            </Link>
+          ))}
+        </nav>
         <div className="flex items-center gap-6">
           {socials.map((s) => (
             <a
