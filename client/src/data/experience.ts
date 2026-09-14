@@ -55,7 +55,7 @@ export const experience: Experience[] = [
     highlights: [
       'Implementing Figma-driven UI for the marketing site and client dashboard with consistent frontend quality and testing',
       'Leading and mentoring a small team of company externship participants: onboarding, development workflow, PR process, and code-review standards',
-      'Helped carry the public site and Todd Iris v1 to launch quality — typography, hierarchy, spacing, color, and interaction polish on functional output',
+      'Helped carry the public site and Todd Iris v1 to launch quality: typography, hierarchy, spacing, color, and interaction polish on functional output',
       'Translating founder direction into features, issues, and engineering tasks; ongoing code review and workflow guidance',
       'Contributed 59 PRs and counting',
       'Generated 100k+ LinkedIn impressions for marketing and growth',
@@ -68,7 +68,10 @@ export const experience: Experience[] = [
     role: 'AI Fellow',
     organization: 'Break Through Tech',
     period: 'May 2026 - Present',
-    highlights: ['Year-long hands-on AI/ML training with industry experts and Cornell Tech'],
+    highlights: ['Year-long hands-on AI/ML training with industry experts and Cornell Tech',
+      'Earned a certificate of completion from Cornell Tech for Machine Learning Foundations',
+      'Matched with Chewy for a team-based fall 2026 capstone machine learning project'
+    ],
     type: 'program',
     tech: ['Python', 'NumPy', 'Pandas', 'SciKit Learn', 'Keras'],
   },
@@ -163,6 +166,9 @@ export const featuredExperience = experience.filter(
 
 /** Professional roles only — powers the /experience page. */
 export const professionalExperience = experience.filter((exp) => exp.type === 'work');
+
+/** Open-source contributor roles — Resume page section, kept apart from professional work. */
+export const openSourceExperience = experience.filter((exp) => exp.type === 'project');
 
 /** Fellowships & structured programs — Resume page section. */
 export const programExperience = experience.filter((exp) => exp.type === 'program');

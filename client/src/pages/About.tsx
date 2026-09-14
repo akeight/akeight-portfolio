@@ -76,8 +76,7 @@ const lifeStack = [
   'Language streaks',
   'Learning rabbit holes',
   'Side-project spirals',
-  'Deep-dive research sessions',
-  `ADHDmaxxing`
+  'Deep-dive research sessions'
 ];
 
 const nowItems = [
