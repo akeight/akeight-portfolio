@@ -34,7 +34,7 @@ const techMarqueeSegments = techStack.flatMap((tech, index) => [
 
 const Home = () => {
   useDocumentMeta(
-    'Allyson Keightley — Software Engineer · Product Minded Builder',
+    'Allyson Keightley | Software Engineer · Product-Minded Builder',
     'Product-minded software engineer building thoughtful full-stack web, mobile, and AI tools.'
   );
   const featured = getFeaturedProjects();
@@ -59,7 +59,7 @@ const Home = () => {
         <div className="container flex min-h-[88vh] flex-col justify-center py-24">
           <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
             <motion.span variants={fadeInUp} className="eyebrow">
-              Software Engineer · Product Minded Builder
+              Software Engineer · Product-Minded Builder
             </motion.span>
 
             <h1 className="text-display font-serif font-normal tracking-tightest leading-[1.05] max-w-[15ch]">

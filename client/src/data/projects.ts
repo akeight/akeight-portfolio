@@ -78,18 +78,17 @@ export const projects: Project[] = [
     slug: 'todd',
     title: 'TODD',
     hook: 'From early product implementation to launch-ready polish and engineering leadership.',
-    // Title progression confirmed by Allyson 2026-09-13.
-    role: 'Frontend Engineer Intern → Founding Engineer',
+    role: 'Software Engineer Intern, Product → Founding Engineer',
     context: 'Professional',
     tier: 1,
     tile: 'large',
     accent: 'sage',
     objectPosition: 'top',
     tagline:
-      'Agriscience startup where my role grew from implementing Figma-driven frontend work into engineering leadership: onboarding externs, setting code-review standards, and helping carry the public site and Iris v1 to launch quality.',
+      'Agriscience startup where my role grew from implementing Figma-driven product work into engineering leadership: onboarding externs, setting code-review standards, and helping carry the public site and Iris v1 to launch quality.',
     impact:
       'Helped take rough functional output to launch-ready polish across typography, hierarchy, spacing, and interaction — while guiding a team of externs through workflow, PRs, and review.',
-    stack: ['React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'Sanity', 'GitHub Actions'],
+    stack: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'Sanity', 'CI/CD', 'Vercel', 'GitHub'],
     links: {
       demo: 'https://toddagriscience.com',
       caseStudy: '/experience',
@@ -327,7 +326,7 @@ export const projects: Project[] = [
     slug: 'kahani-website',
     title: 'Kahani Website',
     hook: 'Supplied Figma → production responsive site, solo, in about three weeks.',
-    role: 'Frontend Engineer · Internship Extension',
+    role: 'Software Engineer Intern· Internship Extension',
     context: 'Internship Project',
     tier: 3,
     tile: 'wide',

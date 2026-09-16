@@ -47,13 +47,13 @@ export const experience: Experience[] = [
   },
   {
     id: 'todd-swe',
-    role: 'Frontend Engineer Intern',
+    role: 'Software Engineer Intern, Product',
     // Title progression confirmed by Allyson 2026-09-13.
-    displayTitle: 'Frontend Engineer Intern → Founding Engineer',
+    displayTitle: 'Software Engineer Intern, Product → Founding Engineer',
     organization: 'Todd',
     period: 'January 2026 - Present',
     highlights: [
-      'Implementing Figma-driven UI for the marketing site and client dashboard with consistent frontend quality and testing',
+      'Implementing Figma-driven UI for the marketing site and client dashboard with consistent product quality and testing',
       'Leading and mentoring a small team of company externship participants: onboarding, development workflow, PR process, and code-review standards',
       'Helped carry the public site and Todd Iris v1 to launch quality: typography, hierarchy, spacing, color, and interaction polish on functional output',
       'Translating founder direction into features, issues, and engineering tasks; ongoing code review and workflow guidance',
@@ -61,11 +61,11 @@ export const experience: Experience[] = [
       'Generated 100k+ LinkedIn impressions for marketing and growth',
     ],
     type: 'work',
-    tech: ['React', 'TypeScript', 'TailwindCSS', 'Figma', 'Framer Motion', 'Sanity', 'CI/CD', 'GitHub Actions', 'GitHub'],
+    tech: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Figma', 'Framer Motion', 'Sanity', 'CI/CD', 'Vercel', 'GitHub', 'GitHub Projects'],
   },
   {
     id: 'break-through-tech',
-    role: 'AI Fellow',
+    role: 'AI Program Fellow',
     organization: 'Break Through Tech',
     period: 'May 2026 - Present',
     highlights: ['Year-long hands-on AI/ML training with industry experts and Cornell Tech',
@@ -105,7 +105,7 @@ export const experience: Experience[] = [
       // TODO(verify): "~60-70% of commits" — unpublished until verified from repo history.
     ],
     type: 'work',
-    tech: ['Flutter', 'Dart', 'Firebase', 'GCP', 'GitHub Actions', 'CI/CD'],
+    tech: ['Flutter', 'Dart', 'Firebase', 'GitHub Projects', 'CI/CD'],
   },
   {
     id: 'kahani-pm',
@@ -117,7 +117,7 @@ export const experience: Experience[] = [
       'Led cross-functional ceremonies and debriefs; tracked milestones, owners, deliverables, and timelines',
     ],
     type: 'work',
-    tech: ['Figma', 'Slack', 'Notion', 'Google Workspace'],
+    tech: ['Figma', 'Slack', 'GitHub Projects', 'Notion', 'Google Workspace'],
   },
   {
     id: 'ai-ml-projects',

@@ -73,7 +73,7 @@ const ToddStory = () => {
 
         <div className="space-y-8">
           <p className="text-xl leading-relaxed text-foreground/90 md:text-2xl">
-            I joined Todd, an agriscience startup, as a frontend engineering intern out of my love for regenerative gardening. From implementing
+            I joined Todd, an agriscience startup, as a software engineering intern on the frontend product team out of my love for regenerative gardening. From implementing
             Figma-driven UI, the role grew into something bigger. I've led a small team of interns and externs,
             setting code-review standards, and helping carry the public site and Iris v1 to launch
             quality.
@@ -140,7 +140,7 @@ const ToddStory = () => {
                       <h3 className="font-medium text-foreground">Where it started</h3>
                       <p>
                         The initial scope was classic frontend internship work: take the design
-                        team's Figma files and implement them faithfully in React and TailwindCSS, 
+                        team's Figma files and implement them consistently in React and TailwindCSS, 
                         marketing site pages, the client dashboard, motion, and responsive behavior.
                       </p>
                     </div>

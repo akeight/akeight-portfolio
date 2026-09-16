@@ -38,10 +38,10 @@ const CHART_POINTS: [number, number][] = [
 
 const BOARD = {
   applied: [
-    { role: 'Frontend Intern', company: 'Google' },
-    { role: 'SWE Intern', company: 'Airbnb' },
+    { role: 'SWE Intern', company: 'Google' },
+    { role: 'Mobile Developer Intern', company: 'Airbnb' },
   ],
-  interview: [{ role: 'Frontend Intern', company: 'Figma' }],
+  interview: [{ role: 'Product Design Intern', company: 'Figma' }],
 };
 
 /** Entrance + idle-bob wrapper for the floating fragments. */
