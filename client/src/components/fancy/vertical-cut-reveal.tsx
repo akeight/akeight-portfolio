@@ -52,8 +52,8 @@ export const VerticalCutReveal = ({
           >
             <motion.span
               className="inline-block"
-              initial={{ y: '115%' }}
-              animate={inView ? { y: 0 } : { y: '115%' }}
+              initial={{ y: '150%' }}
+              animate={inView ? { y: 0 } : { y: '150%' }}
               transition={{ duration: 0.7, ease: easeEditorial, delay: i * staggerDuration }}
               onAnimationComplete={() => {
                 if (isLast && inView) setRevealed(true);

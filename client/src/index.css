@@ -97,15 +97,9 @@
 }
 
 @layer components {
-  /* Uppercase eyebrow label with ochre bullet (editorial section tags) */
+  /* Uppercase eyebrow label (editorial section tags) */
   .eyebrow {
-    @apply inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-muted-foreground;
-  }
-
-  .eyebrow::before {
-    content: "";
-    @apply inline-block h-1.5 w-1.5 rounded-full;
-    background: hsl(var(--ochre));
+    @apply inline-flex items-center font-sans text-xs uppercase tracking-[0.2em] text-muted-foreground;
   }
 
   /* Oversized editorial display type — Lora */

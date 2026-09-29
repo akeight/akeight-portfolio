@@ -30,22 +30,6 @@ export const experience: Experience[] = [
     tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vite', 'ShadCN/Radix UI', 'React Router', 'Framer Motion', 'Vercel'],
   },
   {
-    id: 'itron',
-    role: 'Mobile Application Developer Intern',
-    organization: 'Itron',
-    period: 'April 2026 - Present',
-    highlights: [
-      'Supporting the Temetra mobile application team in feature development, unit testing, and debugging',
-      // TODO(verify): "1000 unit tests" — source from test suite / records before keeping the number.
-      'Built and hardened over 1000 unit tests for the maintainability and reliability of the application',
-      // TODO(verify): "60%" — source before keeping the number; qualitative fallback: "significantly streamlined the process".
-      'Implemented a new feature for customers to easily submit diagnostic/log data to the support team, streamlined the process by 60%; published a design document in the end-to-end process',
-      'Refactoring scattered hard-coded color values into a reusable semantic token system designed to support light, dark, and system themes (foundation work, in progress)',
-    ],
-    type: 'work',
-    tech: ['C#', '.NET MAUI', 'XAML', 'Azure DevOps', 'Moq', 'MS Test'],
-  },
-  {
     id: 'todd-swe',
     role: 'Software Engineer Intern, Product',
     // Title progression confirmed by Allyson 2026-09-13.
@@ -62,6 +46,22 @@ export const experience: Experience[] = [
     ],
     type: 'work',
     tech: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Figma', 'Framer Motion', 'Sanity', 'CI/CD', 'Vercel', 'GitHub', 'GitHub Projects'],
+  },
+  {
+    id: 'itron',
+    role: 'Mobile Application Developer Intern',
+    organization: 'Itron',
+    period: 'April 2026 - September 2026',
+    highlights: [
+      'Supporting the Temetra mobile application team in feature development, unit testing, and debugging',
+      // TODO(verify): "1000 unit tests" — source from test suite / records before keeping the number.
+      'Built and hardened over 1000 unit tests for the maintainability and reliability of the application',
+      // TODO(verify): "60%" — source before keeping the number; qualitative fallback: "significantly streamlined the process".
+      'Implemented a new feature for customers to easily submit diagnostic/log data to the support team, streamlined the process by 60%; published a design document in the end-to-end process',
+      'Refactored scattered hard-coded color values into a reusable semantic token system designed to support light, dark, and system themes.',
+    ],
+    type: 'work',
+    tech: ['C#', '.NET MAUI', 'XAML', 'Azure DevOps', 'Moq', 'MS Test'],
   },
   {
     id: 'break-through-tech',

@@ -8,29 +8,13 @@ import { ExperienceAccordion } from '../components/ExperienceAccordion';
 import { GiantHeading } from '../components/GiantHeading';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { TextRotate } from '../components/fancy/text-rotate';
-import { VerticalCutReveal } from '../components/fancy/vertical-cut-reveal';
-import CurvedLoop from '../components/fancy/CurvedLoop';
 import { StackingCards, StackingCard } from '../components/fancy/stacking-cards';
 import { StickyReveal } from '../components/fancy/sticky-reveal';
 import { Floating } from '../components/fancy/parallax-floating';
-import { fadeInUp, stagger, easeEditorial } from '@/lib/motion';
+import { easeEditorial } from '@/lib/motion';
 import { principles } from '../data/principles';
 import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
-
-const techStack = [
-  'TypeScript', 'C#','Python', 'Swift', 'Dart', 'React', 'Next.js', 'Node.js', 'FastAPI', '.NET MAUI', 'JavaScript',
-  'PostgreSQL', 'Express', 'Flutter', 'TailwindCSS', 'Supabase', 'Firebase', 'Sanity', 'Figma', 'GCP', 'Vercel', 
-  'GitHub', 'Docker', 'CI/CD', 'GitHub Actions', 'Azure DevOps',
-];
-
-const techMarqueeSegments = techStack.flatMap((tech, index) => [
-  {
-    text: tech,
-    className: index % 2 === 1 ? 'font-serif' : undefined,
-  },
-  { text: '    ' },
-]);
 
 const Home = () => {
   useDocumentMeta(
@@ -43,103 +27,56 @@ const Home = () => {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Floating decorative accents */}
-        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-          <Floating depth={2.6} amplitude={28} className="absolute right-[8%] top-[18%]">
-            <div className="h-24 w-24 rounded-full border border-foreground/15 md:h-40 md:w-40" />
+        {/* Floating decorative accents — balanced either side of the centered headline */}
+        <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block" aria-hidden>
+          <Floating depth={2.6} amplitude={28} className="absolute left-[7%] top-[20%]">
+            <div className="h-20 w-20 rounded-full border border-foreground/15 md:h-32 md:w-32" />
           </Floating>
-          <Floating depth={4} amplitude={40} className="absolute right-[22%] top-[55%]">
+          <Floating depth={4} amplitude={40} className="absolute right-[13%] top-[26%]">
             <div className="h-4 w-4 rounded-full bg-dusty" />
           </Floating>
-          <Floating depth={1.8} amplitude={24} className="absolute right-[14%] bottom-[8%]">
+          <Floating depth={1.8} amplitude={24} className="absolute bottom-[20%] right-[8%]">
             <div className="h-16 w-16 rotate-12 border border-foreground/10 md:h-24 md:w-24" />
+          </Floating>
+          <Floating depth={3.2} amplitude={32} className="absolute bottom-[26%] left-[15%]">
+            <div className="h-3 w-3 rounded-full bg-ochre" />
           </Floating>
         </div>
 
-        <div className="container flex min-h-[88vh] flex-col justify-center py-24">
-          <motion.div variants={stagger(0.12)} initial="hidden" animate="visible" className="space-y-12">
-            <motion.span variants={fadeInUp} className="eyebrow">
-              Software Engineer · Product-Minded Builder
-            </motion.span>
+        <div className="container flex min-h-[88vh] flex-col items-center justify-center py-24 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: easeEditorial }}
+            className="font-serif text-[clamp(1.875rem,4.2vw,2.5rem)] font-normal leading-[1.1] tracking-tight"
+          >
+            I'm Allyson.
+          </motion.h1>
 
-            <h1 className="text-display font-serif font-normal tracking-tightest leading-[1.05] max-w-[15ch]">
-              <span className="block translate-y-[10px]">
-                <VerticalCutReveal text="Building" />
-              </span>
-              <span className="block font-serif italic text-oxblood">
-                <TextRotate
-                  texts={['thoughtful', 'beautiful', 'intuitive', 'AI-powered']}
-                  className="leading-[1.2] pl-[0.08em] pr-[0.2em]"
-                />
-              </span>
-              <span className="block translate-y-[-10px]">
-                <VerticalCutReveal text="software." staggerDuration={0.04} />
-              </span>
-            </h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="max-w-xl text-lg text-muted-foreground"
-            >
-              Hey, I'm Allyson! A curious, coffee-fueled self-starter with 1000+ GitHub
-              contributions this year. I build and ship products across mobile and web platforms, with a high attention to  <span className="font-serif italic text-oxblood text-xl">product and design.</span>
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4">
-              <Link
-                to="/projects"
-                className="group inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
-              >
-                View selected work
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-              <Link
-                to="/resume"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-7 py-3.5 text-sm font-medium transition-colors hover:border-foreground/50"
-              >
-                Resume
-              </Link>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              variants={fadeInUp}
-              className="grid max-w-xl grid-cols-3 gap-8 border-t border-foreground/15 pt-8"
-            >
-              {/* {stats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-3xl font-semibold tracking-tight md:text-4xl">{stat.value}</div>
-                  <div className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.15em] text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              ))} */}
-            </motion.div>
-          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.7, ease: easeEditorial }}
+            className="mt-6 max-w-2xl md:max-w-2.5xl font-serif text-[clamp(2.25rem,5vw,3rem)] leading-tight tracking-tight"
+          >
+            <span className="block">I work across product, design, and code to turn ideas into</span>
+            <TextRotate
+              texts={['working products.', 'thoughtful experiences.', 'prototypes.']}
+              splitBy="word"
+              className="font-serif italic text-oxblood"
+            />
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="mt-16 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="mt-20 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
           >
             <ArrowDown className="h-4 w-4 animate-bounce" />
             Scroll
           </motion.div>
         </div>
-      </section>
-
-      {/* Skills marquee */}
-      <section className="py-5">
-        <CurvedLoop
-          segments={techMarqueeSegments}
-          speed={1.50}
-          curveAmount={195}
-          curveType="wave"
-          direction="left"
-          interactive
-          className="text-5xl md:text-4xl font-semibold uppercase tracking-[0.45em] md:tracking-[0.35em] xl:tracking-[0.25em] 2xl:tracking-[0.11em] text-muted-foreground"
-        />
       </section>
 
       {/* Scroll-over reveal — each panel pins once read, then the next rolls up

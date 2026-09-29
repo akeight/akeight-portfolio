@@ -49,17 +49,7 @@ export const Header = () => {
           : 'bg-background'
       )}
     >
-      <div className="container flex h-16 items-center justify-between md:h-20">
-        {/* Wordmark */}
-        <Link to="/" className="shrink-0">
-          <VariableFontHoverByLetter
-            label="Allyson Keightley"
-            className="text-sm font-medium uppercase tracking-[0.18em]"
-            fromWeight={500}
-            toWeight={700}
-          />
-        </Link>
-
+      <div className="container flex h-16 items-center justify-end md:h-20">
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => {
