@@ -7,19 +7,19 @@
 
 @layer base {
   :root {
-    /* Core palette — #F7F3EC paper, #171518 ink */
-    --background: 38 41% 95%;
+    /* Core palette — #FAF7F3 paper, #171518 ink */
+    --background: 34 41% 96.7%;
     --foreground: 280 7% 9%;
 
-    --card: 38 41% 95%;
+    --card: 34 41% 96.7%;
     --card-foreground: 280 7% 9%;
 
-    --popover: 38 38% 97%;
+    --popover: 34 38% 99%;
     --popover-foreground: 280 7% 9%;
 
     /* Primary actions are ink */
     --primary: 280 7% 9%;
-    --primary-foreground: 38 41% 95%;
+    --primary-foreground: 34 41% 96.7%;
 
     --secondary: 38 22% 91%;
     --secondary-foreground: 280 7% 9%;
@@ -29,7 +29,7 @@
 
     /* Primary signal accent — plum #4B2437 */
     --accent: 331 35% 22%;
-    --accent-foreground: 38 41% 95%;
+    --accent-foreground: 34 41% 96.7%;
 
     /* Accent system */
     --plum: 331 35% 22%;       /* #4B2437 */
@@ -39,7 +39,7 @@
     --ochre: 37 45% 49%;       /* #B48A45 */
 
     --destructive: 343 36% 35%;
-    --destructive-foreground: 38 41% 95%;
+    --destructive-foreground: 34 41% 96.7%;
 
     --border: 35 14% 82%;
     --input: 35 12% 78%;
@@ -48,8 +48,8 @@
     --radius: 0.5rem;
 
     /* Custom surface tokens — never pure white */
-    --surface: 38 41% 95%;
-    --surface-elevated: 38 36% 97%;
+    --surface: 34 41% 96.7%;
+    --surface-elevated: 34 36% 99%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--plum)) 100%);
