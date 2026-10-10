@@ -6,28 +6,28 @@ export type SkillCategory = {
   export const engineeringSkills: SkillCategory[] = [
     {
       category: "Languages",
-      items: ["Python", "JavaScript", "TypeScript", "Dart"]
+      items: ["C#", "Python", "JavaScript", "TypeScript", "SQL", "Swift", "Dart"]
     },
     {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "TailwindCSS", "Flutter", "Vite"]
+      items: ["React", "Next.js", ".NET MAUI", "TailwindCSS", "React Native","Flutter", "SwiftUI"]
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express.js", "FastAPI", "tRPC", "REST", "Prisma", "PostgreSQL", "Supabase", "Firebase"]
+      items: ["Node.js", "Express.js", "FastAPI", "RESTful APIs", "Prisma", "PostgreSQL", "Supabase", "Firebase"]
     },
     {
       category: "AI/ML",
-      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "Grad-CAM", "AWS Bedrock"]
+      items: ["NumPy", "Pandas", "TensorFlow", "Keras", "Scikit-learn", "AWS Bedrock"]
     },
     {
       category: "DevOps",
       items: ["Docker", "CI/CD", "Vercel", "GitHub Actions"]
     },
-    // {
-    //   category: "Testing",
-    //   items: ["Jest", "React Testing Library", "Playwright", "Unit Testing"]
-    // }
+    {
+      category: "Design",
+      items: ["Figma", "Procreate", "Canva", "Prototyping", "User Research", "User Testing"]
+    }
   ];
   
   export const productSkills: SkillCategory[] = [

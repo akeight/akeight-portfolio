@@ -3,11 +3,13 @@ import { ArrowUpRight } from 'lucide-react';
 import { SimpleMarquee } from './fancy/simple-marquee';
 import { AnimatedUnderline } from './fancy/underline-animation';
 
+const iconBase = `${import.meta.env.BASE_URL}icons/social`;
+
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/akeight' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley' },
-  { label: 'Email', href: 'mailto:allysondunning@gmail.com' },
-];
+  { label: 'GitHub', href: 'https://github.com/akeight', icon: `${iconBase}/github.png` },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', icon: `${iconBase}/linkedin.png` },
+  { label: 'Email', href: 'mailto:allysondunning@gmail.com', icon: `${iconBase}/email.png` },
+] as const;
 
 const siteLinks = [
   { label: 'Projects', href: '/projects' },
@@ -65,7 +67,7 @@ export const Footer = () => {
       {/* Bottom row */}
       <div className="container flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-background/60">
-          © {year} Allyson Keightley | Building with purpose
+          © {year} Allyson Keightley | Product-Minded Builder
         </p>
         <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
           {siteLinks.map((link) => (
@@ -78,18 +80,32 @@ export const Footer = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-6">
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-background/80 transition-colors hover:text-background"
-            >
-              <AnimatedUnderline>{s.label}</AnimatedUnderline>
-            </a>
-          ))}
+        <div className="flex items-center gap-5">
+          {socials.map((s) => {
+            const external = s.href.startsWith('http');
+            return (
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                {...(external
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+                className="inline-flex rounded-sm opacity-80 transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+              >
+                <img
+                  src={s.icon}
+                  srcSet={`${s.icon} 1x, ${s.icon.replace('.png', '@2x.png')} 2x`}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="h-6 w-6"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            );
+          })}
         </div>
       </div>
     </footer>

@@ -260,6 +260,31 @@ const ItronStory = () => {
               </li>
             ))}
           </ul>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <figure className="overflow-hidden rounded-xl border border-foreground/10 bg-surface-elevated">
+              <img
+                src="/experience/itron/mobile-settings.jpg"
+                alt="Itron Mobile Radio settings on a field iPhone"
+                loading="lazy"
+                className="h-64 w-full object-cover object-[center_20%] sm:h-72"
+              />
+              <figcaption className="border-t border-foreground/10 px-4 py-3 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-muted-foreground">
+                Developing dark mode support for the Temetra mobile app
+              </figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-xl border border-foreground/10 bg-surface-elevated">
+              <img
+                src="/experience/itron/handheld.jpg"
+                alt="Honeywell handheld running Itron Mobile Test"
+                loading="lazy"
+                className="h-64 w-full object-cover object-center sm:h-72"
+              />
+              <figcaption className="border-t border-foreground/10 px-4 py-3 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-muted-foreground">
+                Regression testing on a field device
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </ScrollReveal>

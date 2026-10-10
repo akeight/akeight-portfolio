@@ -94,6 +94,41 @@
     background: hsl(var(--plum));
     color: hsl(var(--accent-foreground));
   }
+
+  /* Custom cursors (pointer devices only — touch keeps system defaults) */
+  @media (pointer: fine) {
+    :root {
+      --cursor-default: url('/cursors/arrow.png') 4 5, auto;
+      --cursor-pointer: url('/cursors/pointer.png') 8 4, pointer;
+      --cursor-text: url('/cursors/text.png') 16 16, text;
+    }
+
+    html,
+    body {
+      cursor: var(--cursor-default);
+    }
+
+    a[href],
+    button:not(:disabled),
+    [role='button']:not([aria-disabled='true']),
+    [role='link'],
+    summary,
+    label[for],
+    select:not(:disabled),
+    input[type='button']:not(:disabled),
+    input[type='submit']:not(:disabled),
+    input[type='reset']:not(:disabled),
+    input[type='checkbox']:not(:disabled),
+    input[type='radio']:not(:disabled) {
+      cursor: var(--cursor-pointer);
+    }
+
+    input:not([type='button']):not([type='submit']):not([type='reset']):not([type='checkbox']):not([type='radio']):not([type='file']):not([type='range']):not([type='hidden']):not([type='color']):not(:disabled),
+    textarea:not(:disabled),
+    [contenteditable='true'] {
+      cursor: var(--cursor-text);
+    }
+  }
 }
 
 @layer components {

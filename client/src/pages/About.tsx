@@ -37,10 +37,11 @@ const lifeStack = [
 ];
 
 const nowItems = [
-  'Interning at Itron on the Temetra mobile software team',
-  'Acting as a founding engineer for Todd',
+  'Founding engineer for Todd',
   'Studying for my B.S. in Software Engineering at WGU',
-  'Starting the Break Through Tech Fall AI Studio — building an AI/ML project for Chewy',
+  'Building a classifier to detect human vs AI text for Chewy',
+  'Side learning with MIT OpenCourseWare and Stanford courses',
+  'Attending NVIDIA\'s GTC 2026',
 ];
 
 const About = () => {
@@ -68,11 +69,11 @@ const About = () => {
 
         {/* Story */}
         <ScrollReveal as="section" className="grid gap-10 md:grid-cols-[2fr_1fr] md:gap-20">
-          <div className="space-y-5 text-lg leading-relaxed text-muted-foreground text-balance">
+          <div className="space-y-6 text-lg leading-relaxed text-muted-foreground text-balance">
           <p>
             Hey! I'm Allyson (or Ally).<br /> 
             I live on one solid principle: <br /> 
-            <span className="font-serif italic text-sage text-2xl">Everything is figureoutable.</span>
+            <span className="font-serif font-medium tracking-wide italic text-sage text-2xl">Everything is figureoutable.</span>
           </p>
           <p>
             I dig in, learn fast, build fast, and usually end up going a few layers
@@ -102,8 +103,8 @@ const About = () => {
   </p>
 
   <p>
-    Away from the keyboard, I’m probably getting inspiration for my project or learning something new.{' '}
-    <span className="font-serif italic text-oxblood">Because why not?</span>
+    Away from the keyboard, I’m probably getting inspiration for my project or learning something new{' '}
+    <span className="font-serif font-medium tracking-wide italic text-oxblood">...Because why not?</span>
   </p>
 </div>
           </div>
@@ -143,7 +144,7 @@ const About = () => {
                 <TechBadge
                   key={item}
                   tech={item}
-                  className="border-sage/40 bg-sage/5 text-sage hover:border-sage/70 hover:text-sage"
+                  className="border-sage/40 bg-sage text-white hover:border-sage/70 hover:text-white"
                 />
               ))}
             </div>
@@ -154,7 +155,6 @@ const About = () => {
         <ScrollReveal as="section" className="rounded-2xl border border-foreground/10 bg-surface-elevated p-8 md:p-12">
           <div className="space-y-6">
             <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-sage" />
               Right now
             </span>
             <ul className="grid gap-x-10 gap-y-3 sm:grid-cols-2">

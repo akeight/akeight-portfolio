@@ -9,6 +9,23 @@ import { AnimatedUnderline } from '../components/fancy/underline-animation';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { useDocumentMeta } from '@/lib/useDocumentMeta';
 
+const iconBase = `${import.meta.env.BASE_URL}icons/social`;
+
+const socialLinks = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/akeight',
+    label: 'github.com/akeight',
+    icon: `${iconBase}/github.png`,
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/in/allyson-keightley',
+    label: 'linkedin.com/in/allyson-keightley',
+    icon: `${iconBase}/linkedin.png`,
+  },
+] as const;
+
 const Contact = () => {
   useDocumentMeta(
     'Contact — Allyson Keightley',
@@ -87,11 +104,6 @@ const Contact = () => {
     }
   };
 
-  const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/akeight', label: 'github.com/akeight' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/allyson-keightley', label: 'linkedin.com/in/allyson-keightley' },
-  ];
-
   return (
     <div className="py-24 md:py-30">
       <div className="container max-w-5xl">
@@ -113,7 +125,7 @@ const Contact = () => {
                 <ScrollReveal
                   as="div"
                   key={link.name}
-                  delay={index * 0.05}
+                  delay={(index + 1) * 0.05}
                   className="border-t border-foreground/10 py-5"
                 >
                   <a
@@ -122,7 +134,17 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="group flex items-baseline justify-between gap-4"
                   >
-                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <span className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      <img
+                        src={link.icon}
+                        srcSet={`${link.icon} 1x, ${link.icon.replace('.png', '@2x.png')} 2x`}
+                        alt=""
+                        width={16}
+                        height={16}
+                        className="h-6 w-6 shrink-0 brightness-0 opacity-70 transition-opacity group-hover:opacity-100"
+                        loading="lazy"
+                        decoding="async"
+                      />
                       {link.name}
                     </span>
                     <span className="text-base font-medium md:text-base">
