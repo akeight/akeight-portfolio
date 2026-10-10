@@ -96,7 +96,7 @@ const Resume = () => {
         {/* Skills */}
         <section className="space-y-8">
           <h2 className="border-b border-foreground/15 pb-4 text-2xl font-semibold tracking-tight">
-            Engineering skills
+            Skills
           </h2>
           <div className="grid gap-8 sm:grid-cols-2">
             {engineeringSkills.map((category) => (

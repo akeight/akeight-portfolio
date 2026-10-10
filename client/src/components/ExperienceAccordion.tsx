@@ -74,11 +74,11 @@ export const ExperienceAccordion = () => {
                             <span className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
                               {exp.period}
                             </span>
-                            <ul className="space-y-2">
+                            <ul className="space-y-3">
                               {exp.highlights.map((highlight, h) => (
                                 <li
                                   key={h}
-                                  className="flex items-start gap-2.5 text-sm text-muted-foreground"
+                                  className="flex items-start gap-2.5 text-[14px]/[24px] text-muted-foreground"
                                 >
                                   <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-ochre" />
                                   <span>{highlight}</span>
@@ -91,7 +91,7 @@ export const ExperienceAccordion = () => {
                                   <TechBadge
                                     key={tool}
                                     tech={tool}
-                                    className="border-plum/30 bg-plum/5 text-plum hover:border-plum/60 hover:text-plum"
+                                    className="border-plum/30 bg-plum text-white hover:border-plum/60 hover:text-white"
                                   />
                                 ))}
                               </div>

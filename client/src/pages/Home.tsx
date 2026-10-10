@@ -57,9 +57,13 @@ const Home = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.7, ease: easeEditorial }}
-            className="mt-6 max-w-2xl md:max-w-2.5xl font-serif text-[clamp(2.25rem,5vw,3rem)] leading-tight tracking-tight"
+            className="mt-6 w-full max-w-2xl md:max-w-2.5xl font-serif text-[clamp(2.25rem,5vw,3rem)] leading-tight tracking-tight"
           >
-            <span className="block">I work across product, design, and code to turn ideas into</span>
+            <span className="block">
+              I work across product,
+              <br className="md:hidden" /> design, and code to
+              <br className="md:hidden" /> turn ideas into
+            </span>
             <TextRotate
               texts={['working products.', 'thoughtful experiences.', 'prototypes.']}
               splitBy="word"
@@ -119,7 +123,7 @@ const Home = () => {
       </section>
 
       {/* How I build — three principles, editorial and quiet */}
-      <section className="container py-24 md:py-32">
+      <section className="container py-24 md:py-32 mb-24 md:mb-32">
         <ScrollReveal className="mb-12 space-y-4 md:mb-16">
           <span className="eyebrow">How I build</span>
           <p className="max-w-2xl font-serif text-2xl font-normal italic tracking-tight md:text-3xl">
@@ -141,7 +145,7 @@ const Home = () => {
       </section>
 
       {/* About teaser */}
-      <section className="container pb-24 md:pb-32 mb-20">
+      {/* <section className="container pb-24 md:pb-32 mb-20">
         <ScrollReveal className="rounded-2xl border border-foreground/10 bg-surface-elevated p-8 md:p-12">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="space-y-4">
@@ -174,7 +178,7 @@ const Home = () => {
             </motion.div>
           </div>
         </ScrollReveal>
-      </section>
+      </section> */}
       </div>
     </div>
   );
